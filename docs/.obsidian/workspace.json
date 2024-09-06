@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ebb208adcb7e5cf8",
+        "id": "eec3937d0f9f5c6b",
         "type": "tabs",
         "children": [
           {
-            "id": "97f92064f71a8ee8",
+            "id": "07a0fb180ad59e2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "security/KodeKloud CKS challenge #2.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "pau",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,11 +71,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "security/KodeKloud CKS challenge #2.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "security/KodeKloud CKS challenge #2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "security/KodeKloud CKS challenge #2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,11 +148,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "97f92064f71a8ee8",
+  "active": "3cc9b213ed91e2eb",
   "lastOpenFiles": [
+    "software engineering/Azure/AZ104.md",
+    "software engineering/Untitled.md",
+    "software engineering/Azure",
+    "software engineering/distributes systems/AKS.md",
+    "index.md",
     "work/interviews.md",
     "finance/personal-finance.md",
-    "index.md",
     "img/financial-planning-pyramid.png",
     "img/image.png",
     "Citazioni e linee guida.md",
@@ -176,9 +181,6 @@
     "books/critical thinking/the-elephant-in-the-brain.md",
     "brain/how-to-study.md",
     "brain/self-deception.md",
-    "brain/Rationality.md",
-    "brain/Logic.md",
-    "brain/how-to-read-body-language.md",
     "finance",
     "books/money",
     "wellbeing/gym-at-home",
@@ -186,7 +188,6 @@
     "wellbeing",
     "entrepreneurship",
     "New folder",
-    "music",
-    "books/critical thinking"
+    "music"
   ]
 }
