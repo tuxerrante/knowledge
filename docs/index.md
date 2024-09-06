@@ -1,11 +1,20 @@
-# Obsidian Notes
+# My links
 
-Publish your public notes with MkDocs
 
-## Hello World!
+- https://affinitoalessandro.altervista.org/blog/
+- https://github.com/tuxerrante
+- https://www.linkedin.com/in/affinitoalessandro
+- https://soundcloud.com/alessandro-affinito-58528444
+- https://www.youtube.com/@alessandro-affinito/videos
 
-The `index.md` in the `/docs` folder is the homepage you see here.
 
-The folders in `/docs` appear as the main sections on the navigation bar.
+# Support my work!
+## https://github.com/sponsors/tuxerrante
 
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
+I've been dedicated to creating free content for years, pouring countless hours into research, writing, and editing. 
+Your support would mean the world to me and help me continue producing high-quality content. By sponsoring my work, you're not just helping me, but also validating the value of the information I provide. Thank you for considering!
+
+![[support.png]]
+
+
+

@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "7f85af4eb23a45d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebb208adcb7e5cf8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97f92064f71a8ee8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3cf531792eab734d",
+    "type": "split",
+    "children": [
+      {
+        "id": "97a54518c5f23899",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61270e2131a552d5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3cc9b213ed91e2eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "236980493b0cc05a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "d65d49f9c1f505ba",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e0b805506c2aec1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa6a5699c3c67708",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35381103af787fec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4653db69bd76a6ff",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "74b9b435b2f4819d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "97f92064f71a8ee8",
+  "lastOpenFiles": [
+    "work/interviews.md",
+    "finance/personal-finance.md",
+    "index.md",
+    "img/financial-planning-pyramid.png",
+    "img/image.png",
+    "Citazioni e linee guida.md",
+    "img/support.png",
+    "brain/Critical-Thinking.md",
+    "img",
+    "Untitled.md",
+    "wellbeing/gym-at-home.md",
+    "software engineering/sed-grep-awk.md",
+    "software engineering/RHCSA.md",
+    "software engineering/LFCE-LINUX-ENGINEER.md",
+    "software engineering/Behind-The-Phoenix.md",
+    "software engineering/DESIGN-PATTERNS.md",
+    "software engineering/distributes systems/kubernetes/KUBERNETES-CKAD.md",
+    "image2.md",
+    "software engineering/distributes systems/kubernetes/KUBERNETES APIS PROGRAMMING.md",
+    "music/Music.md",
+    "books/money/psychology-of-money.md",
+    "books/critical thinking/designing-your-life.md",
+    "finance/finanza-personale.md",
+    "books/critical thinking/drive.md",
+    "books/critical thinking/the-elephant-in-the-brain.md",
+    "brain/how-to-study.md",
+    "brain/self-deception.md",
+    "brain/Rationality.md",
+    "brain/Logic.md",
+    "brain/how-to-read-body-language.md",
+    "finance",
+    "books/money",
+    "wellbeing/gym-at-home",
+    "wellbeing/gym",
+    "wellbeing",
+    "entrepreneurship",
+    "New folder",
+    "music",
+    "books/critical thinking"
+  ]
+}
