@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "brain/the-science-of-gratitude.md",
+                "file": "brain/Rationality.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "brain/the-science-of-gratitude.md"
+                "file": "brain/Rationality.md"
               }
             }
           }
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "brain/the-science-of-gratitude.md",
+                "file": "brain/Rationality.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "brain/the-science-of-gratitude.md",
+                "file": "brain/Rationality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,8 +150,14 @@
   },
   "active": "2465985f4b2fcc20",
   "lastOpenFiles": [
-    "index.md",
+    "brain/self-deception.md",
+    "brain/Rationality.md",
+    "brain/epistemology.md",
+    "brain/Critical-Thinking.md",
+    "books/critical thinking/inventing-temperature.md",
+    "brain/mindfulness.md",
     "brain/the-science-of-gratitude.md",
+    "index.md",
     "security/KodeKloud CKS challenge #2.md",
     "software engineering/Azure/AZ104.md",
     "software engineering/Untitled.md",
@@ -162,7 +169,6 @@
     "img/image.png",
     "Citazioni e linee guida.md",
     "img/support.png",
-    "brain/Critical-Thinking.md",
     "img",
     "Untitled.md",
     "wellbeing/gym-at-home.md",
@@ -175,11 +181,6 @@
     "image2.md",
     "software engineering/distributes systems/kubernetes/KUBERNETES APIS PROGRAMMING.md",
     "music/Music.md",
-    "books/money/psychology-of-money.md",
-    "books/critical thinking/designing-your-life.md",
-    "finance/finanza-personale.md",
-    "books/critical thinking/drive.md",
-    "books/critical thinking/the-elephant-in-the-brain.md",
     "finance",
     "books/money",
     "wellbeing/gym-at-home",
