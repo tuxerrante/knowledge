@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "brain/Rationality.md",
+                "file": "security/Security-hardening.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "brain/Rationality.md"
+                "file": "security/Security-hardening.md"
               }
             }
           }
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "brain/Rationality.md",
+                "file": "security/Security-hardening.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "brain/Rationality.md",
+                "file": "security/Security-hardening.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,14 +149,15 @@
   },
   "active": "2465985f4b2fcc20",
   "lastOpenFiles": [
-    "brain/self-deception.md",
+    "index.md",
+    "security/Security-hardening.md",
     "brain/Rationality.md",
+    "brain/self-deception.md",
     "brain/epistemology.md",
     "brain/Critical-Thinking.md",
     "books/critical thinking/inventing-temperature.md",
     "brain/mindfulness.md",
     "brain/the-science-of-gratitude.md",
-    "index.md",
     "security/KodeKloud CKS challenge #2.md",
     "software engineering/Azure/AZ104.md",
     "software engineering/Untitled.md",
@@ -180,7 +180,6 @@
     "software engineering/distributes systems/kubernetes/KUBERNETES-CKAD.md",
     "image2.md",
     "software engineering/distributes systems/kubernetes/KUBERNETES APIS PROGRAMMING.md",
-    "music/Music.md",
     "finance",
     "books/money",
     "wellbeing/gym-at-home",

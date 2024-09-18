@@ -1,10 +1,10 @@
 # My links
 
-- [affinitoalessandro.it](https://affinitoalessandro.altervista.org/blog/)
-- [github.com/tuxerrante](https://github.com/tuxerrante)
-- [linkedin.com/in/affinitoalessandro](https://www.linkedin.com/in/affinitoalessandro)
-- [soundcloud.com/alessandro-affinito-58528444](https://soundcloud.com/alessandro-affinito-58528444)
-- [youtube.com/@alessandro-affinito/videos](https://www.youtube.com/@alessandro-affinito/videos)
+- [AffinitoAlessandro.it](https://affinitoalessandro.altervista.org/blog/)
+- [Github](https://github.com/tuxerrante)
+- [LinkedIn](https://www.linkedin.com/in/affinitoalessandro)
+- [Soundcloud](https://soundcloud.com/alessandro-affinito-58528444)
+- [YouTube](https://www.youtube.com/@alessandro-affinito/videos)
   
 
 ---
