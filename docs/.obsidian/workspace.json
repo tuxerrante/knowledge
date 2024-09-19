@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "security/Security-hardening.md",
+                "file": "security/security-hardening.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "security/Security-hardening.md"
+                "file": "security/security-hardening.md"
               }
             }
           }
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "security/Security-hardening.md",
+                "file": "security/security-hardening.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "security/Security-hardening.md",
+                "file": "security/security-hardening.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
   "active": "2465985f4b2fcc20",
   "lastOpenFiles": [
     "index.md",
-    "security/Security-hardening.md",
+    "security/security-hardening.md",
     "brain/Rationality.md",
     "brain/self-deception.md",
     "brain/epistemology.md",
