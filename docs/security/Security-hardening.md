@@ -52,12 +52,12 @@ Management & VP:
 
 # Ops
 
-**Dashboard**:
-- **Grafana** is an open-source analytics and monitoring platform. It integrates seamlessly with Prometheus to visualize metrics. You can create dashboards to monitor the health and performance of your AKS clusters.
+**Dashboard**:  
+- **Grafana** is an open-source analytics and monitoring platform. It integrates seamlessly with Prometheus to visualize metrics. You can create dashboards to monitor the health and performance of your AKS clusters.  
 - Kibana
 
-**Logs**:
-- **OpenTelemetry**: a unified approach to collecting metrics, logs, and traces. It’s an observability framework that supports multiple backends, including Prometheus and Jaeger ([logz](https://logz.io/blog/open-source-monitoring-tools/)).
+**Logs**:  
+- **OpenTelemetry**: a unified approach to collecting metrics, logs, and traces. It’s an observability framework that supports multiple backends, including Prometheus and Jaeger ([logz](https://logz.io/blog/open-source-monitoring-tools/)).  
 - **Fluentd**: For log aggregation, Fluentd can be used to collect and forward logs to various destinations, including Elasticsearch and [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes).
 
 **Metrics**:
