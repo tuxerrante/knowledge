@@ -13,5 +13,6 @@
 - **T**ogetherness: meet with family every time you can ([hygge style](https://www.scandinaviastandard.com/what-is-hygge/)).
 
 
+Videos:
 - [# Teaching Empathy: The Danish Way of Parenting, co-author Jessica Alexander](https://www.youtube.com/live/Y8-tmRSoOPg?si=JDk7dPdw9fuWFzdd)
 - [Danish Way of Parenting. How to Raise Smart and Happy Children - By Jessica Joelle Alexander](https://www.youtube.com/watch?v=etc174YIdbc&t=18s)
