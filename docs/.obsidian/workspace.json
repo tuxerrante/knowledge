@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "41c0e29932554d10",
+        "id": "459f2ca2d55ae133",
         "type": "tabs",
         "children": [
           {
-            "id": "2465985f4b2fcc20",
+            "id": "6ecf40f52abc2356",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/parenting/danish-way-of-parenting.md",
+                "file": "books/management/the-managers-path.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "books/parenting/danish-way-of-parenting.md"
+                "file": "books/management/the-managers-path.md"
               }
             }
           }
@@ -79,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/parenting/danish-way-of-parenting.md",
+                "file": "books/management/the-managers-path.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/parenting/danish-way-of-parenting.md",
+                "file": "books/management/the-managers-path.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,11 +147,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2465985f4b2fcc20",
+  "active": "6ecf40f52abc2356",
   "lastOpenFiles": [
+    "books/emotions/emotional-intelligence.md",
+    "books/management/the-managers-path.md",
+    "books/emotions",
+    "security/CISSP/think-like-a-manager.md",
+    "Untitled.md",
+    "security/CISSP/domain-1.md",
+    "security/CISSP/domain-7-security-operations.md",
+    "security/CISSP/domain-3.md",
+    "security/img/roles-risks-pyramid.png",
+    "security/img",
+    "security/CISSP.md",
+    "security/CISSP/domain-2.md",
+    "security/CISSP",
+    "books/management",
+    "software engineering/management/management.md",
+    "software-engineering/management",
+    "software-engineering/distributed-systems/kubernetes/kubernetes-dns.md",
+    "books/parenting/danish-way-of-parenting.md",
     "security/security-hardening.md",
     "brain/critical-thinking.md",
-    "books/parenting/danish-way-of-parenting.md",
     "brain/rationality.md",
     "index.md",
     "brain/self-deception.md",
@@ -160,33 +177,17 @@
     "brain/mindfulness.md",
     "brain/the-science-of-gratitude.md",
     "security/KodeKloud CKS challenge #2.md",
-    "software engineering/Azure/AZ104.md",
-    "software engineering/Untitled.md",
-    "software engineering/Azure",
-    "software engineering/distributes systems/AKS.md",
+    "software-engineering/Azure/AZ104.md",
+    "software-engineering/Azure",
+    "software-engineering/distributed-systems/AKS.md",
     "work/interviews.md",
     "finance/personal-finance.md",
     "img/financial-planning-pyramid.png",
     "img/image.png",
-    "Citazioni e linee guida.md",
     "img/support.png",
     "img",
-    "Untitled.md",
-    "wellbeing/gym-at-home.md",
-    "software engineering/sed-grep-awk.md",
-    "software engineering/RHCSA.md",
-    "software engineering/LFCE-LINUX-ENGINEER.md",
-    "software engineering/Behind-The-Phoenix.md",
-    "software engineering/DESIGN-PATTERNS.md",
-    "software engineering/distributes systems/kubernetes/KUBERNETES-CKAD.md",
-    "image2.md",
     "finance",
     "books/money",
-    "wellbeing/gym-at-home",
-    "wellbeing/gym",
-    "wellbeing",
-    "entrepreneurship",
-    "New folder",
-    "music"
+    "wellbeing/gym-at-home"
   ]
 }
