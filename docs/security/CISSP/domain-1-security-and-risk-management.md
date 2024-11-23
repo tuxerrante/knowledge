@@ -45,6 +45,7 @@ POPIA: South Africa
 ## PIA: Privacy Impact Assessment
 Evaluate the damage of a data breach based on the current data that is processed and stored by the company or system. 
 It is required by GDPR and HIPAA.
+[7 Steps to Conduct a Privacy Impact Assessment](https://www.zendata.dev/post/7-steps-to-conduct-a-privacy-impact-assessment#:~:text=Conducting%20a%20Privacy%20Impact%20Assessment%3A%207%20Critical%20Steps,...%207%20Step%207%3A%20Implement%20Approved%20Recommendations%20)
 
 ## Legislation conflicts
 some legislations may conflict on the management of data or privacy made by multinational enterprises. There is no superior law, an expert is needed to solve the specific case (eg: GDPR VS CLOUD Act).

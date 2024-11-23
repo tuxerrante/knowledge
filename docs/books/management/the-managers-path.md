@@ -6,12 +6,40 @@
 **Example**: Imagine a new manager, Alex, who has just been promoted from a senior engineering role. Alex starts by setting up regular one-on-one meetings with each team member. During these meetings, Alex provides feedback, discusses career goals, and addresses any concerns. 
 **Theory**: The foundation of effective management lies in clear communication, regular feedback, and support for career growth. By establishing a routine of one-on-one meetings, Alex ensures that team members feel heard and valued, which can lead to higher job satisfaction and productivity. This approach is rooted in the theory of [transformational leadership]([What Is Transformational Leadership?](https://leaders.com/articles/leadership/transformational-leadership/)), which emphasizes the importance of inspiring and motivating employees through direct and meaningful interactions.
 
+Share the responsibility of **1-1s meetings**. 
+Come with a prepared agenda.
+- Avoid just status update, 
+- focus on topics above your team (company vision, market changes, new opportunities in other teams...), 
+- new stretch topics to work on to get more visibility, 
+- trainings, 
+- issues inside the team, 
+- overall strategy (are you working on the hot topics?)
+- agree on some goal to reach a promotion or a raise next year
+
+Find the best manager and the best mentor in your company and kindly ask directly for some guidance or suggestion periodically.
+
+The more you get senior the more you get in an **uncertainty** environment. If everything is already in order and well structured when you work on it, you're doing it wrong and you're probably far from increase your seniority.
+
+Even if your manager is stressful only you are responsible for your own **work life balance**. -> Always plan and schedule your activities, deny or postpone the rest as much as you can.
+
+As always only **complaining** is not useful to anyone! If there is an issue think about a possible solution first or search/ask proactively if someone else has already worked on a similar problem before complaining.
+
+Make strong relationship with managers able to understand and play the company **politics** game. Managers coming from an engineering path are usually bad at this.
+
 ### 2. **Mentoring**
 
 **Concept**: The importance of mentoring in career development. 
 
 **Example**: Sarah, a senior engineer, takes on the role of a mentor for a junior colleague, John. She helps John navigate technical challenges, provides guidance on best practices, and offers career advice. 
-**Theory**: Mentoring is crucial for professional growth and knowledge transfer. It creates a supportive environment where less experienced employees can learn from their more seasoned counterparts. This aligns with the social learning theory, which posits that people learn from one another through observation, imitation, and modeling. By mentoring John, Sarah not only helps him develop his skills but also reinforces her own knowledge and leadership abilities.
+**Theory**: Mentoring is crucial for professional growth and knowledge transfer. It creates a supportive environment where less experienced employees can learn from their more seasoned counterparts. This aligns with the **social learning theory**, which posits that people learn from one another through observation, imitation, and modelling. By mentoring John, Sarah not only helps him develop his skills but also reinforces her own knowledge and leadership abilities.
+
+Prepare an onboarding: select a project or some ABC task being part of a project you know well.
+Never act competitive.
+Never act intimidating. 
+Listen. Explain difficult concepts in different ways and with diagrams.
+Define clear goals or acceptance tests and let the mentored to find its own path. Be ready for the coming questions.
+Check the understanding. Ask for code or process explanation, ask to present their work.
+
 
 ### 3. **Tech Lead**
 

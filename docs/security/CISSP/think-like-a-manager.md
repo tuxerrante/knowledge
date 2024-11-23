@@ -18,7 +18,7 @@ Don't touch, Advise.
 Cost VS Value
 
 Safeguard Evaluation
-[[domain-1]]
+[[domain-1-security-and-risk-management]]
 [Risk analysis formulas](https://youtu.be/ttOKJYOedNo?si=0OaIDoKOvuDKUbwp)
 
 
