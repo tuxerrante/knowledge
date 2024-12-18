@@ -164,12 +164,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d04aa7fecda1a23c",
+  "active": "d65d49f9c1f505ba",
   "lastOpenFiles": [
+    "brain/think-again-how-to-reason.md",
+    "software-engineering/Azure/AZ500.md",
     "img/kerberos-authentication-illustration.jpg",
     "img/kerberos-authentication-illustration.jpg.crdownload",
     "software-engineering/Azure/AZ104.md",
-    "software-engineering/Azure/AZ500.md",
     "security/CISSP/domain-4-communication-and-network-security.md",
     "security/CISSP/domain-1-security-and-risk-management.md",
     "security/CISSP/domain-2.md",
