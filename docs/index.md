@@ -1,4 +1,6 @@
-# My links
+Click on the menu on the top to explore the pages.
+
+# About me
 
 - [AffinitoAlessandro.it](https://affinitoalessandro.altervista.org/blog/)
 - [Github](https://github.com/tuxerrante)
