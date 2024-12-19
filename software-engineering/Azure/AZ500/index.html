@@ -1,0 +1,3124 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../AZ104/">
+      
+      
+        <link rel="next" href="../../devops/CI_CD%20Architecture/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>SOURCES - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SOURCES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citazioni%20e%20linee%20guida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes and life guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX Math Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mermaid diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Critical thinking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Critical thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/designing-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/drive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/inventing-temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventing temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/the-elephant-in-the-brain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The elephant in the brain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/thinking-in-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thinking in systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emotions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Emotions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/emotions/emotional-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emotional intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/management/an-elegant-puzzle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An elegant puzzle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/management/the-managers-path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The managers path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Money
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Money
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/psychology-of-money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Psychology of money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/the-simple-path-to-wealth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The simple path to wealth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/your-money-or-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your money or your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Parenting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Parenting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/parenting/danish-way-of-parenting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Danish way of parenting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/parenting/good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Brain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Brain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/Critical-Thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Critical Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/Rationality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rationality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/Theoretical-concepts-to-keep-in-mind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theoretical concepts to keep in mind
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/elephant-in-the-brain-vs-good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elephant in the brain vs good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/epistemology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/how-to-read-body-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to read body language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/how-to-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/mindfulness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mindfulness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/self-deception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self deception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/the-science-of-gratitude/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The science of gratitude
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../brain/think-again-how-to-reason/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think again how to reason
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entrepreneurship
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Entrepreneurship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entrepreneurship/Domande%20per%20acquisto%20casa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domande per acquisto casa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entrepreneurship/make-a-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principi base per creare una nuova startup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Finance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Finance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/personal-finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/simulazioni/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulazioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/Music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Soundcloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/KodeKloud%20CKS%20challenge%20%232/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KodeKloud CKS challenge #2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/Security-hardening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            CISSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/domain-1-security-and-risk-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 1 security and risk management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/domain-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/domain-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/domain-4-communication-and-network-security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/domain-7-security-operations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/CISSP/think-like-a-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think like a manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Software engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Behind-The-Phoenix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behind The Phoenix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DESIGN-PATTERNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DESIGN PATTERNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GIT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LFCE-LINUX-ENGINEER/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LFCE - LFS211- LINUX ENGINEER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RHCSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RHCSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sed-grep-awk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sed grep awk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Azure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            Azure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AZ104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AZ104
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SOURCES
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Devops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Devops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/CI_CD%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distributed systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/AKS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10_2" id="__nav_11_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/KUBERNETES%20APIS%20PROGRAMMING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES APIS PROGRAMMING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/KUBERNETES-CKAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES CKA CKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/kubernetes-dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes dns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wellbeing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Wellbeing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wellbeing/gym-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gym at home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sources">SOURCES<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6vISzj-z8k4&amp;t=187s&amp;ab_channel=JohnSavill%27sTechnicalTraining">AZ-500 Microsoft Azure Security Technologies Study Cram</a> +3h</li>
+<li><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/?practice-assessment-type=certification">Microsoft Certified: Azure Security Engineer Associate - Certifications | Microsoft Learn</a></li>
+<li><a href="https://www.youtube.com/watch?v=JYWR5GoF3vM&amp;ab_channel=JohnSavill%27sTechnicalTraining">Top Five Security Tips (youtube.com)</a></li>
+<li><a href="https://www.coursera.org/professional-certificates/microsoft-azure-security-engineer-associate">Microsoft Azure Security Engineer Associate (AZ-500) Professional Certificate | Coursera</a> ~ 101h</li>
+<li><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/practice/assessment?assessment-type=practice&amp;assessmentId=57&amp;practice-assessment-type=certification">Practice Assessment | Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?products=azure&amp;terms=az-500">Exam Readiness Zone | Microsoft Learn</a></li>
+<li>https://www.examtopics.com/exams/microsoft/az-500/view/</li>
+<li>https://learn.microsoft.com/en-us/azure/well-architected/security/</li>
+</ul>
+<hr />
+<h1 id="licenses">Licenses<a class="headerlink" href="#licenses" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.microsoft.com/en-us/security/business/microsoft-entra-pricing">EntraID features</a></td>
+<td>P1</td>
+<td>P2</td>
+<td>Entra Suite</td>
+</tr>
+<tr>
+<td>Portal</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>RBAC</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview">Conditional Access</a></td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/concept-password-ban-bad">Password Protection</a></td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Cross-tenant user sync</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Group management</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Session lifetime management</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>SharePoint limited access</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>PROTECTION</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Risk-based conditional access</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Device filtering conditional access</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Real-time sign-in assessment</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Real-time user assessment</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Authentication context</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Risk event investigation</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Token protection</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>GOVERNANCE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Automated user provisioning  <br>to cloud and on-prem apps</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>HR-driven provisioning</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Terms-of-use attestation</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Basic entitlement management</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Privileged Identity management (PIM)</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>VERIFIED ID</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Verifiable credentials issuance  <br>and verification</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>INTERNET ACCESS</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>PRIVATE ACCESS</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://learn.microsoft.com/en-us/training/modules/explore-microsoft-identity-platform/?WT.mc_id=m365-16105-cxa">Explore the Microsoft identity platform - Training | Microsoft Learn</a></p>
+<h1 id="entra-id">ENTRA ID<a class="headerlink" href="#entra-id" title="Permanent link">&para;</a></h1>
+<h2 id="authn">AUTHN<a class="headerlink" href="#authn" title="Permanent link">&para;</a></h2>
+<p>Components:</p>
+<p>Portal, Oauth2, OIDC, MSGraph APIs, open source libraries (MSAL)…</p>
+<h3 id="service-principals">Service Principals<a class="headerlink" href="#service-principals" title="Permanent link">&para;</a></h3>
+<p>An application registered in EntraID gets a global unique object ID and a service principal.</p>
+<p>The app can be single tenant or multi-tenant.</p>
+<p>Object ID: scoped across the home tenant. It is like a class with static properties used as template to create the app instances through service principals.</p>
+<p>It defines mainly:</p>
+<ul>
+<li>How to issue tokens</li>
+<li>Resources available</li>
+<li>Actions permitted</li>
+</ul>
+<p>Service principal:</p>
+<p>An app registration will create a SP, with specific permissions (eg: delegated).</p>
+<ul>
+<li>Application: App Instance = SP single tenant representation of a global object ID.</li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview">Managed Identity</a>: for services supporting EntraID authn. Can have permissions updates but not direct edits.<br />
+    No need to manage certificates in the app.</p>
+</li>
+<li>
+<p>System assigned: 1 identity &lt;--&gt; 1 managed SP<br />
+    If you require that each resource has its own identity, or have resources that require a unique set of permissions and want the identity to be deleted as the resource is deleted, then you should use a system-assigned identity.</p>
+</li>
+<li>User assigned:     N to N map to resources<br />
+    User-assigned identities can be used by multiple resources, and their life cycles are decoupled from the resources’ life cycles with which they’re associated.</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations">Best practice recommendations for managed system identities - Managed identities for Azure resources | Microsoft Learn</a></p>
+<ul>
+<li>Legacy</li>
+</ul>
+<p>You can login directly against the cloud IdP or to a <a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-pta-quick-start">Passthrough authentication</a> agent.<br />
+With Pass-through Authentication, the user’s password is validated against the on-premises Active Directory, ensuring a secure and seamless authentication experience.</p>
+<p>AADS/<a href="https://learn.microsoft.com/en-us/entra/identity/domain-services/overview">Entra Domain Services</a> creates managed Domain Controllers in another VNet to sync the authentication of users coming from another IdP. It is only synced from the Main DC to the managed replicas direction.</p>
+<h2 id="sso">SSO<a class="headerlink" href="#sso" title="Permanent link">&para;</a></h2>
+<h2 id="kerberos"><a href="https://youtu.be/5N242XcKAsM?si=hpCSADRauVUlo7Hy">Kerberos</a><a class="headerlink" href="#kerberos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">Kerberos Authentication Overview | Microsoft Learn</a> 
+<img alt="kerberos-authentication-illustration.jpg" src="../../../img/kerberos-authentication-illustration.jpg" /></li>
+<li>KDC = Key Distribution Center</li>
+<li>If client credentials are valid the KDC emits a Ticket Granting Ticket</li>
+<li>Before accessing a specifc service the client sends the TGT again back to the KDC to have a new ticket scoped on the target service.</li>
+<li>Until this new ticket expires, the client can have access to the target server without repeating the authn process.
+Cons:</li>
+<li><a href="[Use Alternate Authentication Material: Pass the Ticket, Sub-technique T1550.003 - Enterprise | MITRE ATT&amp;CK®](https://attack.mitre.org/techniques/T1550/003/)">pass-the-ticket attack</a></li>
+<li><a href="[Steal or Forge Kerberos Tickets: Kerberoasting, Sub-technique T1558.003 - Enterprise | MITRE ATT&amp;CK®](https://attack.mitre.org/techniques/T1558/003/)">Kerberoasting</a></li>
+<li>Missing sync between servers clocks</li>
+</ul>
+<h2 id="guest-users">Guest Users<a class="headerlink" href="#guest-users" title="Permanent link">&para;</a></h2>
+<p>Authn happens against their IdP (social network, external AD, mail...) while authZ happens against our service (Oauth2)</p>
+<h2 id="entraad-b2b">EntraAD B2B<a class="headerlink" href="#entraad-b2b" title="Permanent link">&para;</a></h2>
+<p>Guest users could be:
+- from an external Azure AD tenant
+- from an external Microsoft account
+- synced from an on-prem Domain Controller
+- guest users created on the EntraID host tenant</p>
+<h2 id="entraad-b2c">EntraAD B2C<a class="headerlink" href="#entraad-b2c" title="Permanent link">&para;</a></h2>
+<h2 id="conditional-access">Conditional Access:<a class="headerlink" href="#conditional-access" title="Permanent link">&para;</a></h2>
+<p>Apply policies to target</p>
+<ul>
+<li>users (external, groups, roles)</li>
+<li>Actions (registration...)</li>
+<li>Apps</li>
+<li>Platforms</li>
+<li>Locations</li>
+</ul>
+<p>To require:</p>
+<ul>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks">MFA</a><br />
+<a href="https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-mfasettings">MFA settings</a>
+    Number matching prevents accidental approval by requiring the user to type in a two-digit code from the login screen to their Authenticator app.</p>
+<p><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-oath-tokens">OATH TOTP</a> tokens: users can have a max of 5 between hardware based tokens and authentication apps.</p>
+</li>
+<li>
+<p>something you <strong>know</strong> (psw)</p>
+</li>
+<li>Smt you <strong>have</strong> (usb key, mobile app...)</li>
+<li>
+<p>Smt you <strong>are</strong> (fingerprint)</p>
+</li>
+<li>
+<p>Allow only enrolled devices</p>
+</li>
+<li>IP filtering (named locations)</li>
+<li>VPN</li>
+<li>certificate based auth</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2">passkeys (FIDO2)</a> 
+  an MFA setup might include:<ol>
+<li><strong>Something You Have</strong>: A FIDO2 security key or a mobile device with FIDO2 capabilities.</li>
+<li><strong>Something You Are</strong>: Biometric verification like a fingerprint or facial recognition.</li>
+<li><strong>Something You Know</strong>: A password or PIN.</li>
+</ol>
+</li>
+</ul>
+<p>To then report <a href="https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks#risk-detections-mapped-to-riskeventtype">risky users and accesses</a> (malicious IP, psw spray, anonymous IP...)</p>
+<h1 id="authz">AUTHZ<a class="headerlink" href="#authz" title="Permanent link">&para;</a></h1>
+<h2 id="oauth2">OAuth2<a class="headerlink" href="#oauth2" title="Permanent link">&para;</a></h2>
+<p>is an authz method where third party apps can get authorized on behalf of a user to web hosted resources (MSGraph, Az Key Vaults...) by exchanging <a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols#tokens">tokens</a> provided by the IdP.</p>
+<p>The <a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols#tokens">tokens</a> are given by Az Identity and validated by MSGraph API.</p>
+<p><a href="https://learn.microsoft.com/en-us/training/modules/microsoft-graph/">Explore Microsoft Graph - Training | Microsoft Learn</a></p>
+<p><a href="https://learn.microsoft.com/en-gb/training/paths/m365-msgraph-fundamentals/">Microsoft Graph Fundamentals - Training | Microsoft Learn</a></p>
+<p>Tokens can be</p>
+<ul>
+<li>ID tokens</li>
+<li>Access tokens: are sent in the http req as bearer tokens in the Authorization header</li>
+<li>Refresh tokens</li>
+</ul>
+<p>In OAuth2 permissions are called scopes.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols">OAuth 2.0 and OpenID Connect protocols on the Microsoft identity platform - Microsoft identity platform | Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/scenario-token-exchange-saml-oauth">Microsoft identity platform token exchange scenario with SAML and OIDC/OAuth in Microsoft Entra ID - Microsoft identity platform | Microsoft Learn</a></li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/entra/identity-platform/msal-overview">MSAL</a></p>
+</li>
+<li>
+<p><a href="https://github.com/AzureAD/microsoft-authentication-library-for-go">Golang Azure MSAL</a></p>
+</li>
+</ul>
+<p>Permissions can be:</p>
+<ul>
+<li>Delegated: a user must be present to sign-in</li>
+<li>App-only: background services apps (daemons)</li>
+</ul>
+<p>Consent type:</p>
+<ul>
+<li>Static: need to know all the resources in advance</li>
+<li>Dynamic: you can increment the scope access over time</li>
+<li>Admin</li>
+</ul>
+<h1 id="user-management">User management<a class="headerlink" href="#user-management" title="Permanent link">&para;</a></h1>
+<h2 id="administrative-units"><a href="https://learn.microsoft.com/en-gb/entra/identity/role-based-access-control/administrative-units">Administrative Units</a><a class="headerlink" href="#administrative-units" title="Permanent link">&para;</a></h2>
+<p>Administrative units restrict permissions in a role to any portion of your organization that you define (geographical, business unit...), if you assign a role to a user that is not a member of an administrative unit, the scope of the role is the entire tenant.</p>
+<p>You can assign the user to an administrative unit, group, or Microsoft Entra role when the account is created. You can assign the user to up to 20 groups or roles.</p>
+<p>A.U. can't be nested. 
+<a href="https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview">Entra ID Governance</a> can't manage A.U.</p>
+<h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h2>
+<p>Global Admins and Auth Admins can create and delete users (also admin), B2B users and B2C users.
+<a href="https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#user-administrator">User Administrator</a> can't delete other admins.
+Deleted users are soft deleted for 30 days.</p>
+<p><strong>Licenses</strong>: depending on user location there should be available Free, P1 and P2 licenses. Licenses could be also assigned to a group and inherited by their users, a user has to be removed from the group to have his license retired. If the user is instead synced from an on-premise AD it will be soft deleted.</p>
+<p>External Identities</p>
+<p>B2B collaboration is a feature within Microsoft Entra External ID that lets you invite guest users to collaborate with your organization.</p>
+<p>The partner uses their own identity management solution, so there's no external administrative overhead for your organization.</p>
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h2>
+<p>Members can include: users, service principals, groups, devices.</p>
+<p>Options:</p>
+<ul>
+<li>AD Roles can be assigned</li>
+<li>
+<p>Membership:</p>
+</li>
+<li>
+<p>Assigned</p>
+</li>
+<li>Dynamic users membership (query rules)</li>
+<li>
+<p>Dynamic device</p>
+</li>
+<li>
+<p>Name, Description</p>
+</li>
+<li>Owners</li>
+</ul>
+<p>Microsoft 365 Groups: share access to calendar, Teams channels, SharePoint sites...</p>
+<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
+<p>RBAC can give specific permissions to some user or group to a given scope like a management group, a resource group, a resource or an entire subscription.</p>
+<p>Policies</p>
+<ul>
+<li>Tracking compliance</li>
+<li>Offers remediations</li>
+<li>Track Events</li>
+</ul>
+<h3 id="global-administrator">Global Administrator<a class="headerlink" href="#global-administrator" title="Permanent link">&para;</a></h3>
+<p>Suggested to have less than 5. Can revoke MFA and edit all other roles.</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Subscription &gt; Management group &gt; resource group &gt; resource &gt; resource internal scope.</p>
+<p>Can be locked.</p>
+<p>I can deploy a template of resources through a BLUEPRINT.</p>
+<h3 id="pim-privileged-identity-management">PIM (Privileged Identity Management)<a class="headerlink" href="#pim-privileged-identity-management" title="Permanent link">&para;</a></h3>
+<p>Give the roles just in time for a limited amount of time.</p>
+<h1 id="hybrid-cloud">Hybrid Cloud<a class="headerlink" href="#hybrid-cloud" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-phs">psw hash sync</a></li>
+<li>Passthrough auth: needs agents installation</li>
+<li>Federation
+<a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/choose-ad-authn#decision-tree">Hybrid cloud authn decision tree</a></li>
+</ul>
+<h3 id="azure-connect"><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect">Azure Connect</a><a class="headerlink" href="#azure-connect" title="Permanent link">&para;</a></h3>
+<p>On-prem application to sync AD accounts to the cloud.</p>
+<p>Filtering on identities to sync (computers, users, groups..)
+<a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-phs">psw hash sync</a>: uses on-prem AD as authentication authority
+Psw writeback: reset your psw in the cloud conditioned by on-prem policies
+Federation features</p>
+<p>Psw policy doesn't apply to synchronized accounts from on-prem using Connect.
+<a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-password-hash-synchronization#password-policy-considerations">Implement password hash synchronization with Microsoft Entra Connect Sync - Microsoft Entra ID | Microsoft Learn</a></p>
+<h3 id="entra-cloud-sync"><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync">Entra Cloud Sync</a><a class="headerlink" href="#entra-cloud-sync" title="Permanent link">&para;</a></h3>
+<p>Cloud architecture: one or more agents installed in on-prem apps while the configuration is kept in the cloud, no need to connect AD forests to network. No need to manage upgrades.</p>
+<h3 id="entra-domain-service"><a href="https://learn.microsoft.com/en-us/entra/identity/domain-services/overview">Entra Domain Service</a><a class="headerlink" href="#entra-domain-service" title="Permanent link">&para;</a></h3>
+<p>Two Windows domain controller server are deployed in the Azure cloud to create a new domain connected to the legacy AD.
+The synch is one-way from the legacy on-prem and EntraID to the cloud managed replica.
+HA through multiple DC replicas.
+It is useful for giving access to legacy on-prem apps (LDAP, NTLM, Kerberos) through SSO and to give those accounts a fine grained policy protection.</p>
+<p>If <a href="[Create and use password policies in Microsoft Entra Domain Services - Microsoft Entra ID | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/domain-services/password-policy)">an account is locked out</a> in EntraDS it is not locked out in tits original source directory (EntraID or on-prem).</p>
+<p><strong>NTLM</strong>
+- requires an application server to connect to a domain controller to authenticate every client computer or service.
+- NTLM does not enable clients to verify a server's identity or enable one server to verify the identity of another. NTLM authentication was designed for a network environment in which servers were assumed to be genuine. The Kerberos protocol makes no such assumption.</p>
+<ul>
+<li>LDAP</li>
+</ul>
+<h1 id="identity-protection"><a href="https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection">IDENTITY PROTECTION</a><a class="headerlink" href="#identity-protection" title="Permanent link">&para;</a></h1>
+<p>Tool to identify and remediate suspicious login activities
+- password policies
+- geospatial login checks
+- MFA
+- Suspicious behaviour detection
+- self-remediation workflows</p>
+<p>Sign-in (suggested at medium level) and user risks (suggested at high level) can be remediated. 
+- self-remediation workflow
+- reset password when SSPR is impossible
+    - user admin can't reset psw in case of an incident
+- dismiss risk
+- close detection
+Depending on the risk the user can be <strong>unblocked</strong> by resetting their psw or logging in from a known location.</p>
+<p><strong>Smart lockout</strong>: 
+- by default 10 different failed attempts are allowed on public cloud
+- customizations require P1 license
+- Use much higher thresholds for on-prem lockout polices
+- even admins can't unlock a lockout user</p>
+<h2 id="risk-event-detection">Risk Event Detection<a class="headerlink" href="#risk-event-detection" title="Permanent link">&para;</a></h2>
+<p><a href="[Risk policies - Microsoft Entra ID Protection | Microsoft Learn](https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies)"><strong>Risk policies</strong></a> can be at low, medium or high level for:
+- <strong>User</strong> (legacy): related to identity risks as leaked credentials or anomalous activity.
+- <strong>Sign-in</strong> (legacy): 
+  if a member of the target user group has a risk detected during sign-in, a remediation policy could be automatically triggered like asking for MFA.
+  Detects impossible travel, malware or anonymous IPs... 
+- <strong>MFA registration</strong>: can be used in combination of both user and sign-in risk policy
+- <strong><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories">Conditional Access</a></strong> (💸 P2 license):
+    - Foundation: require MFA, compliant device...
+    - Zero Trust: no browser session, no unknown apps...
+    - Remote work
+    - Protect administrators
+    - Emerging threats: require anti-phishing MFA for admins
+    It is a second-layer access protection, not used for DoS attacks or similar.
+    Policies cover these signals:
+        - user/group
+        - cloud app
+        - client app
+        - device status (eg: domain joined)
+        - IP
+        - sign-in risk</p>
+<p><strong>Access Reviews</strong>, available in PIM and Enterprise Applications, could be needed when:
+- periodical audits
+- guest users
+- change of group members or scope
+- users not in EntraID
+- policy exceptions</p>
+<h2 id="privileged-identity-management-pim">Privileged Identity Management (PIM)<a class="headerlink" href="#privileged-identity-management-pim" title="Permanent link">&para;</a></h2>
+<ul>
+<li>P2 license</li>
+<li>temporary role assignments for users or groups from 1 to 24 hours</li>
+<li>monitor and alert on changes</li>
+<li>can require stroger authentication proof like MFA or Conditional Access Policy</li>
+<li><strong>user role</strong>: it provides a list of built-in user roles to be enabled if the current user is eligible, plus the custom roles defined by the User Access Administrator</li>
+<li><strong>resource access</strong>: there are resources specific roles like Owner, Reader or Contributor</li>
+<li><strong>group membership</strong>: a Global Admin or Privileged Role Admin can add as members users to EntraID security groups or Microsoft365 groups. Max 500 groups definitions.</li>
+</ul>
+<p><strong>Zero Trust model</strong>: 
+Assume breach and implement least privilege principle together with enforcing authentication between all the entities communicating in the internal network.
+- InTune checks for device configuration
+- Entra ID checks for user and groups
+- Access polices for device health
+Plan a project with a pilot group to test PIM settings
+JIT (just in time) access for 28 built-in roles</p>
+<h2 id="microsoft-identity-management">Microsoft Identity Management<a class="headerlink" href="#microsoft-identity-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li>manages users and groups access to on-prem apps</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/fundamentals/compare">differences from Entra ID</a>: both focuses on identity and access management, including the provisioning of users in sync with external HR apps, but MIM has a broader scope over the identity lifecycle management including on-premise.</li>
+<li>passwordless MFA (FIDO 2)</li>
+</ul>
+<h2 id="azure-policies">Azure Policies<a class="headerlink" href="#azure-policies" title="Permanent link">&para;</a></h2>
+<p>When you enable Defender for Cloud, the Microsoft cloud security benchmark (<a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance">MCSB</a>) becomes the default initiative.</p>
+<p>Azure Defender initiative: 
+- group of policies
+- There also regulatory compliance initiatives useful to detect non-conformities with legal security frameworks like ISO27001 (<a href="https://learn.microsoft.com/en-us/azure/governance/policy/samples/iso-27001">Regulatory Compliance details for ISO 27001:2013 - Azure Policy | Microsoft Learn</a>)
+eg: <a href="https://learn.microsoft.com/en-us/azure/aks/policy-reference">Policy definitions for Azure Kubernetes Service</a></p>
+<p>Types:
+- built-in
+- custom
+- static for regulatory compliances</p>
+<p>Modes:
+- all (default)
+- indexed: only resources supporting tags and locations</p>
+<p>Some built-in policies:
+- App slots should use a managed identity
+- App Configuration should disable public network access
+- APIs should use encrypted protocols
+- Allowed VM size SKU
+- Configure container registries to disable anonymous authentication
+- Add a tag to resources</p>
+<p><strong>Effects</strong> in evaluation order:
+- Disabled
+- Append
+- Modify
+- Deny
+- Audit
+- Manual 
+- AuditIfNotExists
+- DenyAction</p>
+<p>Possible states of a resources in a policy scope:
+- compliant
+- non compliant
+- exempted
+    - <strong>Mitigated</strong>: The exemption is granted because the policy intent is met through another method.
+    - <strong>Waiver</strong>: The exemption is granted because the non-compliance state of the resource is temporarily accepted.
+- conflict
+- unknown</p>
+<h3 id="shared-responsibility-model"><a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Shared Responsibility Model</a><a class="headerlink" href="#shared-responsibility-model" title="Permanent link">&para;</a></h3>
+<h3 id="management-groups">Management groups<a class="headerlink" href="#management-groups" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Management Groups:</strong><ul>
+<li><strong>Root Management Group:</strong> The top-level container for all resources within an Azure Active Directory (Azure AD) tenant.</li>
+<li><strong>Child Management Groups:</strong> Can be created within the root group or other child groups to further organize resources based on business units, departments, or projects.</li>
+<li>Apply policies at the management group level to enforce consistent standards across multiple subscriptions.</li>
+</ul>
+</li>
+<li><strong>Subscriptions:</strong>    <ul>
+<li>Contain a collection of resource groups and resources.</li>
+<li>Can be assigned to one or more management groups.</li>
+</ul>
+</li>
+<li><strong>Resource Groups:</strong>    <ul>
+<li>A logical container for related Azure resources.</li>
+<li>Can be assigned to one subscription.</li>
+</ul>
+</li>
+<li><strong>Resources:</strong>   <ul>
+<li>Individual Azure services, such as virtual machines, storage accounts, and databases.</li>
+<li>Belong to a specific resource group.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="networking">NETWORKING<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h1>
+<h2 id="load-balancer">LOAD BALANCER<a class="headerlink" href="#load-balancer" title="Permanent link">&para;</a></h2>
+<p>L4 (TCP/UDP), REGIONAL</p>
+<p>can be internal or external (get assigned a Public IP)</p>
+<h2 id="app-gateway">APP GATEWAY<a class="headerlink" href="#app-gateway" title="Permanent link">&para;</a></h2>
+<p>L7, REGIONAL: redirection, rewrite, https,</p>
+<p>Can have on top a WAF (<a href="https://learn.microsoft.com/en-gb/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs21#owasp-crs-32">OWASP threats</a>)</p>
+<h2 id="az-front-door">AZ <a href="https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview">FRONT DOOR</a><a class="headerlink" href="#az-front-door" title="Permanent link">&para;</a></h2>
+<p>L7,  GLOBAL</p>
+<p>Uses <a href="https://en.wikipedia.org/wiki/Anycast">anycast</a> to manage the connection as close as possible to the client ( the lowest number of <a href="https://en.wikipedia.org/wiki/Border_gateway_protocol">BGP</a> network hops) with hundreds of PoPs (point of  presence) CDN connected through a high speed WAN.</p>
+<h2 id="nsg-network-security-group-l4">NSG – Network Security Group (L4)<a class="headerlink" href="#nsg-network-security-group-l4" title="Permanent link">&para;</a></h2>
+<p>Allows us to groups network resources through tags instead of caring of IPs</p>
+<p>SUBNET specifics</p>
+<ul>
+<li>Service endpoint: identifies an internal subnet to be allowed to call other internal services by allowing it in the target service firewall</li>
+<li>Private endpoint: identifies a specific service instance inside a private subnet. Requires also a DNS configuration in order to be found by other internal services.</li>
+</ul>
+<h2 id="firewall">FIREWALL<a class="headerlink" href="#firewall" title="Permanent link">&para;</a></h2>
+<p>L4: network rules</p>
+<p>L7: app rules (FQDN, TLS inspection, URL filtering, IDPR = Intrusion Detection Protection System)</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview">ROUTING</a></p>
+<p>Az automatically creates routing tables for each new subnet adding system default routes.</p>
+<p>You don't need to define route tables or gateways for Azure to route traffic between subnets.</p>
+<ul>
+<li>Parent VNet prefix</li>
+<li>0.0.0.0/0 Internet</li>
+<li>10.0.0.0/8 None</li>
+<li>192.168/16, 172.16/12 None</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined">UDR</a></p>
+<p>When you create a route table and associate it to a subnet, the table's routes are combined with the subnet's default routes. If there are conflicting route assignments, user-defined routes override the default routes.</p>
+<ul>
+<li>Virtual appliance: private VM inet, private LB IP</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways">VNet VPN GW</a></li>
+<li>VNet</li>
+<li>None</li>
+<li>Internet</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/diagnose-network-routing-problem">Diagnose an Azure virtual machine routing problem | Microsoft Learn</a></p>
+<h2 id="expressroute">ExpressRoute<a class="headerlink" href="#expressroute" title="Permanent link">&para;</a></h2>
+<p>Dedicated physical connection to an Azure tenant</p>
+<h2 id="vpn">VPN<a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h2>
+<p>IpSec/K encrypted connection.</p>
+<ul>
+<li>P2P</li>
+<li>Point to site</li>
+<li>Site to site</li>
+</ul>
+<p>Can be established also inside an ExpressRoute connection.</p>
+<p>DDOS Protection</p>
+<ul>
+<li>Attack analytics</li>
+<li>Support</li>
+<li>Multilayered protection (if there is also a WAF)</li>
+</ul>
+<hr />
+<h1 id="host">HOST<a class="headerlink" href="#host" title="Permanent link">&para;</a></h1>
+<p>Azure update manager</p>
+<p>Automatic VM patching</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/attestation/tpm-attestation-concepts">TPM</a></p>
+<p>Secure boot</p>
+<p>Anti malware, local firewall</p>
+<p>Azure disk encryption (Win BitLocker/Linux DM-crypt)</p>
+<p>Bastion (managed jump-box)</p>
+<hr />
+<h1 id="containers">CONTAINERS<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h1>
+<p>AKS</p>
+<hr />
+<h1 id="key-vault">KEY VAULT<a class="headerlink" href="#key-vault" title="Permanent link">&para;</a></h1>
+<p>Stores:</p>
+<ul>
+<li>Keys</li>
+<li>Secrets</li>
+<li>certificates</li>
+</ul>
+<p>Permissions:</p>
+<ul>
+<li>Access policies</li>
+<li>RBAC: granular</li>
+</ul>
+<hr />
+<h1 id="storage-account">STORAGE ACCOUNT<a class="headerlink" href="#storage-account" title="Permanent link">&para;</a></h1>
+<p>Enabling storage keys you can access containers/blobs/queue/files through SAS signed by the storage account access private key.</p>
+<hr />
+<h1 id="db">DB<a class="headerlink" href="#db" title="Permanent link">&para;</a></h1>
+<p>Firewall</p>
+<p>Encryption</p>
+<ul>
+<li>At rest</li>
+<li>In transit: always encrypted (deterministic or randomized)</li>
+</ul>
+<p>Dynamic Data Masking: hiding data without encryption.</p>
+<p>Classification.</p>
+<hr />
+<h1 id="az-monitor">Az MONITOR<a class="headerlink" href="#az-monitor" title="Permanent link">&para;</a></h1>
+<p>To collect logs I need first to create Diagnostic Settings, where I can collect also metrics, EntraID events</p>
+<p>Login dates
+Location of access
+Apps used</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

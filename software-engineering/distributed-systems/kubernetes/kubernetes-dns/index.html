@@ -1,0 +1,3011 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../KUBERNETES-CKAD/">
+      
+      
+        <link rel="next" href="../../../../wellbeing/gym-at-home/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Kubernetes dns - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-coredns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kubernetes dns
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Citazioni%20e%20linee%20guida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes and life guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Features/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX Math Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Features/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mermaid diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Critical thinking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Critical thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/critical%20thinking/designing-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/critical%20thinking/drive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/critical%20thinking/inventing-temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventing temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/critical%20thinking/the-elephant-in-the-brain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The elephant in the brain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/critical%20thinking/thinking-in-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thinking in systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emotions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Emotions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/emotions/emotional-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emotional intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/management/an-elegant-puzzle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An elegant puzzle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/management/the-managers-path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The managers path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Money
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Money
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/money/psychology-of-money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Psychology of money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/money/the-simple-path-to-wealth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The simple path to wealth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/money/your-money-or-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your money or your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Parenting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Parenting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/parenting/danish-way-of-parenting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Danish way of parenting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/parenting/good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Brain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Brain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/Critical-Thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Critical Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/Rationality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rationality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/Theoretical-concepts-to-keep-in-mind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theoretical concepts to keep in mind
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/elephant-in-the-brain-vs-good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elephant in the brain vs good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/epistemology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/how-to-read-body-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to read body language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/how-to-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/mindfulness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mindfulness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/self-deception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self deception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/the-science-of-gratitude/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The science of gratitude
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../brain/think-again-how-to-reason/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think again how to reason
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entrepreneurship
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Entrepreneurship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../entrepreneurship/Domande%20per%20acquisto%20casa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domande per acquisto casa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../entrepreneurship/make-a-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principi base per creare una nuova startup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Finance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Finance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../finance/personal-finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../finance/simulazioni/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulazioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../music/Music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Soundcloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/KodeKloud%20CKS%20challenge%20%232/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KodeKloud CKS challenge #2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/Security-hardening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            CISSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/domain-1-security-and-risk-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 1 security and risk management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/domain-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/domain-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/domain-4-communication-and-network-security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/domain-7-security-operations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/CISSP/think-like-a-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think like a manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Software engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Behind-The-Phoenix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behind The Phoenix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DESIGN-PATTERNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DESIGN PATTERNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LFCE-LINUX-ENGINEER/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LFCE - LFS211- LINUX ENGINEER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RHCSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RHCSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sed-grep-awk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sed grep awk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Azure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            Azure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Azure/AZ104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AZ104
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Azure/AZ500/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SOURCES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Devops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Devops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../devops/CI_CD%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distributed systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AKS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_10_2" id="__nav_11_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES%20APIS%20PROGRAMMING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES APIS PROGRAMMING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES-CKAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES CKA CKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kubernetes dns
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes dns
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-coredns" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is CoreDNS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-kube-dns-coredns-and-kube-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences Between kube-dns, CoreDNS, and kube-proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-dns-records-with-agnhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspecting DNS records with agnhost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-will-output-the-hosts-configured-dns-servers-separated-by-commas" class="md-nav__link">
+    <span class="md-ellipsis">
+      It will output the host's configured DNS servers, separated by commas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-managed-hosts-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes-managed hosts file.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aks-peering" class="md-nav__link">
+    <span class="md-ellipsis">
+      AKS Peering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AKS Peering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-network-peering-between-two-aks-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Network Peering Between Two AKS Clusters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Network Peering Between Two AKS Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-two-aks-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create Two AKS Clusters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-set-up-virtual-network-peering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Set Up Virtual Network Peering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-externalname-kubernetes-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure ExternalName Kubernetes Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-roles-for-service-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Assign Roles for Service Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      REFERENCES:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wellbeing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Wellbeing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wellbeing/gym-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gym at home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../work/interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-coredns" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is CoreDNS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-kube-dns-coredns-and-kube-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences Between kube-dns, CoreDNS, and kube-proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-dns-records-with-agnhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspecting DNS records with agnhost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-will-output-the-hosts-configured-dns-servers-separated-by-commas" class="md-nav__link">
+    <span class="md-ellipsis">
+      It will output the host's configured DNS servers, separated by commas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-managed-hosts-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes-managed hosts file.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aks-peering" class="md-nav__link">
+    <span class="md-ellipsis">
+      AKS Peering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AKS Peering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-network-peering-between-two-aks-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Network Peering Between Two AKS Clusters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Network Peering Between Two AKS Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-two-aks-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create Two AKS Clusters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-set-up-virtual-network-peering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Set Up Virtual Network Peering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-externalname-kubernetes-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure ExternalName Kubernetes Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-roles-for-service-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Assign Roles for Service Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      REFERENCES:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Not headless Services are assigned DNS A and/or AAAA records, depending on the IP family or families of the Service, with a name of the form my-svc.my-namespace.svc.cluster-domain.example. This resolves to the cluster IP of the Service. </p>
+<p>If the <cluster-ip> is an IPv4 address, an A record of the following form must exist </p>
+<p><code>&lt;service&gt;.&lt;ns&gt;.svc.&lt;zone&gt;. &lt;ttl&gt; IN A &lt;cluster-ip&gt;</code></p>
+<p><a href="https://github.com/kubernetes/dns/blob/master/docs/specification.md#25---records-for-external-name-services">Records for External Name Services</a></p>
+<p>Given a Service named <service> in Namespace <ns> with ExternalName <code>&lt;extname&gt;</code>, a CNAME record named <code>&lt;service&gt;.&lt;ns&gt;.svc.&lt;zone&gt;</code> pointing to <code>&lt;extname&gt;</code> must exist. </p>
+<p>Record Format: 
+<code>&lt;service&gt;.&lt;ns&gt;.svc.&lt;zone&gt;. &lt;ttl&gt; IN CNAME &lt;extname&gt;</code> </p>
+<p>By default AKS uses CoreDNS for tcp and udp internal DNS resolution. This configuration is easily editable through a configmap </p>
+<p>These resolution policies are specified in the dnsPolicy field of a Pod Spec. </p>
+<ul>
+<li>
+<p>"Default": The Pod inherits the name resolution configuration from the node that the Pods run on. See <a href="https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/">related discussion</a> for more details. </p>
+</li>
+<li>
+<p>"ClusterFirst": Any DNS query that does not match the configured cluster domain suffix is forwarded to an upstream nameserver by the DNS server. See <a href="https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/">related discussion</a> for details on how DNS queries are handled in those cases. </p>
+</li>
+</ul>
+<p>➜ kubectl describe configmaps --namespace=kube-system coredns </p>
+<div class="highlight"><pre><span></span><code>.:53<span class="w"> </span><span class="o">{</span><span class="w">                          </span><span class="c1"># Listen on port 53 for all zones (.)</span>
+<span class="w">    </span>errors<span class="w">                      </span><span class="c1"># Enable error logging</span>
+<span class="w">    </span>ready<span class="w">                       </span><span class="c1"># Enable readiness probe</span>
+<span class="w">    </span>health<span class="w"> </span><span class="o">{</span><span class="w">                    </span><span class="c1"># Enable health checks</span>
+<span class="w">      </span>lameduck<span class="w"> </span>5s<span class="w"> </span><span class="c1"># Delay shutdown by 5 seconds to allow in-flight requests to complete</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span>kubernetes<span class="w"> </span>cluster.local<span class="w"> </span><span class="k">in</span>-addr.arpa<span class="w"> </span>ip6.arpa<span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1"># Kubernetes plugin for service discovery in the cluster</span>
+<span class="w">      </span>pods<span class="w"> </span>insecure<span class="w">             </span><span class="c1"># Use insecure mode for pod DNS names</span>
+<span class="w">      </span>fallthrough<span class="w"> </span><span class="k">in</span>-addr.arpa<span class="w"> </span>ip6.arpa<span class="w">  </span><span class="c1"># Continue to the next plugin if no match is found</span>
+<span class="w">      </span>ttl<span class="w"> </span><span class="m">30</span><span class="w">                    </span><span class="c1"># Set the DNS record TTL to 30 seconds</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span>prometheus<span class="w"> </span>:9153<span class="w">            </span><span class="c1"># Enable Prometheus metrics on port 9153</span>
+<span class="w">    </span>forward<span class="w"> </span>.<span class="w"> </span>/etc/resolv.conf<span class="w">  </span><span class="c1"># Forward all other DNS queries to the nameservers in /etc/resolv.conf</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="what-is-coredns">What is CoreDNS?<a class="headerlink" href="#what-is-coredns" title="Permanent link">&para;</a></h2>
+<p>CoreDNS is a modern, flexible, and extensible DNS server designed to provide DNS and service discovery functionalities. <a href="https://kubernetes.io/docs/tasks/administer-cluster/coredns/">It is built with a modular architecture, allowing it to be easily extended with plugins to support various use cases</a>.  </p>
+<p>CoreDNS can serve as a DNS server for traditional DNS records, as well as for service discovery in cloud-native environments like Kubernetes. </p>
+<p>CoreDNS operates by listening for DNS queries on specified ports and resolving these queries based on its configuration. It can act as both a resolver and a forwarder: </p>
+<ul>
+<li>
+<p>Resolver: CoreDNS can resolve DNS queries using its internal database of DNS records. </p>
+</li>
+<li>
+<p>Forwarder: If CoreDNS does not have the answer to a query, it can forward the query to upstream DNS servers and return the response to the client. </p>
+</li>
+</ul>
+<p>CoreDNS uses a configuration file called Corefile to define its behavior. This file specifies the plugins to be used and their configurations. Plugins can handle various tasks such as caching, load balancing, health checks, and more. </p>
+<p>In Kubernetes, CoreDNS is the default DNS service starting from version 1.13. It replaces the older kube-dns service and provides DNS resolution for services and pods within the cluster.  </p>
+<p>Here’s how CoreDNS integrates with Kubernetes: </p>
+<ol>
+<li>
+<p>Deployment: CoreDNS is deployed as a Kubernetes Deployment with multiple replicas for high availability. <a href="https://kubernetes.io/docs/tasks/administer-cluster/coredns/">It runs in the kube-system namespace and is exposed via a Kubernetes Service named kube-dns</a>. </p>
+</li>
+<li>
+<p>Service Discovery: When a pod in the Kubernetes cluster needs to communicate with another service, it sends a DNS query to CoreDNS. CoreDNS resolves the query by mapping the service name to the corresponding IP address using its internal records. </p>
+</li>
+<li>
+<p>Configuration: The CoreDNS configuration in Kubernetes is managed through a ConfigMap. This ConfigMap contains the Corefile, which defines how CoreDNS should handle DNS queries. The kubernetes plugin in the Corefile is specifically designed to handle DNS queries for Kubernetes services and pods. </p>
+</li>
+<li>
+<p>Performance and Monitoring: CoreDNS can be configured to collect metrics using plugins like Prometheus. These metrics can help monitor DNS performance, such as query latency, cache hit rates, and resource usage <a href="https://www.infracloud.io/blogs/using-coredns-effectively-kubernetes/">[using-coredns-effectively-kubernetes]</a>. </p>
+</li>
+<li>
+<p>Scalability: CoreDNS is designed to scale with the Kubernetes cluster. It can handle a large number of DNS queries efficiently and can be tuned to optimize resource usage. </p>
+</li>
+</ol>
+<p>More info on the <a href="https://coredns.io/plugins/kubernetes/">CoreDNS kubernetes plugin here</a>. </p>
+<p>Looking inside the CoreDNS deployment we can see it is mounted there  </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># kubectl --namespace=kube-system describe deploy coredns</span>
+<span class="l l-Scalar l-Scalar-Plain">Name</span><span class="err">:                   </span><span class="l l-Scalar l-Scalar-Plain">coredns</span>
+<span class="l l-Scalar l-Scalar-Plain">Namespace</span><span class="err">:              </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class="l l-Scalar l-Scalar-Plain">Labels</span><span class="err">:                 </span><span class="l l-Scalar l-Scalar-Plain">addonmanager.kubernetes.io/mode=Reconcile</span>
+<span class="err">                        </span><span class="l l-Scalar l-Scalar-Plain">k8s-app=kube-dns</span>
+<span class="err">                        </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.azure.com/managedby=aks</span>
+<span class="err">                        </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/cluster-service=true</span>
+<span class="err">                        </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/name=CoreDNS</span>
+<span class="err">                        </span><span class="l l-Scalar l-Scalar-Plain">version=v20</span>
+<span class="l l-Scalar l-Scalar-Plain">Selector</span><span class="p p-Indicator">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">k8s-app=kube-dns,version=v20</span>
+<span class="nt">Replicas</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">desired</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">|</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">updated</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">|</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">total</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">|</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">available</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">|</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">unavailable</span>
+<span class="nt">Pod Template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Labels</span><span class="p">:</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">k8s-app=kube-dns</span>
+<span class="w">    </span><span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.azure.com/managedby=aks</span>
+<span class="w">    </span><span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/cluster-service=true</span>
+<span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">Service-Account</span><span class="err">:  </span><span class="l l-Scalar l-Scalar-Plain">coredns</span>
+<span class="err">  </span><span class="nt">Containers</span><span class="p">:</span>
+<span class="err">   </span><span class="nt">coredns</span><span class="p">:</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Image</span><span class="err">:       </span><span class="l l-Scalar l-Scalar-Plain">mcr.microsoft.com/oss/kubernetes/coredns:v1.9.4-hotfix.20240704</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Ports</span><span class="err">:       </span><span class="l l-Scalar l-Scalar-Plain">53/UDP,</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">53/TCP,</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">9153/TCP</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Host</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">Ports</span><span class="err">:  </span><span class="l l-Scalar l-Scalar-Plain">0/UDP,</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">0/TCP,</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">0/TCP</span>
+<span class="err">    </span><span class="nt">Args</span><span class="p">:</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">-conf</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">/etc/coredns/Corefile</span>
+<span class="l l-Scalar l-Scalar-Plain">...</span><span class="err">      </span>
+<span class="err">    </span><span class="nt">Mounts</span><span class="p">:</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">/etc/coredns</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">from</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">config-volume</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">(ro)</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">/etc/coredns/custom</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">from</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">custom-config-volume</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">(ro)</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">/tmp</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">from</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">tmp</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">(rw)</span>
+<span class="err">  </span><span class="nt">Volumes</span><span class="p">:</span>
+<span class="err">   </span><span class="nt">config-volume</span><span class="p">:</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="err">:      </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">(a</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">volume</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">populated</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">by</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">a</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap)</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Name</span><span class="err">:      </span><span class="l l-Scalar l-Scalar-Plain">coredns</span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">Optional</span><span class="err">:  </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>So any of the DNS resolving requests targeted on port 53 will be solved by coredns server itself if the target was in the same cluster zone (eg: <a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">data.test.svc.cluster.local</a>)  while the rest will be redirected to the host <a href="https://www.man7.org/linux/man-pages/man5/resolv.conf.5.html">resolv.conf</a> which is not much used today. </p>
+<h2 id="differences-between-kube-dns-coredns-and-kube-proxy">Differences Between kube-dns, CoreDNS, and kube-proxy<a class="headerlink" href="#differences-between-kube-dns-coredns-and-kube-proxy" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Function: kube-dns is the traditional DNS service used in Kubernetes for service discovery. </p>
+</li>
+<li>
+<p>Components: It typically includes a DNS server (dnsmasq), a DNS caching layer, and a health check. </p>
+</li>
+<li>
+<p>Usage: kube-dns resolves DNS names for services and pods within the cluster. </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">spec</span><span class="err">: </span>
+<span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">ports</span><span class="err">: </span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">-</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">dns</span><span class="err"> </span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">protocol</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">UDP</span><span class="err"> </span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">port</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">53</span><span class="err"> </span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">targetPort</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">53</span><span class="err"> </span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">-</span><span class="err"> </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">dns-tcp</span><span class="err"> </span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">protocol</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="err"> </span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">port</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">53</span>
+<span class="err">      </span><span class="l l-Scalar l-Scalar-Plain">targetPort</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">53</span><span class="err"> </span>
+<span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">selector</span><span class="err">: </span>
+<span class="err">    </span><span class="l l-Scalar l-Scalar-Plain">k8s-app</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">kube-dns</span><span class="err"> </span>
+<span class="err">  </span><span class="l l-Scalar l-Scalar-Plain">clusterIP</span><span class="err">: </span><span class="l l-Scalar l-Scalar-Plain">10.X.Y.Z</span>
+</code></pre></div>
+<p>CoreDNS Deployment </p>
+<ul>
+<li>
+<p>Function: CoreDNS is a more flexible and extensible DNS server that can replace kube-dns. </p>
+</li>
+<li>
+<p>Components: CoreDNS uses a configuration file (Corefile) to define its behavior, including plugins for various functionalities. </p>
+</li>
+<li>
+<p>Usage: CoreDNS can handle DNS-based service discovery, metrics, health checks, and more. It is the default DNS server in newer Kubernetes versions due to its modularity and performance. </p>
+</li>
+</ul>
+<p>kube-proxy DaemonSet </p>
+<ul>
+<li>
+<p>Function: kube-proxy is responsible for maintaining network rules on nodes to allow communication to services. </p>
+</li>
+<li>
+<p>Components: It runs as a daemonset on each node and uses iptables or IPVS to manage routing rules. </p>
+</li>
+<li>
+<p>Usage: kube-proxy routes traffic to the appropriate backend pods for a given service, ensuring that requests reach the correct destination. </p>
+</li>
+</ul>
+<h2 id="inspecting-dns-records-with-agnhost">Inspecting DNS records with <a href="https://github.com/kubernetes/kubernetes/tree/master/test/images/agnhost">agnhost</a><a class="headerlink" href="#inspecting-dns-records-with-agnhost" title="Permanent link">&para;</a></h2>
+<p>```bash
+ kubectl run agnhost --namespace dev-testing --image=registry.k8s.io/e2e-test-images/agnhost:2.40 --overrides='{"spec":{"containers":[{"name":"agnhost","image":"registry.k8s.io/e2e-test-images/agnhost:2.40","command":["sleep","3600"],"securityContext":{"privileged":true},"volumeMounts":[{"name":"host-volume","mountPath":"/host","readOnly":true}]}],"volumes":[{"name":"host-volume","hostPath":{"path":"/"}}],"restartPolicy":"Never"}}'</p>
+<h1 id="it-will-output-the-hosts-configured-dns-servers-separated-by-commas">It will output the host's configured DNS servers, separated by commas<a class="headerlink" href="#it-will-output-the-hosts-configured-dns-servers-separated-by-commas" title="Permanent link">&para;</a></h1>
+<p>❯ kubectl exec -n dev-testing agnhost -- /agnhost dns-server-list
+10.X.Y.Z  (NDR: kube-dns service IP)</p>
+<p>❯ kubectl exec -n dev-testing agnhost -- nslookup mapim.dev-mapim.svc.cluster.local
+Server:         10.X.Y.Z
+Address:        10.X.Y.Z#53
+Name:   mapim.dev-mapim.svc.cluster.local
+Address: 10.A.B.C</p>
+<p>➜ kubectl exec -n dev-testing agnhost -- /agnhost dns-suffix
+dev-testing.svc.cluster.local,svc.cluster.local,cluster.local,paxg3pivipuujon3aq5cuajlnb.ax.internal.cloudapp.net</p>
+<p>➜ kubectl exec -n dev-testing agnhost -- /agnhost etc-hosts</p>
+<h1 id="kubernetes-managed-hosts-file">Kubernetes-managed hosts file.<a class="headerlink" href="#kubernetes-managed-hosts-file" title="Permanent link">&para;</a></h1>
+<p>127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+fe00::0 ip6-mcastprefix
+fe00::1 ip6-allnodes
+fe00::2 ip6-allrouters</p>
+<p>10.0.12.59      agnhost-pod
+ ```</p>
+<h1 id="aks-peering">AKS Peering<a class="headerlink" href="#aks-peering" title="Permanent link">&para;</a></h1>
+<p>Here’s a short guide on setting up network peering between two Azure Kubernetes Service (AKS) clusters</p>
+<h3 id="setting-up-network-peering-between-two-aks-clusters">Setting Up Network Peering Between Two AKS Clusters<a class="headerlink" href="#setting-up-network-peering-between-two-aks-clusters" title="Permanent link">&para;</a></h3>
+<h4 id="step-1-create-two-aks-clusters">Step 1: Create Two AKS Clusters<a class="headerlink" href="#step-1-create-two-aks-clusters" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Create Resource Groups</strong>:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>group<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ResourceGroup1<span class="w"> </span>--location<span class="w"> </span>eastus
+az<span class="w"> </span>group<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ResourceGroup2<span class="w"> </span>--location<span class="w"> </span>westus
+</code></pre></div>
+</li>
+<li>
+<p><strong>Create AKS Clusters</strong>:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span>ResourceGroup1<span class="w"> </span>--name<span class="w"> </span>AKSCluster1<span class="w"> </span>--node-count<span class="w"> </span><span class="m">1</span><span class="w"> </span>--enable-addons<span class="w"> </span>monitoring<span class="w"> </span>--generate-ssh-keys
+az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span>ResourceGroup2<span class="w"> </span>--name<span class="w"> </span>AKSCluster2<span class="w"> </span>--node-count<span class="w"> </span><span class="m">1</span><span class="w"> </span>--enable-addons<span class="w"> </span>monitoring<span class="w"> </span>--generate-ssh-keys
+</code></pre></div>
+</li>
+</ol>
+<h4 id="step-2-set-up-virtual-network-peering">Step 2: Set Up Virtual Network Peering<a class="headerlink" href="#step-2-set-up-virtual-network-peering" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Get Virtual Network IDs</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">VNET1_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>show<span class="w"> </span>--resource-group<span class="w"> </span>MC_ResourceGroup1_AKSCluster1_eastus<span class="w"> </span>--name<span class="w"> </span>aks-vnet-123456<span class="w"> </span>--query<span class="w"> </span>id<span class="w"> </span>--output<span class="w"> </span>tsv<span class="k">)</span>
+<span class="nv">VNET2_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>show<span class="w"> </span>--resource-group<span class="w"> </span>MC_ResourceGroup2_AKSCluster2_westus<span class="w"> </span>--name<span class="w"> </span>aks-vnet-654321<span class="w"> </span>--query<span class="w"> </span>id<span class="w"> </span>--output<span class="w"> </span>tsv<span class="k">)</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Create Peering from VNet1 to VNet2</strong>:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>peering<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>VNet1ToVNet2<span class="w"> </span>--resource-group<span class="w"> </span>MC_ResourceGroup1_AKSCluster1_eastus<span class="w"> </span>--vnet-name<span class="w"> </span>aks-vnet-123456<span class="w"> </span>--remote-vnet<span class="w"> </span><span class="nv">$VNET2_ID</span><span class="w"> </span>--allow-vnet-access
+</code></pre></div>
+</li>
+<li>
+<p><strong>Create Peering from VNet2 to VNet1</strong>:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>peering<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>VNet2ToVNet1<span class="w"> </span>--resource-group<span class="w"> </span>MC_ResourceGroup2_AKSCluster2_westus<span class="w"> </span>--vnet-name<span class="w"> </span>aks-vnet-654321<span class="w"> </span>--remote-vnet<span class="w"> </span><span class="nv">$VNET1_ID</span><span class="w"> </span>--allow-vnet-access
+</code></pre></div>
+</li>
+</ol>
+<h4 id="step-3-configure-externalname-kubernetes-services">Step 3: Configure ExternalName Kubernetes Services<a class="headerlink" href="#step-3-configure-externalname-kubernetes-services" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Create ExternalName Service in AKSCluster1</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">externalname-service</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalName</span>
+<span class="w">  </span><span class="nt">externalName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myservice.example.com</span>
+</code></pre></div>
+<p>Apply the configuration:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>externalname-service.yaml
+</code></pre></div>
+</li>
+</ol>
+<h4 id="step-4-assign-roles-for-service-principal">Step 4: Assign Roles for Service Principal<a class="headerlink" href="#step-4-assign-roles-for-service-principal" title="Permanent link">&para;</a></h4>
+<p>TODO</p>
+<h1 id="references">REFERENCES:<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/coredns-custom">Customize CoreDNS for Azure Kubernetes Service (AKS) - Azure Kubernetes Service | Microsoft Learn</a> </p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/</a> </p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/dns/blob/master/docs/specification.md">dns/docs/specification.md at master · kubernetes/dns · GitHub</a> </p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/">Debugging DNS Resolution | Kubernetes</a> </p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kubernetes/tree/master/test/images/agnhost">https://github.com/kubernetes/kubernetes/tree/master/test/images/agnhost</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

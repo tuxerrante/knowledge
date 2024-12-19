@@ -1,0 +1,3171 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../GIT/">
+      
+      
+        <link rel="next" href="../RHCSA/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>LFCE - LFS211- LINUX ENGINEER - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lfce-lfs211-linux-engineer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LFCE - LFS211- LINUX ENGINEER
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citazioni%20e%20linee%20guida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes and life guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX Math Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mermaid diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Critical thinking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Critical thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/critical%20thinking/designing-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/critical%20thinking/drive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/critical%20thinking/inventing-temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventing temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/critical%20thinking/the-elephant-in-the-brain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The elephant in the brain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/critical%20thinking/thinking-in-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thinking in systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emotions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Emotions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/emotions/emotional-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emotional intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/management/an-elegant-puzzle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An elegant puzzle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/management/the-managers-path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The managers path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Money
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Money
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/money/psychology-of-money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Psychology of money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/money/the-simple-path-to-wealth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The simple path to wealth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/money/your-money-or-your-life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your money or your life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Parenting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Parenting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/parenting/danish-way-of-parenting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Danish way of parenting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/parenting/good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Brain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Brain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/Critical-Thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Critical Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/Rationality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rationality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/Theoretical-concepts-to-keep-in-mind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theoretical concepts to keep in mind
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/elephant-in-the-brain-vs-good-inside/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elephant in the brain vs good inside
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/epistemology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/how-to-read-body-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to read body language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/how-to-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/mindfulness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mindfulness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/self-deception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self deception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/the-science-of-gratitude/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The science of gratitude
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain/think-again-how-to-reason/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think again how to reason
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entrepreneurship
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Entrepreneurship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrepreneurship/Domande%20per%20acquisto%20casa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domande per acquisto casa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrepreneurship/make-a-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principi base per creare una nuova startup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Finance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Finance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/personal-finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/simulazioni/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulazioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/Music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Soundcloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/KodeKloud%20CKS%20challenge%20%232/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KodeKloud CKS challenge #2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/Security-hardening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            CISSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/domain-1-security-and-risk-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 1 security and risk management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/domain-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/domain-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/domain-4-communication-and-network-security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/domain-7-security-operations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/CISSP/think-like-a-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Think like a manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Software engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Behind-The-Phoenix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behind The Phoenix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DESIGN-PATTERNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DESIGN PATTERNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GIT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LFCE - LFS211- LINUX ENGINEER
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    LFCE - LFS211- LINUX ENGINEER
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      NETWORKING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NETWORKING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      IFCONFIG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      SYSTEM SERVICES
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      YUM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-key-and-certificate-with-openssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new key and certificate with openssl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAIL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROXY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAMBA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECURITY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTAINERS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RHCSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RHCSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sed-grep-awk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sed grep awk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Azure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            Azure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure/AZ104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AZ104
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure/AZ500/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SOURCES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Devops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Devops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/CI_CD%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distributed systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distributed-systems/AKS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10_2" id="__nav_11_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distributed-systems/kubernetes/KUBERNETES%20APIS%20PROGRAMMING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES APIS PROGRAMMING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distributed-systems/kubernetes/KUBERNETES-CKAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KUBERNETES CKA CKS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distributed-systems/kubernetes/kubernetes-dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes dns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wellbeing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Wellbeing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wellbeing/gym-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gym at home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Work
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      NETWORKING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NETWORKING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      IFCONFIG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      SYSTEM SERVICES
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      YUM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-key-and-certificate-with-openssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new key and certificate with openssl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAIL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROXY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAMBA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECURITY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTAINERS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lfce-lfs211-linux-engineer">LFCE - LFS211- LINUX ENGINEER<a class="headerlink" href="#lfce-lfs211-linux-engineer" title="Permanent link">&para;</a></h1>
+<p><a href="https://trainingportal.linuxfoundation.org/learn/course/linux-networking-and-administration-lfs211/linux-networking-concepts-and-review/linux-networking-concepts-and-review?page=18">https://trainingportal.linuxfoundation.org/learn/course/linux-networking-and-administration-lfs211/</a></p>
+<ul>
+<li><a href="https://github.com/ghumman/lfce">ghumman/lfce: Linux Foundation Certified Exam Preparation and Practice</a>  </li>
+<li><a href="https://ravikirans.com/lfce-linux-exam-study-guide/">LFCE Exam Study Guide (Linux Foundation Certified Engineer)</a>  </li>
+<li><a href="https://learning.oreilly.com/videos/linux-foundation-certified/9780134774015/9780134774015-LFCE_01_01_00">https://learning.oreilly.com/videos/linux-foundation-certified/9780134774015/9780134774015-LFCE_01_01_00</a>  </li>
+<li><a href="https://www.tecmint.com/installing-network-services-and-configuring-services-at-system-boot/">LFCE: Installing Network Services and Configuring Automatic Startup at Boot - Part 1</a>  </li>
+<li><a href="https://linuxjourney.com/">Linux Journey: Home</a>  </li>
+<li><a href="https://www.coursera.org/learn/real-time-cyber-threat-detection/home/welcome">https://www.coursera.org/learn/real-time-cyber-threat-detection/home/welcome</a>  </li>
+<li><a href="https://www.youtube.com/watch?v=D0Xob4DGbFQ">https://www.youtube.com/watch?v=D0Xob4DGbFQ</a></li>
+</ul>
+<p><a href="https://www.katacoda.com/courses/ubuntu/playground">https://www.katacoda.com/courses/ubuntu/playground</a></p>
+<h2 id="networking">NETWORKING<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h2>
+<p>less /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<p>ifdown eth0; ifup eth0</p>
+<p>ip a show eth0</p>
+<p>ip route show<br />
+ip route </p>
+<p><strong>nmcli</strong> device show   # NetworkManager: dettagli per network devices<br />
+nmcli -f ip4.address device show enp1s0</p>
+<p>nmtui           # interfaccia da terminale</p>
+<p>se il networkmanager non gestisce connessioni allora forse lo sta facendo<br />
+<strong>networkctl</strong> </p>
+<p>puoi verificare il manager anche tramite<br />
+<strong>netplan</strong> get all<br />
+<em>network:</em><br />
+<em>renderer: NetworkManager</em><br />
+<em>version: 2</em></p>
+<p>Esempi di configurazioni si trovano in /usr/share/doc/netplan/examples/</p>
+<p># Change speed and mode of current enp0 interface<br />
+sudo <strong>ethtool</strong> enp0s3 --change speed 1000 duplex full</p>
+<p><strong>DNS</strong><br />
+<strong>systemd-resolve --status</strong></p>
+<p><strong>systemd-resolve</strong> --set-dns=192.168.178.1 --set-dns=10.34.168.6 --interface=enp0s3</p>
+<p><strong>nmcli</strong> device show enp0</p>
+<p><a href="https://phoenixnap.com/kb/linux-dig-command-examples">https://phoenixnap.com/kb/linux-dig-command-examples</a> <br />
+<strong>dig</strong> -x 172.217.14.238      Reverse DNS<br />
+dig google.com -t A +trace        Type Address, trace the request</p>
+<p># Ask server 8.8.4.4 the name google.com for records of type NameServer<br />
+dig @8.8.4.4 google.com -t NS -c IN   </p>
+<p>nslookup google.com 8.8.8.8</p>
+<p><strong>PING</strong><br />
+load test<br />
+ping -f -s 4096 IP</p>
+<p><strong>TRACEROUTE</strong><br />
+<strong>traceroute</strong> -I IP       usa ICMP per tentare bypass dei firewall</p>
+<p><strong>NMAP</strong></p>
+<p><strong>ARP</strong> / <strong>TELNET</strong><br />
+telnet github.com 80</p>
+<p><strong>openssl</strong> s_client -connect github.com:443</p>
+<p><strong>TCPDUMP</strong><br />
+<a href="https://danielmiessler.com/study/tcpdump/">https://danielmiessler.com/study/tcpdump/</a></p>
+<p>To capture packets with <strong>tcpdump</strong> for use with <strong>wireshark</strong>, use:<br />
+$ sudo tcpdump -i eth0 -s 65535 -w capture.pcap port 22</p>
+<p># tcpdump -nnvv -i any net 127.0.0.1 and port 4200 and not 'tcp[tcpflags] == tcp-syn'</p>
+<p><strong>SERVER SIDE</strong><br />
+SS<br />
+<strong>sudo ss -ltp | grep httpd</strong></p>
+<p>NETSTAT<br />
+sudo netstat -palute</p>
+<p><strong>/etc/hosts</strong><br />
+<a href="https://linux.die.net/man/5/hosts_access">man hosts_access</a></p>
+<ul>
+<li><strong>/proc/sys/net/ipv4/ip_forward</strong><br />
+  Allows for network traffic to be forwarded from one interface to another.  </li>
+<li><strong>/proc/sys/net/ipv4/conf/*/accept_redirects</strong><br />
+  Accepting Internet Control Message Protocol (ICMP) redirects from a router to find better routes. This setting has the potential to be exploited by a malicious party to redirect your traffic.  </li>
+<li><strong>/proc/sys/net/ipv4/icmp_echo_ignore_all</strong><br />
+  Changing this setting will affect the host's visibility to ICMP ping packets.</li>
+</ul>
+<p>To persistently enable changes you must use the <strong>sysctl</strong> command with its configuration file <strong>/etc/sysctl.conf</strong>.</p>
+<p>sudo sysctl --all |grep redirect</p>
+<p>esempio:<br />
+scrivi un log ogni volta che tentano la connessione ftp dal dominio .esempio.com<br />
+hosts.deny<br />
+vsftpd : 192.168.1. , .esempio.com : spawn /bin/echo  `/bin/date` access denied &gt;&gt; /var/log/vsftpd.log : deny</p>
+<p><strong>NETCAT</strong><br />
+netcat -l 2000         ascolta sul server sulla 2000<br />
+netcat IP 2000      si connette</p>
+<p><strong>TC Traffic Control</strong><br />
+<a href="https://linux.die.net/man/8/tc">https://linux.die.net/man/8/tc</a> </p>
+<p><strong>tc qdisc</strong> add dev lo root netem loss random 40<br />
+aggiunge una queue discilipline sul device lo tramite netEmulator che perderà il 40% dei pacchetti</p>
+<p>ping localhost                      #1<br />
+sudo <strong>tcpdump</strong> -nnvvS src 127.0.0.1 -i lo       #2<br />
+sudo tcpdump -i lo -nnvvS icmp</p>
+<p>sudo tc qdisc show<br />
+sudo <strong>tc</strong> qdisc delete lo root</p>
+<p><strong>UDEV</strong><br />
+ACPI is the Advanced Configuration and Power Interface standard (<a href="http://www.uefi.org/acpi/specs">Preexisting ACPI Specifications</a>) by which the computer firmware (either the BIOS, for older machines, or its replacement, EUFI) can communicate what hardware is preinstalled in the computer to the operating system</p>
+<p>udevadm test /sys/class/net/enp0s3<br />
+udevadm info /sys/class/net/enp0s3</p>
+<p><strong>TUN</strong> e <strong>TAP</strong> sono driver che permettono la creazione di periferiche di rete virtuali. Rispetto alle comuni periferiche (ad es. eth0) che sono controllate direttamente dalle schede di rete, i <a href="https://it.wikipedia.org/wiki/Pacchetto_(reti)">pacchetti</a> spediti da o verso dispositivi TUN/TAP sono spediti da o verso programmi software. <strong>TUN</strong> è in grado di simulare una periferica di rete di tipo punto-punto e lavora con pacchetti di tipo <a href="https://it.wikipedia.org/wiki/Internet_Protocol">IP</a> mentre <strong>TAP</strong> è in grado di simulare un dispositivo Ethernet e logicamente utilizza i frame <a href="https://it.wikipedia.org/wiki/Ethernet">Ethernet</a>. </p>
+<p><strong>FILES</strong><br />
+/etc/hostname   hostname della macchina<br />
+/etc/resolv.conf    DNS<br />
+/etc/network        <br />
+/etc/netplan/01..       Stesso risultato di ‘netplan get all’<br />
+/usr/share/doc/ppp/examples/interfaces</p>
+<h3 id="ifconfig">IFCONFIG<a class="headerlink" href="#ifconfig" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.computerhope.com/unix/uifconfi.htm">https://www.computerhope.com/unix/uifconfi.htm</a></p>
+<h3 id="firewall">FIREWALL<a class="headerlink" href="#firewall" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7">https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7</a></p>
+<h3 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<p><strong>pssh</strong> -H box -H node1 -H node2 "yum install -y tmux bash-completion bash-completion-extras &amp;&amp; mandb"</p>
+<p>/etc/ssh/ssh_config<br />
+sudo apt install openssh-server → /etc/ssh/sshd_config<br />
+grep -E “^\w” /etc/ssh/sshd_config</p>
+<p>ssh-keygen -f $HOME/.ssh/id_rsa -N 'supersecret' -t rsa<br />
+ssh-copy-id alex@IP</p>
+<h3 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
+<p><a href="https://ns1.com/resources/dns-types-records-servers-and-queries">https://ns1.com/resources/dns-types-records-servers-and-queries</a></p>
+<p>host<br />
+dig<br />
+resolvectl query <br />
+nslookup</p>
+<p>DNS SERVER<br />
+apt install -y bind9 resolvconf<br />
+systemctl start bind9<br />
+<strong>/etc/resolv.conf</strong><br />
+<strong>/etc/systemd/resolved.conf</strong><br />
+<strong>/etc/bind/named.conf</strong> </p>
+<p>/etc/bind/named.conf.options<br />
+options {<br />
+        listen-on port 53 { any; };<br />
+        allow-query     { any; };<br />
+        recursion       yes;<br />
+};</p>
+<h2 id="system-services">SYSTEM SERVICES<a class="headerlink" href="#system-services" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files">Understanding Systemd Units and Unit Files</a></p>
+<p>Systemd has a flexible configuration architecture that uses override and drop-in directories. The sequence in which systemd processes the configuration files is predictable and extensible. The common sequence is:</p>
+<ul>
+<li>The vendor-supplied unit file in <strong>/usr/lib/systemd/\&lt;service&gt;.service</strong> or <strong>/lib/systemd/system/\&lt;service&gt;.service</strong>.  </li>
+<li>Optional or dynamically-created unit files in the <strong>/run/systemd/system/</strong> directory.  </li>
+<li>Optional user-unit override files in the <strong>/etc/systemd/system/</strong> directory.  </li>
+<li>Optional user drop-in files in <strong>/etc/systemd/system/\&lt;service&gt;.d</strong>.</li>
+</ul>
+<p><strong>man 5 systemd-system.conf</strong><br />
+When packages need to customize the configuration, they can install configuration snippets in <strong>/usr/lib/systemd/*.conf.d/</strong>. Files in <strong>/etc/</strong> are reserved for the local administrator, who may use this logic to override the configuration files installed by vendor packages.</p>
+<p>ES: manually launch ftp service<br />
+# /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf &amp;</p>
+<h2 id="yum">YUM<a class="headerlink" href="#yum" title="Permanent link">&para;</a></h2>
+<p>yum provides */traceroute</p>
+<h2 id="http">HTTP<a class="headerlink" href="#http" title="Permanent link">&para;</a></h2>
+<p>ubuntu apache2<br />
+centos httpd</p>
+<p>/var/www/html   siti<br />
+/var/log/apache2    access e error log</p>
+<p>$ grep "^\w" /etc/apache2/apache2.conf<br />
+DefaultRuntimeDir ${APACHE_RUN_DIR}<br />
+PidFile ${APACHE_PID_FILE}<br />
+Timeout 300<br />
+KeepAlive On<br />
+MaxKeepAliveRequests 100<br />
+KeepAliveTimeout 5<br />
+User ${APACHE_RUN_USER}<br />
+Group ${APACHE_RUN_GROUP}<br />
+HostnameLookups Off<br />
+ErrorLog ${APACHE_LOG_DIR}/error.log<br />
+LogLevel warn<br />
+IncludeOptional mods-enabled/*.load<br />
+IncludeOptional mods-enabled/*.conf<br />
+Include ports.conf<br />
+AccessFileName .htaccess<br />
+LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined<br />
+LogFormat "%h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined<br />
+LogFormat "%h %l %u %t \"%r\" %&gt;s %O" common<br />
+LogFormat "%{Referer}i -&gt; %U" referer<br />
+LogFormat "%{User-agent}i" agent<br />
+IncludeOptional conf-enabled/*.conf<br />
+IncludeOptional sites-enabled/*.conf</p>
+<p><a href="http://httpd.apache.org/docs/2.2/mod/mod_log_config.html#formats">http://httpd.apache.org/docs/2.2/mod/mod_log_config.html#formats</a></p>
+<p>sudo <strong>apachectl configtest</strong></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04</a></p>
+<p>sudo vim /etc/apache2/sites-enabled/000-default.conf<br />
+\&lt;Directory "/var/www/html/get-only"&gt;<br />
+<strong>AuthType Basic</strong><br />
+        AuthName "Restricted Content"<br />
+        AuthUserFile /etc/apache2/secure.passwords<br />
+        Require valid-user<br />
+\&lt;/Directory&gt;<br />
+sudo systemctl restart apache2</p>
+<p><a href="https://www.ibm.com/docs/en/aspera-on-demand/3.9?topic=appendix-enable-ssl-apache">https://www.ibm.com/docs/en/aspera-on-demand/3.9?topic=appendix-enable-ssl-apache</a></p>
+<p><a href="https://www.cyberciti.biz/faq/kvm-forward-ports-to-guests-vm-with-ufw-on-linux/">KVM forward ports to guests VM with UFW on Linux</a></p>
+<p>Rewrite flags <a href="https://httpd.apache.org/docs/2.4/rewrite/flags.html">RewriteRule Flags - Apache HTTP Server Version 2.4</a><br />
+Directory directives <a href="https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride">https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride</a></p>
+<h4 id="create-a-new-key-and-certificate-with-openssl">Create a new key and certificate with openssl<a class="headerlink" href="#create-a-new-key-and-certificate-with-openssl" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.katacoda.com/courses/ubuntu/playground">https://www.katacoda.com/courses/ubuntu/playground</a></p>
+<p>man 1 req<br />
+openssl req -x509 -newkey rsa:2048 -keyout my.key -out mycert.crt<br />
+vim sites-enabled/000-default.conf<br />
+cp sites-available/default-ssl.conf sites-enabled/<br />
+echo "127.0.0.1 alex.com" &gt;&gt; /etc/hosts<br />
+curl -Ik https://alex.com<br />
+HTTP/1.1 200 OK</p>
+<h2 id="mail">MAIL<a class="headerlink" href="#mail" title="Permanent link">&para;</a></h2>
+<p><a href="https://doc.dovecot.org/configuration_manual/">https://doc.dovecot.org/configuration_manual/</a><br />
+<a href="http://www.postfix.org/postconf.5.html">http://www.postfix.org/postconf.5.html</a></p>
+<p><strong>/etc/postfix/main.cf</strong> </p>
+<p>only a few mail parameters need to be altered in <strong>/etc/postfix/main.cf</strong>. </p>
+<ul>
+<li>The domain name to use for outbound mail (<strong>myorigin</strong>).  </li>
+<li>The domains to receive mail for (<strong>mydestination</strong>).  </li>
+<li>The clients to allow relaying of mail (<strong>mynetworks</strong>).  </li>
+<li>The destinations to relay mail to (<strong>relay_domains</strong>).  </li>
+<li>The delivery method, indirect or direct (<strong>relayhost</strong>). </li>
+</ul>
+<p>The <strong>postconf</strong> command can be used to customize <strong>/etc/postfix/main.conf</strong>:</p>
+<p><strong># postconf -e 'inet_interfaces = all'</strong><br />
+<strong># postconf -e "mynetworks_style = subnet"</strong></p>
+<p>~# vim /etc/postfix/master.cf<br />
+~# vim /etc/postfix/main.cf<br />
+~# vim /etc/aliases</p>
+<h2 id="proxy">PROXY<a class="headerlink" href="#proxy" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Reverse_proxy">https://en.wikipedia.org/wiki/Reverse_proxy</a></p>
+<p><a href="http://www.squid-cache.org/Versions/v6/cfgman/">http://www.squid-cache.org/Versions/v6/cfgman/</a><br />
+<a href="https://wiki.squid-cache.org/SquidFaq/SquidAcl">SquidFaq/SquidAcl - Squid Web Proxy Wiki</a></p>
+<p><a href="https://wiki.squid-cache.org/ConfigExamples/Intercept/LinuxRedirect">https://wiki.squid-cache.org/ConfigExamples/Intercept/LinuxRedirect</a></p>
+<p>Squid can also parse and check its syntax with a built-in syntax checker:<br />
+<strong># squid -k parse</strong></p>
+<p>The first match wins. Therefore, start your ACLs with the most specific options in the beginning.<br />
+# grep "^\w" /etc/squid/squid.conf<br />
+acl localnet src 0.0.0.1-0.255.255.255    # RFC 1122 "this" network (LAN)<br />
+acl localnet src 192.168.0.0/16      # RFC 1918 local private network (LAN)</p>
+<p>acl SSL_ports port 443<br />
+acl Safe_ports port 80      # http<br />
+acl Safe_ports port 21      # ftp<br />
+acl Safe_ports port 443     # https</p>
+<p>http_access deny !Safe_ports<br />
+http_access deny CONNECT !SSL_ports<br />
+http_access allow localhost manager<br />
+http_access deny manager<br />
+-------</p>
+<h2 id="nfs">NFS<a class="headerlink" href="#nfs" title="Permanent link">&para;</a></h2>
+<p># groupadd -g 42000 share<br />
+# chown nfsnobody /home/export<br />
+# chgrp share -R /home/export<br />
+# chmod -R 2770 /home/export<br />
+# usermod -aG share student<br />
+# usermod -aG share root</p>
+<p># cat \&lt;\&lt;EOF &gt;&gt;<strong>/etc/exports</strong><br />
+&gt; /home/export  127.0.0.1/32(rw) 192.168.0.0/16(ro)<br />
+&gt; EOF</p>
+<p>systemctl restart nfs-server<br />
+mount 127.0.0.1:/home/export /mnt/my-nfs</p>
+<p>man exports</p>
+<h2 id="samba">SAMBA<a class="headerlink" href="#samba" title="Permanent link">&para;</a></h2>
+<p># apt install samba smbclient</p>
+<p>man <strong>smb.conf</strong></p>
+<p>cat \&lt;\&lt;EOF &gt;&gt;/etc/samba/smb.conf<br />
+[lab13-3]<br />
+  guest ok = yes<br />
+  read only = yes<br />
+  path = /home/export/cifs<br />
+EOF</p>
+<p>smbclient -L localhost<br />
+smbclient //localhost/lab13-3</p>
+<p>-- PRIVATE ACCESS EXAMPLE<br />
+cat \&lt;\&lt;EOF &gt;&gt;/etc/samba/smb.conf<br />
+[lab-private]<br />
+  path = /home/export/private<br />
+  valid users = alex<br />
+  read only = no<br />
+  public = no<br />
+EOF</p>
+<p># chown -R alex /home/export/private/my-secret<br />
+# smbpasswd -a alex<br />
+# systemctl restart smbd.service<br />
+# smbclient -L localhost<br />
+# smbclient -U alex //localhost/lab-private<br />
+smb: \&gt; get my-secret</p>
+<p>-- <strong>ETC/FSTAB</strong><br />
+man systemd.mount</p>
+<p>127.0.0.1:/home/export/nfs /home/share/nfs nfs x-systemd.automount,x-systemd.idle-timeout=10,noauto,_netdev<br />
+0 0</p>
+<p>//localhost/mainexports /home/share/cifs cifs credentials=/root/smbfile,x-systemd.automount,x-systemd.idle-timeout=10,noauto,_netdev 0 0</p>
+<h2 id="security">SECURITY<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
+<p><strong>SELINUX</strong><br />
+<a href="https://access.redhat.com/articles/2191331">Basic SELinux Troubleshooting in CLI</a></p>
+<p><strong>APPARMOR</strong><br />
+<a href="https://wiki.debian.org/AppArmor/HowToUse">https://wiki.debian.org/AppArmor/HowToUse</a><br />
+/etc/apparmor.d<br />
+apparmor_status</p>
+<p><strong>PAM</strong><br />
+Framework for authentication called Pluggable Authentication Module (PAM).</p>
+<p><strong>CHROOT</strong></p>
+<p><a href="https://us-cert.cisa.gov/ncas/alerts">https://us-cert.cisa.gov/ncas/alerts</a></p>
+<p>nmap<br />
+tcpdump<br />
+snort</p>
+<p><strong>FIREWALL</strong><br />
+netfilter<br />
+nftables</p>
+<p>When traffic comes to a <strong>libwrap</strong>-enabled daemon, those two files are consulted</p>
+<ul>
+<li>/etc/hosts.allow  </li>
+<li>
+<p>/etc/hosts.deny</p>
+</li>
+<li>
+<p>The <strong>netfilter</strong> firewall consists of <em>tables</em>.  </p>
+</li>
+<li>Tables consist of <strong><em>chains</em></strong>.  </li>
+<li>Chains have a default <em>policy</em>.  </li>
+<li>Chains consist of <em>rules</em>.  </li>
+<li>
+<p>Rules consist of a <em>match criteria</em> and a <em>target</em>.</p>
+</li>
+<li>
+<p><strong>filter</strong> table deals with packets bound for the local machine, being routed through the machine, or packets generated by processes on the machine.<br />
+  chains: forward, input, output  </p>
+</li>
+<li><strong>NAT</strong> table for traffic creating a new network connection. Chains: prerouting, output, postrouting  </li>
+<li><strong>mangle</strong> for all network packets rules: prerouting, input, output, forward, postrouting</li>
+</ul>
+<p>sudo <strong>ufw</strong> app list<br />
+sudo ufw show listening <br />
+        raw</p>
+<p><strong>IPTABLES</strong><br />
+<a href="http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-it-4/s1-firewall-ipt-fwd.html"><strong>7.4. Regole FORWARD e NAT</strong></a></p>
+<p>man iptables<br />
+man iptables-extensions</p>
+<p><strong>iptables</strong> --list-rules<br />
+      --list<br />
+iptables --list INPUT --type mangle -v</p>
+<p>Targets: ACCEPT, DROP, REJECT </p>
+<p># Con drop la connessione rimane in attesa, con reject chiusa subito<br />
+iptables -A INPUT --proto tcp --dport 80 --jump DROP</p>
+<p>iptables -A INPUT --proto tcp --dport 8080 --jump REJECT --reject-with icmp-net-prohibited</p>
+<p># apt install iptables-persistent<br />
+# iptables-save</p>
+<p>To enable <strong>DNAT redirect</strong> (DMZ ecc):<br />
+echo 1 &gt; /proc/sys/net/ipv4/ip_forward<br />
+/etc/sysctl.conf  -----&gt; net.ipv4.ip_forward=1  # Rileggi le conf con <strong>sysctl -p</strong> /etc/sysctl.conf</p>
+<p><strong>MASQUERADE</strong><br />
+This target is only valid in the nat table, in the POSTROUTING chain.  It should only be used with dynamically assigned IP (dialup) connections: if you have a static IP address, you should use the SNAT target.<br />
+# iptables -t nat -A POSTROUTING -o eth1 ! -d 192.168.12.0/24 -j MASQUERADE</p>
+<p>Accettando i pacchetti inoltrati tramite il dispositivo IP interno, si abilita la comunicazione tra i nodi LAN; tuttavia essi non sono ancora abilitati a comunicare esternamente con Internet. Per abilitare i nodi LAN con indirizzi IP privati alla comunicazione con le reti pubbliche esterne, configurate il firewall per l'<em>IP masquerading</em>, il quale maschera le richieste provenienti dai nodi LAN con l'indirizzo IP dei dispositivi esterni del firewall<br />
+iptables -A FORWARD -i eth1 -j ACCEPT<br />
+iptables -A FORWARD -o eth1 -j ACCEPT<br />
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</p>
+<p><strong>Traffic redirect</strong> through Squid<br />
+iptables -t nat -A PREROUTING -s $SQUIDIP -p tcp --dport 80 -j ACCEPT<br />
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port $SQUIDPORT<br />
+iptables -t nat -A POSTROUTING -j MASQUERADE</p>
+<p><strong>LOG</strong> connections<br />
+iptables -A INPUT -i lo -p tcp --dport 4200 --destination localhost -m state NEW -j LOG --log-level info --log-prefix “NEW CON LOCAL “</p>
+<p>journactl -f</p>
+<p><strong>block</strong> all other traffic <br />
+# iptables -P INPUT DROP</p>
+<h2 id="containers">CONTAINERS<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h2>
+<p><a href="https://book.hacktricks.xyz/pentesting/2375-pentesting-docker">https://book.hacktricks.xyz/pentesting/2375-pentesting-docker</a></p>
+<p>Note sul corso</p>
+<p><a href="https://trainingportal.linuxfoundation.org/learn/course/linux-networking-and-administration-lfs211/network-security/knowledge-check?page=1">https://trainingportal.linuxfoundation.org/learn/course/linux-networking-and-administration-lfs211/network-security/knowledge-check?page=1</a><br />
+no knowledge check</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
