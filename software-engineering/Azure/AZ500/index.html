@@ -3830,32 +3830,40 @@ Depending on the risk the user can be <strong>unblocked</strong> by resetting th
 - Use much higher thresholds for on-prem lockout polices
 - even admins can't unlock a lockout user</p>
 <h2 id="risk-event-detection">Risk Event Detection<a class="headerlink" href="#risk-event-detection" title="Permanent link">&para;</a></h2>
-<p><a href="[Risk policies - Microsoft Entra ID Protection | Microsoft Learn](https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies)"><strong>Risk policies</strong></a> can be at low, medium or high level for:
-- <strong>User</strong> (legacy): related to identity risks as leaked credentials or anomalous activity.
-- <strong>Sign-in</strong> (legacy): 
+<p><a href="[Risk policies - Microsoft Entra ID Protection | Microsoft Learn](https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies)"><strong>Risk policies</strong></a> can be at low, medium or high level for:</p>
+<ul>
+<li><strong>User</strong> (legacy): related to identity risks as leaked credentials or anomalous activity.</li>
+<li><strong>Sign-in</strong> (legacy): 
   if a member of the target user group has a risk detected during sign-in, a remediation policy could be automatically triggered like asking for MFA.
-  Detects impossible travel, malware or anonymous IPs... 
-- <strong>MFA registration</strong>: can be used in combination of both user and sign-in risk policy
-- <strong><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories">Conditional Access</a></strong> (💸 P2 license):
-    - Foundation: require MFA, compliant device...
-    - Zero Trust: no browser session, no unknown apps...
-    - Remote work
-    - Protect administrators
-    - Emerging threats: require anti-phishing MFA for admins
-    It is a second-layer access protection, not used for DoS attacks or similar.
-    Policies cover these signals:
-        - user/group
-        - cloud app
-        - client app
-        - device status (eg: domain joined)
-        - IP
-        - sign-in risk</p>
-<p><strong>Access Reviews</strong>, available in PIM and Enterprise Applications, could be needed when:
-- periodical audits
-- guest users
-- change of group members or scope
-- users not in EntraID
-- policy exceptions</p>
+  Detects impossible travel, malware or anonymous IPs... </li>
+<li><strong>MFA registration</strong>: can be used in combination of both user and sign-in risk policy</li>
+<li><strong><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories">Conditional Access</a></strong> (💸 P2 license):<ul>
+<li>Foundation: require MFA, compliant device...</li>
+<li>Zero Trust: no browser session, no unknown apps...</li>
+<li>Remote work</li>
+<li>Protect administrators</li>
+<li>Emerging threats: require anti-phishing MFA for admins
+It is a second-layer access protection, not used for DoS attacks or similar.
+Policies cover these signals:<ul>
+<li>user/group</li>
+<li>cloud app</li>
+<li>client app</li>
+<li>device status (eg: domain joined)</li>
+<li>IP</li>
+<li>sign-in risk</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Access Reviews</strong>, available in PIM and Enterprise Applications, could be needed when:</p>
+<ul>
+<li>periodical audits</li>
+<li>guest users</li>
+<li>change of group members or scope</li>
+<li>users not in EntraID</li>
+<li>policy exceptions</li>
+</ul>
 <h2 id="privileged-identity-management-pim">Privileged Identity Management (PIM)<a class="headerlink" href="#privileged-identity-management-pim" title="Permanent link">&para;</a></h2>
 <ul>
 <li>P2 license</li>
@@ -3867,12 +3875,14 @@ Depending on the risk the user can be <strong>unblocked</strong> by resetting th
 <li><strong>group membership</strong>: a Global Admin or Privileged Role Admin can add as members users to EntraID security groups or Microsoft365 groups. Max 500 groups definitions.</li>
 </ul>
 <p><strong>Zero Trust model</strong>: 
-Assume breach and implement least privilege principle together with enforcing authentication between all the entities communicating in the internal network.
-- InTune checks for device configuration
-- Entra ID checks for user and groups
-- Access polices for device health
+Assume breach and implement least privilege principle together with enforcing authentication between all the entities communicating in the internal network.</p>
+<ul>
+<li>InTune checks for device configuration</li>
+<li>Entra ID checks for user and groups</li>
+<li>Access polices for device health
 Plan a project with a pilot group to test PIM settings
-JIT (just in time) access for 28 built-in roles</p>
+JIT (just in time) access for 28 built-in roles</li>
+</ul>
 <h2 id="microsoft-identity-management">Microsoft Identity Management<a class="headerlink" href="#microsoft-identity-management" title="Permanent link">&para;</a></h2>
 <ul>
 <li>manages users and groups access to on-prem apps</li>
@@ -3881,25 +3891,25 @@ JIT (just in time) access for 28 built-in roles</p>
 </ul>
 <h2 id="azure-policies">Azure Policies<a class="headerlink" href="#azure-policies" title="Permanent link">&para;</a></h2>
 <p>When you enable Defender for Cloud, the Microsoft cloud security benchmark (<a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance">MCSB</a>) becomes the default initiative.</p>
-<p>Azure Defender initiative: 
+<p>Azure Defender initiative:<br />
 - group of policies
 - There also regulatory compliance initiatives useful to detect non-conformities with legal security frameworks like ISO27001 (<a href="https://learn.microsoft.com/en-us/azure/governance/policy/samples/iso-27001">Regulatory Compliance details for ISO 27001:2013 - Azure Policy | Microsoft Learn</a>)
 eg: <a href="https://learn.microsoft.com/en-us/azure/aks/policy-reference">Policy definitions for Azure Kubernetes Service</a></p>
-<p>Types:
+<p>Types:<br />
 - built-in
 - custom
 - static for regulatory compliances</p>
-<p>Modes:
+<p>Modes:<br />
 - all (default)
 - indexed: only resources supporting tags and locations</p>
-<p>Some built-in policies:
+<p>Some built-in policies:<br />
 - App slots should use a managed identity
 - App Configuration should disable public network access
 - APIs should use encrypted protocols
 - Allowed VM size SKU
 - Configure container registries to disable anonymous authentication
 - Add a tag to resources</p>
-<p><strong>Effects</strong> in evaluation order:
+<p><strong>Effects</strong> in evaluation order:<br />
 - Disabled
 - Append
 - Modify
@@ -3908,7 +3918,7 @@ eg: <a href="https://learn.microsoft.com/en-us/azure/aks/policy-reference">Polic
 - Manual 
 - AuditIfNotExists
 - DenyAction</p>
-<p>Possible states of a resources in a policy scope:
+<p>Possible states of a resources in a policy scope:<br />
 - compliant
 - non compliant
 - exempted
