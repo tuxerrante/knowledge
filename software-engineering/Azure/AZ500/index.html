@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://tuxerrante.github.io/knowledge/software-engineering/Azure/AZ500/">
+      
       
         <link rel="prev" href="../AZ104/">
       
@@ -23,7 +25,7 @@
     
     
       
-        <title>AZ-500 - obsidian-mkdocs template</title>
+        <title>AZ500 - obsidian-mkdocs template</title>
       
     
     
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AZ-500
+              AZ500
             
           </span>
         </div>
@@ -1996,18 +1998,518 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AZ500
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    AZ-500
+    AZ500
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#az-500" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZ-500
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licenses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entra-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENTRA ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENTRA ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authn" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUTHN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AUTHN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Principals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kerberos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guest Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entraad-b2b" class="md-nav__link">
+    <span class="md-ellipsis">
+      EntraAD B2B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entraad-b2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      EntraAD B2C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Access:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authz" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUTHZ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AUTHZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth2" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      User management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#administrative-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrative Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Administrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pim-privileged-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIM (Privileged Identity Management)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hybrid Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entra-cloud-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entra Cloud Sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entra-domain-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entra Domain Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDENTITY PROTECTION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDENTITY PROTECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-event-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Event Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privileged-identity-management-pim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privileged Identity Management (PIM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Identity Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-responsibility-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Responsibility Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      NETWORKING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NETWORKING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOAD BALANCER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      APP GATEWAY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#az-front-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZ FRONT DOOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nsg-network-security-group-l4" class="md-nav__link">
+    <span class="md-ellipsis">
+      NSG – Network Security Group (L4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpressRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOST
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTAINERS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEY VAULT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      STORAGE ACCOUNT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Az MONITOR
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2406,8 +2908,488 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#az-500" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZ-500
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licenses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entra-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENTRA ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENTRA ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authn" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUTHN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AUTHN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Principals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kerberos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guest Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entraad-b2b" class="md-nav__link">
+    <span class="md-ellipsis">
+      EntraAD B2B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entraad-b2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      EntraAD B2C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Access:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authz" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUTHZ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AUTHZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth2" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      User management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#administrative-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrative Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Administrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pim-privileged-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIM (Privileged Identity Management)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hybrid Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entra-cloud-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entra Cloud Sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entra-domain-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entra Domain Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDENTITY PROTECTION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDENTITY PROTECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-event-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Event Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privileged-identity-management-pim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privileged Identity Management (PIM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Identity Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-responsibility-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Responsibility Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      NETWORKING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NETWORKING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOAD BALANCER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      APP GATEWAY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#az-front-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZ FRONT DOOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nsg-network-security-group-l4" class="md-nav__link">
+    <span class="md-ellipsis">
+      NSG – Network Security Group (L4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpressRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOST
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTAINERS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEY VAULT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      STORAGE ACCOUNT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Az MONITOR
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2422,7 +3404,7 @@
                   
 
 
-<h1 id="az-500">AZ-500<a class="headerlink" href="#az-500" title="Permanent link">&para;</a></h1>
+<h2 id="az-500">AZ-500<a class="headerlink" href="#az-500" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=6vISzj-z8k4&amp;t=187s&amp;ab_channel=JohnSavill%27sTechnicalTraining">AZ-500 Microsoft Azure Security Technologies Study Cram</a> +3h</li>
 <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/?practice-assessment-type=certification">Microsoft Certified: Azure Security Engineer Associate - Certifications | Microsoft Learn</a></li>
@@ -2658,16 +3640,16 @@ With Pass-through Authentication, the user’s password is validated against the
 <li><a href="https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">Kerberos Authentication Overview | Microsoft Learn</a> 
 <img alt="kerberos-authentication-illustration.jpg" src="../../../img/kerberos-authentication-illustration.jpg" /></li>
 <li>KDC = Key Distribution Center</li>
-<li>If client credentials are valid the KDC emits a Ticket Granting Ticket</li>
-<li>Before accessing a specifc service the client sends the TGT again back to the KDC to have a new ticket scoped on the target service.</li>
-<li>Until this new ticket expires, the client can have access to the target server without repeating the authn process.
-Cons:</li>
-<li><a href="[Use Alternate Authentication Material: Pass the Ticket, Sub-technique T1550.003 - Enterprise | MITRE ATT&amp;CK®](https://attack.mitre.org/techniques/T1550/003/)">pass-the-ticket attack</a></li>
-<li><a href="[Steal or Forge Kerberos Tickets: Kerberoasting, Sub-technique T1558.003 - Enterprise | MITRE ATT&amp;CK®](https://attack.mitre.org/techniques/T1558/003/)">Kerberoasting</a></li>
-<li>Missing sync between servers clocks</li>
+<li>If client credentials are valid, the KDC emits a Ticket Granting Ticket (TGT).</li>
+<li>Before accessing a specific service, the client sends the TGT back to the KDC to receive a new ticket scoped for the target service.</li>
+<li>Until this new ticket expires, the client can access the target server without repeating the authentication process.</li>
 </ul>
+<p>Cons:
+- <a href="https://attack.mitre.org/techniques/T1550/003/">pass-the-ticket attack</a>
+- <a href="https://attack.mitre.org/techniques/T1558/003/">Kerberoasting</a>
+- Missing sync between servers' clocks</p>
 <h2 id="guest-users">Guest Users<a class="headerlink" href="#guest-users" title="Permanent link">&para;</a></h2>
-<p>Authn happens against their IdP (social network, external AD, mail...) while authZ happens against our service (Oauth2)</p>
+<p>Authentication happens against their IdP (social network, external AD, mail...) while authorization happens against our service (OAuth2).</p>
 <h2 id="entraad-b2b">EntraAD B2B<a class="headerlink" href="#entraad-b2b" title="Permanent link">&para;</a></h2>
 <p>Guest users could be:
 - from an external Azure AD tenant
