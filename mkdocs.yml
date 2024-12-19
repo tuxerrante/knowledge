@@ -1,5 +1,5 @@
 site_name: obsidian-mkdocs template
-
+site_url: https://tuxerrante.github.io/knowledge/
 theme:
     name: 'material'
     palette:
@@ -43,7 +43,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: pymdownx.superfences.fence_code_format
 
   - toc:
       permalink: true

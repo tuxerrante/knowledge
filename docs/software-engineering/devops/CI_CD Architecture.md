@@ -73,5 +73,3 @@ A Jenkins pipeline will detect the push on the master branch, so it will wake up
 - ### Should developers have rights over namespace creation/deletion?
 
 - ### When should I start the ArgoCD configuration?
-
-- 
