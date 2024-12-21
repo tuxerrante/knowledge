@@ -1,4 +1,4 @@
-Related sources:
+Related sources:  
 - [The almanack of Naval Ravikant](https://www.navalmanack.com/)  
 - [Algorithms to Live By: The Computer Science of Human Decisions](https://www.amazon.it/Algorithms-live-Brian-Christian/dp/0007547994/ref=tmm_pap_swatch_0)  
 - [Joe Rogan Podcast](https://youtu.be/3qHkcs3kG44?si=3b75F9aawTFUsl7G)  
