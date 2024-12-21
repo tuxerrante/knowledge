@@ -28,6 +28,9 @@ If you don't own equities in a business, you're chances of making good money is 
 Don't look at jobs where input and output are highly connected. That won't create wealth.
 
 Search for, or create, [positive sum wealth games](https://youtu.be/7lSZQix6l3s?si=aAq4sePbesVpjgmp).
+   - [YT FEE - wealth isn't zero sum game](https://youtu.be/rixbHbaWBuk?si=IoM8uzldhO7O4eFt)
+   - [investopedia game theory](https://www.investopedia.com/terms/g/gametheory.asp)
+   
 
 Do it for the sake of it, not for money. Id you love money and you make it, that's never enough.
 
