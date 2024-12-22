@@ -37,3 +37,14 @@ Do it for the sake of it, not for money. Id you love money and you make it, that
 Networking at all costs is bullshit. Do your craft, practice your craft and the Right people will come to you.
 
 Keep doing it. don't keep track. don't count. have a lot of patience.
+
+# building judgements
+
+https://navalsarchive.substack.com/p/cynicism-is-easy-mimicry-is-easy
+
+wisdom is knowing the long-term consequences of your actions. Wisdom applied to external problems is judgment
+
+the moment of suffering—when you’re in pain—is a moment of truth. It is a moment where you’re forced to embrace reality the way it actually is
+
+To be honest speak wothout identity. Do not self-identify in anything. 
+
