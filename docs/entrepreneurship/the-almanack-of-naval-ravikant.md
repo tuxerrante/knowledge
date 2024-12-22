@@ -61,11 +61,11 @@ Being successful means being more able to avoid mistakes than being always corre
 learn the basics very well and practice them everyday looking for a feedback. 
 
 requisites:  
-- microeconomics
+- [[microeconomics]]
    - principal-agent problem 
    - compound interest 
 - game theory 
-- critical thinking 
+- [[critical-thinking]]
 - complex systems 
 - Statistics 
 
