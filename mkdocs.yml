@@ -1,7 +1,10 @@
-site_name: obsidian-mkdocs template
+site_name: tuxerrante knowledge garden
 site_url: https://tuxerrante.github.io/knowledge/
+
 theme:
     name: 'material'
+    features:
+      - navigation.footer
     palette:
 
     # Light mode
@@ -59,6 +62,11 @@ plugins:
       categories:
         - categories
         - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/affinitoalessandro
 
 extra_javascript:
   - javascripts/mathjax.js
