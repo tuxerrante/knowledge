@@ -1,5 +1,6 @@
 site_name: tuxerrante knowledge garden
 site_url: https://tuxerrante.github.io/knowledge/
+repo_url: https://github.com/tuxerrante/knowledge
 
 theme:
     name: 'material'
