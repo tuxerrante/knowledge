@@ -60,14 +60,14 @@ Avoid being dishonest. Once you get used to it you'll start believing your own l
 Being successful means being more able to avoid mistakes than being always correct. 
 learn the basics very well and practice them everyday looking for a feedback. 
 
-requisites:  
-- [[microeconomics]]
-   - principal-agent problem 
-   - compound interest 
-- game theory 
-- [[critical-thinking]]
-- complex systems 
-- Statistics 
+Requisites:  
+- [[microeconomics]]  
+   - principal-agent problem  
+   - compound interest   
+- game theory  
+- [[critical-thinking]]  
+- complex systems   
+- Statistics  
 
 if you can't decide, if you're making a list of pro vs cons, the answer is no.
 
