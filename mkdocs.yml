@@ -67,6 +67,7 @@ extra:
   social:
     - icon: fontawesome/brands/linkedin 
       link: https://www.linkedin.com/in/affinitoalessandro
+  generator: false
 
 extra_javascript:
   - javascripts/mathjax.js
