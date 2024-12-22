@@ -38,7 +38,8 @@ Networking at all costs is bullshit. Do your craft, practice your craft and the 
 
 Keep doing it. don't keep track. don't count. have a lot of patience.
 
-# building judgements
+
+# Building judgement
 
 https://navalsarchive.substack.com/p/cynicism-is-easy-mimicry-is-easy
 
@@ -47,4 +48,6 @@ wisdom is knowing the long-term consequences of your actions. Wisdom applied to 
 the moment of suffering—when you’re in pain—is a moment of truth. It is a moment where you’re forced to embrace reality the way it actually is
 
 To be honest speak wothout identity. Do not self-identify in anything. 
+
+Almost all biases are time-saving heuristics. For important decisions, discard memory and identity, and focus on the problem.
 
