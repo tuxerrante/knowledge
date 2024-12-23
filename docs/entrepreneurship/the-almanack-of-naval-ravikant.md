@@ -57,5 +57,28 @@ Avoid being dishonest. Once you get used to it you'll start believing your own l
 
 [the more you know the less you diversify. ](https://x.com/NavalismHQ/status/1793875574492139850)
 
+Being successful means being more able to avoid mistakes than being always correct. 
+learn the basics very well and practice them everyday looking for a feedback. 
 
+requisites:  
+- microeconomics
+   - principal-agent problem 
+   - compound interest 
+- game theory 
+- critical thinking 
+- complex systems 
+- Statistics 
 
+if you can't decide, if you're making a list of pro vs cons, the answer is no.
+
+when you can choose between two similar paths, choose the one more painful in the short term. Look for compound interests gain in the long term.
+
+```mermaid
+flowchart
+	n1["Happiness"]
+	style n1 stroke-width:2px
+	n1 --- n4["Health "]
+	n4 --- n2["Wealth"]
+	style n2 stroke-width:1px,stroke-dasharray:5 5
+
+```
