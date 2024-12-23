@@ -2515,12 +2515,14 @@ learn the basics very well and practice them everyday looking for a feedback. </
 <p>if you can't decide, if you're making a list of pro vs cons, the answer is no.</p>
 <p>when you can choose between two similar paths, choose the one more painful in the short term. Look for compound interests gain in the long term.</p>
 <pre class="mermaid"><code>flowchart
-    n1["Happiness"]
+    n1["😁 Happiness"]
     style n1 stroke-width:2px
-    n1 --- n4["Health "]
-    n4 --- n2["Wealth"]
- n2 -.- n1
-    style n2 stroke-width:1px,stroke-dasharray:5 5
+    n1 -- Continuous learning&lt;br&gt;Exercising&lt;br&gt;Diet --- n4["🧘‍♂️ Health "]
+    n4 -- Authenticity &lt;br&gt;Permissionless leverage&lt;br&gt;Mastery --- n2["💰 Wealth"]
+    n2 -.- n3@{ shape: "diam", label: "do you&lt;br&gt;love money?" }
+    n3 -. no .-n5@{ shape: "diam", label: "do you&lt;br&gt;measure everything?" }
+    n5 -. no .-n1
+    style n2 stroke-width:1px,stroke
 </code></pre>
 
 
