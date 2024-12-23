@@ -79,6 +79,7 @@ flowchart
 	style n1 stroke-width:2px
 	n1 --- n4["Health "]
 	n4 --- n2["Wealth"]
+ n2 -.- n1
 	style n2 stroke-width:1px,stroke-dasharray:5 5
 
 ```
