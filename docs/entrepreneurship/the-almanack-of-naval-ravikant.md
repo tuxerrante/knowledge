@@ -51,3 +51,11 @@ To be honest speak wothout identity. Do not self-identify in anything.
 
 Almost all biases are time-saving heuristics. For important decisions, discard memory and identity, and focus on the problem.
 
+Avoid being dishonest. Once you get used to it you'll start believing your own lies. Your idea of reality will be more and more distant from the truth.
+
+[Praise specifically, criticize generically.]( https://home.workstory.team/post/praise-specifically-criticize-generally#:~:text=Praise%20by%20name%2C%20criticize%20by,the%20art%20of%20giving%20feedback.)
+
+[the more you know the less you diversify. ](https://x.com/NavalismHQ/status/1793875574492139850)
+
+
+
