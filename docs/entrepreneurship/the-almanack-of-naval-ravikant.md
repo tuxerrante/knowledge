@@ -75,11 +75,13 @@ when you can choose between two similar paths, choose the one more painful in th
 
 ```mermaid
 flowchart
-	n1["Happiness"]
-	style n1 stroke-width:2px
-	n1 --- n4["Health "]
-	n4 --- n2["Wealth"]
- n2 -.- n1
-	style n2 stroke-width:1px,stroke-dasharray:5 5
+	n1["😁 Happiness"]
+    style n1 stroke-width:2px
+    n1 -- Continuous learning<br>Exercising<br>Diet --- n4["🧘‍♂️ Health "]
+    n4 -- Authenticity <br>Permissionless leverage<br>Mastery --- n2["💰 Wealth"]
+    n2 -.- n3@{ shape: "diam", label: "do you<br>love money?" }
+    n3 -. no .-n5@{ shape: "diam", label: "do you<br>measure everything?" }
+    n5 -. no .-n1
+    style n2 stroke-width:1px,stroke
 
 ```
