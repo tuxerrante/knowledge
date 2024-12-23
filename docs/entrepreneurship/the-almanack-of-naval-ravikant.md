@@ -75,7 +75,7 @@ when you can choose between two similar paths, choose the one more painful in th
 
 ```mermaid
 flowchart
-	n1["😁 Happiness"]
+    n1["😁 Happiness"]
     style n1 stroke-width:2px
     n1 -- Continuous learning<br>Exercising<br>Diet --- n4["🧘‍♂️ Health "]
     n4 -- Authenticity <br>Permissionless leverage<br>Mastery --- n2["💰 Wealth"]
