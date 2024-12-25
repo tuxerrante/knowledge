@@ -20,20 +20,13 @@ Play stupid games, win stupid prizes.
 Wealth creation is an evolutionarily recent positive-sum game. Status is an old zero-sum gam. N.Ravikant
 
 
-### **Every day work**
+### Every day work
 
-- double check your morning focus TODO list: most impactful task first
-
-### **Meetings:**
-
-- Only in the afternoon  
+- double check your morning focus TODO list: most impactful task first  
+- meetings only in the afternoon  
 - Block the first three hours of the day for the most important task, no interruptions  
-- 
+- Cellphone upside down, no sound, check notifications only after lunch
 
-### **Cellphone**
-
-- upside down, no sound, check notifications only after lunch
-- 
 
 ## **Happiness**
 
@@ -78,10 +71,9 @@ eg: work from home
 
 14:00 \- 18:00 meetings, emails, documentation, tests…
 
+
 ## **Conversations**
 
 * [Dare to disagree](https://youtu.be/PY\_kd46RfVE)  
 * "Any fool can criticize, complain, and condemn — and most fools do. But it takes character and self-control to be understanding and forgiving." \- Dale Carnegie  
-* 
 
-[image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnAAAAAECAYAAAAOPwJdAAAANElEQVR4Xu3WMQ0AMAwEseAOoJIpqGYvgrzkwcshuLqnHwAAOeoPAADsZuAAAMIYOACAMAOTpGslhjl7rwAAAABJRU5ErkJggg==>
