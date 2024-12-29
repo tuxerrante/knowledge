@@ -12,11 +12,11 @@ Click on the menu on the top to explore the pages.
 ---
 # Support my work!
 
-**[Buy me a coffee!](https://buymeacoffee.com/tuxerrante)**
-
- **[Sponsor me on GitHub](https://github.com/sponsors/tuxerrante)**
+➡️ **[Buy me a coffee!](https://buymeacoffee.com/tuxerrante)**
+➡️ **[Sponsor me on GitHub!](https://github.com/sponsors/tuxerrante)**
 
 I've been dedicated to creating free content for years, pouring countless hours into research, writing, and editing. 
-Your support would mean the world to me and help me continue producing high-quality content. By sponsoring my work, you're not just helping me, but also validating the value of the information I provide. Thank you for considering!
+Your support would mean the world to me and help me continue producing high-quality content. By sponsoring my work, you're not just helping me, but also validating the value of the information I provide.  
+Thank you for considering!
 
 ![[support.png]]

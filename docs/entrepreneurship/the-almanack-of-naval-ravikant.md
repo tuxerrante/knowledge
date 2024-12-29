@@ -85,3 +85,60 @@ flowchart
     style n2 stroke-width:1px,stroke
 
 ```
+
+# Happiness
+Happiness is not about positive or negative thoughts. It is about the absence of desire.
+
+Reality is neutral.
+Reality has no judgements.
+
+Memory and identity are burdens of the past preventing us from living freely the present.
+
+Enlightenment is the space between your thoughts.
+
+You locally reverse entropy. That's why you're here.
+
+Desire is a contract that makes you unhappy until you get what you want.
+-> and then it will move on the next thing.
+
+You have to lives. The second one begins when you understand you only have one.
+Confucius.
+
+Peaceful successful people have such self-control and self-awareness to not need anything from anyone.
+
+In front of a new challenge or delusion you always have three choices:  
+1. You accept it  
+2. You try to change it  
+3. or you can leave it  
+Accept and move fast forward. Life is short.
+
+Listen and absorb. Don't emulate.
+
+We evolved in scarcity but live in abundance. This is why is so important to always say no.
+
+Workout everyday. Whatever it works for you.
+
+In every moment you should be taking a new good habit or removing a bad one.
+
+All benefits come from compound interests: relationships, money, health and habits.
+
+Inspiration is perishable, act immediately.
+### Meditation
+Too much sugar lead to a heavy body.  
+Too many distractions lead to a heavy mind.
+
+The more you judge, the more you separate yourself from reality.
+
+Remove 95% of the noise from your brain, is useless in general or is useless in that moment.
+
+Turn off society and listen to yourself.
+
+If you're not spending time doing what you want, learning or earning, you're throwing your life.
+
+The mind should be a servant and a tool, not the master.
+# Personal comments
+Anger is a precursor to violence.  
+	what about grit and stress discharge? Anger can have important effect too.
+	
+
+

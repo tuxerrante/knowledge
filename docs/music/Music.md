@@ -1,7 +1,7 @@
 
 
 # My Soundcloud
-https://soundcloud.com/alessandro-affinito-58528444/domino-voices
+[soundcloud.com/alessandro-affinito](https://soundcloud.com/alessandro-affinito-58528444/domino-voices)
 
 # Spotify
 ## My Spotify playlists
