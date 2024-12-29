@@ -1,5 +1,7 @@
+https://youtu.be/uLlv_aZjHXc?si=loVX_PhjHxgX70OM
+
 I think an argument is a structured assertion with the purpose of transferring knowledge. So it can't be a mere definition, but it could be a justification, an explanation or persuasion  
-  
+
 An argument is a series of propositions starting from premises giving reasons to justify the conclusions. It should be made in a well-known language with a purpose to transfer knowledge.  
   
 An argument could be:  
