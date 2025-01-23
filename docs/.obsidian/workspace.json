@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "brain/think-again.md",
+                "file": "science/strategy-and-game-theory-for-management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "think-again"
+              "title": "strategy-and-game-theory-for-management"
             }
           }
         ]
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 224.5,
+    "collapsed": true
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -165,17 +166,20 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
-    "brain/think-again-how-to-reason.md",
-    "brain/think-again.md",
+    "science/Theoretical-concepts-to-keep-in-mind.md",
+    "science/strategy-and-game-theory-for-management.md",
+    "books/critical thinking/the-art-of-strategy.md",
     "entrepreneurship/the-almanack-of-naval-ravikant.md",
+    "science/think-again.md",
+    "brain/think-again-how-to-reason.md",
     "music/Music.md",
-    "brain/rationality.md",
+    "science/rationality.md",
     "philosophy/quotes-and-life-guidelines.md",
     "index.md",
-    "brain/critical-thinking.md",
+    "science/critical-thinking.md",
     "books/the-almanack-of-naval-ravikant.md",
     "philosophy/rational-buddhism.md",
-    "brain/elephant-in-the-brain-vs-good-inside.md",
+    "science/elephant-in-the-brain-vs-good-inside.md",
     "philosophy",
     "critical thinking.md",
     "economics/microeconomics.md",
@@ -193,11 +197,8 @@
     "books/emotions/emotional-intelligence.md",
     "books/emotions",
     "Untitled.md",
-    "software-engineering/security/CISSP/domain-7-security-operations.md",
-    "software-engineering/security/CISSP/domain-3.md",
     "software-engineering/security/img/roles-risks-pyramid.png",
     "software-engineering/security/img",
-    "security/CISSP.md",
     "software-engineering/security/CISSP",
     "books/management",
     "software-engineering/management",

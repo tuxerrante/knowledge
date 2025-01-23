@@ -29,7 +29,7 @@ To be [_Bayesian_](https://www.lesswrong.com/tag/bayesianism):
 
 **Overcoming Biases**: Rationality involves recognizing and overcoming cognitive biases that can distort our thinking. This includes biases like confirmation bias, where we favor information that confirms our preexisting beliefs, and availability bias, where we overestimate the importance of information that is readily available.
 
-**[[Self-Deception]]**: Rationality also requires us to be honest with ourselves about our beliefs and motivations. Self-deception can lead to holding false beliefs and making poor decisions.
+**[[self-deception]]**: Rationality also requires us to be honest with ourselves about our beliefs and motivations. Self-deception can lead to holding false beliefs and making poor decisions.
 	humans can look at an illusion and realize that ==part of what we’re seeing is the lens itself==. You don’t always have to believe your own eyes, but you have to realize that you _have_ eyes — you must have distinct mental buckets for the map and the territory, for the senses and reality. Lest you think this a trivial ability, remember how rare it is in the animal kingdom.
 	[The Lens That Sees Its Flaws — LessWrong](https://www.lesswrong.com/s/NBDFAKt3GbFwnwzQF/p/46qnWRSR7L2eyNbMA)
 
