@@ -2369,6 +2369,57 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#perimeter-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perimeter defense
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perimeter defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpressRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      DDOS Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       LOAD BALANCER
@@ -2399,33 +2450,6 @@
   <a href="#nsg-network-security-group-l4" class="md-nav__link">
     <span class="md-ellipsis">
       NSG – Network Security Group (L4)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firewall" class="md-nav__link">
-    <span class="md-ellipsis">
-      FIREWALL
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expressroute" class="md-nav__link">
-    <span class="md-ellipsis">
-      ExpressRoute
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      VPN
     </span>
   </a>
   
@@ -3505,6 +3529,57 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#perimeter-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perimeter defense
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perimeter defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIREWALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpressRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      DDOS Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       LOAD BALANCER
@@ -3535,33 +3610,6 @@
   <a href="#nsg-network-security-group-l4" class="md-nav__link">
     <span class="md-ellipsis">
       NSG – Network Security Group (L4)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firewall" class="md-nav__link">
-    <span class="md-ellipsis">
-      FIREWALL
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expressroute" class="md-nav__link">
-    <span class="md-ellipsis">
-      ExpressRoute
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      VPN
     </span>
   </a>
   
@@ -4196,25 +4244,22 @@ eg: <a href="https://learn.microsoft.com/en-us/azure/aks/policy-reference">Polic
 When you apply a lock at a parent scope, all resources within that scope inherit the same lock. Even resources you add later inherit the same parent lock. The most restrictive lock in the inheritance takes precedence.</p>
 <hr />
 <h1 id="networking-platform-protection">NETWORKING (Platform Protection)<a class="headerlink" href="#networking-platform-protection" title="Permanent link">&para;</a></h1>
-<h2 id="load-balancer">LOAD BALANCER<a class="headerlink" href="#load-balancer" title="Permanent link">&para;</a></h2>
-<p>L4 (TCP/UDP), REGIONAL</p>
-<p>can be internal or external (get assigned a Public IP)</p>
-<h2 id="app-gateway">APP GATEWAY<a class="headerlink" href="#app-gateway" title="Permanent link">&para;</a></h2>
-<p>L7, REGIONAL: redirection, rewrite, https,</p>
-<p>Can have on top a WAF (<a href="https://learn.microsoft.com/en-gb/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs21#owasp-crs-32">OWASP threats</a>)</p>
-<h2 id="az-front-door">AZ <a href="https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview">FRONT DOOR</a><a class="headerlink" href="#az-front-door" title="Permanent link">&para;</a></h2>
-<p>L7,  GLOBAL</p>
-<p>Uses <a href="https://en.wikipedia.org/wiki/Anycast">anycast</a> to manage the connection as close as possible to the client ( the lowest number of <a href="https://en.wikipedia.org/wiki/Border_gateway_protocol">BGP</a> network hops) with hundreds of PoPs (point of  presence) CDN connected through a high speed WAN.</p>
-<h2 id="nsg-network-security-group-l4">NSG – Network Security Group (L4)<a class="headerlink" href="#nsg-network-security-group-l4" title="Permanent link">&para;</a></h2>
-<p>Allows us to groups network resources through tags instead of caring of IPs</p>
-<p>SUBNET specifics</p>
-<ul>
-<li>Service endpoint: identifies an internal subnet to be allowed to call other internal services by allowing it in the target service firewall</li>
-<li>Private endpoint: identifies a specific service instance inside a private subnet. Requires also a DNS configuration in order to be found by other internal services.</li>
-</ul>
-<h2 id="firewall">FIREWALL<a class="headerlink" href="#firewall" title="Permanent link">&para;</a></h2>
-<p>L4: network rules</p>
-<p>L7: app rules (FQDN, TLS inspection, URL filtering, IDPR = Intrusion Detection Protection System)</p>
+<h2 id="perimeter-defense">Perimeter defense<a class="headerlink" href="#perimeter-defense" title="Permanent link">&para;</a></h2>
+<p>In addition to a firewall, microsegmentation could be needed through an software defined networks (SDN), software-defined data centers (SSDC) and zero trust policies.</p>
+<p>Virtual Network Appliances located on the perimeter:
+- public IP<br />
+- Application gateway (regional L7 LB)<br />
+- Firewall (WAF, L4 packet filtering, stateful NGFW, proxy)<br />
+- Front Door (HTTPS LB)<br />
+- TCP/IP Load balancer  </p>
+<h3 id="firewall"><a href="[What is Azure Firewall? | Microsoft Learn](https://learn.microsoft.com/en-us/azure/firewall/overview)">FIREWALL</a><a class="headerlink" href="#firewall" title="Permanent link">&para;</a></h3>
+<p>L4: network rules<br />
+L7: app rules (FQDN, TLS inspection, URL filtering, IDPR = Intrusion Detection Protection System)<br />
+High availability by default.<br />
+Limit FQDN outbound connections.<br />
+OSNAT<br />
+<a href="https://learn.microsoft.com/en-us/azure/firewall-manager/overview">Firewall manager</a><br />
+Create Application rules to operate at at the application layer (FQDN filtering).  </p>
 <p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview">ROUTING</a></p>
 <p>Az automatically creates routing tables for each new subnet adding system default routes.</p>
 <p>You don't need to define route tables or gateways for Azure to route traffic between subnets.</p>
@@ -4234,9 +4279,9 @@ When you apply a lock at a parent scope, all resources within that scope inherit
 <li>Internet</li>
 </ul>
 <p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/diagnose-network-routing-problem">Diagnose an Azure virtual machine routing problem | Microsoft Learn</a></p>
-<h2 id="expressroute">ExpressRoute<a class="headerlink" href="#expressroute" title="Permanent link">&para;</a></h2>
+<h3 id="expressroute">ExpressRoute<a class="headerlink" href="#expressroute" title="Permanent link">&para;</a></h3>
 <p>Dedicated physical connection to an Azure tenant</p>
-<h2 id="vpn">VPN<a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h2>
+<h3 id="vpn">VPN<a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h3>
 <p>IpSec/K encrypted connection.</p>
 <ul>
 <li>P2P</li>
@@ -4244,11 +4289,35 @@ When you apply a lock at a parent scope, all resources within that scope inherit
 <li>Site to site</li>
 </ul>
 <p>Can be established also inside an ExpressRoute connection.</p>
-<p>DDOS Protection</p>
+<p>Can have DDOS Protection</p>
 <ul>
 <li>Attack analytics</li>
 <li>Support</li>
 <li>Multilayered protection (if there is also a WAF)</li>
+</ul>
+<h3 id="ddos-protection">DDOS Protection<a class="headerlink" href="#ddos-protection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Azure DDoS Protection is designed <a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-for-azure-services">for services that are deployed in a virtual network</a>.  </li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-features">Azure DDoS Protection features | Microsoft Learn</a>  </li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-pricing-guide#example-scenarios">Compare pricing between Azure DDoS Protection tiers | Microsoft Learn</a>  </li>
+</ul>
+<p>Real time protection and mitigation (L4 to L7 monitoring). Telemetry logging.
+Blocks: volumetric (UDP...), protocol (SYN flood, reflection...) and app layer attacks (SQL inj...).  </p>
+<h2 id="load-balancer">LOAD BALANCER<a class="headerlink" href="#load-balancer" title="Permanent link">&para;</a></h2>
+<p>L4 (TCP/UDP), REGIONAL</p>
+<p>can be internal or external (get assigned a Public IP)</p>
+<h2 id="app-gateway">APP GATEWAY<a class="headerlink" href="#app-gateway" title="Permanent link">&para;</a></h2>
+<p>L7, REGIONAL: redirection, rewrite, https,</p>
+<p>Can have on top a WAF (<a href="https://learn.microsoft.com/en-gb/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs21#owasp-crs-32">OWASP threats</a>)</p>
+<h2 id="az-front-door">AZ <a href="https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview">FRONT DOOR</a><a class="headerlink" href="#az-front-door" title="Permanent link">&para;</a></h2>
+<p>L7,  GLOBAL</p>
+<p>Uses <a href="https://en.wikipedia.org/wiki/Anycast">anycast</a> to manage the connection as close as possible to the client ( the lowest number of <a href="https://en.wikipedia.org/wiki/Border_gateway_protocol">BGP</a> network hops) with hundreds of PoPs (point of  presence) CDN connected through a high speed WAN.</p>
+<h2 id="nsg-network-security-group-l4">NSG – Network Security Group (L4)<a class="headerlink" href="#nsg-network-security-group-l4" title="Permanent link">&para;</a></h2>
+<p>Allows us to groups network resources through tags instead of caring of IPs</p>
+<p>SUBNET specifics</p>
+<ul>
+<li>Service endpoint: identifies an internal subnet to be allowed to call other internal services by allowing it in the target service firewall</li>
+<li>Private endpoint: identifies a specific service instance inside a private subnet. Requires also a DNS configuration in order to be found by other internal services.</li>
 </ul>
 <hr />
 <h1 id="host">HOST<a class="headerlink" href="#host" title="Permanent link">&para;</a></h1>
