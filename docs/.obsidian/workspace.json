@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "science/strategy-and-game-theory-for-management.md",
+                "file": "software-engineering/Azure/AZ500.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "strategy-and-game-theory-for-management"
+              "title": "AZ500"
             }
           }
         ]
@@ -79,17 +79,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "brain/think-again-how-to-reason.md"
+                "file": "software-engineering/Azure/AZ500.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of think-again-how-to-reason"
+              "title": "Outline of AZ500"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 224.5,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -166,8 +167,8 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
-    "science/Theoretical-concepts-to-keep-in-mind.md",
     "science/strategy-and-game-theory-for-management.md",
+    "science/Theoretical-concepts-to-keep-in-mind.md",
     "books/critical thinking/the-art-of-strategy.md",
     "entrepreneurship/the-almanack-of-naval-ravikant.md",
     "science/think-again.md",
