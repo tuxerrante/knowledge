@@ -23,7 +23,7 @@ Language principles
 
 Animals can communicate but can't argue.  
 
-To justify a conclusion is to give a reason for that conclusion, but the audience might not understand or accept that reason, even when it is a good reason. Then the argument might have no effect (or an unintended effect) on the audience. One can give a reason for a conclusion, and it will be a reason, regardless of the effect on the audience.  
+**To justify** a conclusion is to give a reason for that conclusion, but the audience might not understand or accept that reason, even when it is a good reason. Then the argument might have no effect (or an unintended effect) on the audience. One can give a reason for a conclusion, and it will be a reason, regardless of the effect on the audience.  
   
 We need to understand the purpose of an artifact in order to understand that artifact. Artifacts are created for special purposes, and different artifacts (such as a screwdriver and a spatula) are distinguished by their purposes, among other things.  
   

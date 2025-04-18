@@ -22,7 +22,7 @@ When emotions are involved people are more willing to take collaborative actions
 	
 - **The classical prisoner’s dilemma case**:    
     - **Dominant Strategy**: In the classic scenario, each prisoner has a dominant strategy to betray the other, as it minimizes their own potential punishment regardless of the other’s choice.
-    - **Prisoner’s Dilemma**: If both prisoners betray each other, they receive a moderate punishment, which is worse than if they both remained silent. However, the fear of being betrayed leads them to choose betrayal, resulting in a suboptimal outcome for both.
+    - **Prisoner’s Dilemma**: If both prisoners betray each other, they receive a moderate punishment, which is worse than if they both remained silent. However, the fear of being betrayed leads them to choose betrayal, resulting in a suboptimal outcome for both. Each has a personal incentive to do something that ultimately leads to a result that is bad for everyone when everyone similarly does what his or her personal interest dictates.
 
 - Problem/**tragedy of the commons**  
   [What is the tragedy of the commons? - Nicholas Amendolare](https://www.youtube.com/watch?v=CxC161GvMPc&ab_channel=TED-Ed)

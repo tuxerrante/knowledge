@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software-engineering/Azure/AZ500.md",
+                "file": "software-engineering/security/CISA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AZ500"
+              "title": "CISA"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -79,10 +80,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software-engineering/Azure/AZ500.md"
+                "file": "software-engineering/security/CISA.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of AZ500"
+              "title": "Outline of CISA"
             }
           }
         ],
@@ -167,17 +171,21 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
+    "software-engineering/security/Fundamental-security-models.md",
+    "software-engineering/security/CISA.md",
+    "[Security.md",
+    "software-engineering/Azure/AZ500.md",
+    "science/rationality.md",
     "science/strategy-and-game-theory-for-management.md",
-    "science/Theoretical-concepts-to-keep-in-mind.md",
-    "books/critical thinking/the-art-of-strategy.md",
-    "entrepreneurship/the-almanack-of-naval-ravikant.md",
     "science/think-again.md",
+    "books/critical thinking/the-art-of-strategy.md",
+    "science/critical-thinking.md",
+    "science/Theoretical-concepts-to-keep-in-mind.md",
+    "entrepreneurship/the-almanack-of-naval-ravikant.md",
     "brain/think-again-how-to-reason.md",
     "music/Music.md",
-    "science/rationality.md",
     "philosophy/quotes-and-life-guidelines.md",
     "index.md",
-    "science/critical-thinking.md",
     "books/the-almanack-of-naval-ravikant.md",
     "philosophy/rational-buddhism.md",
     "science/elephant-in-the-brain-vs-good-inside.md",
@@ -185,7 +193,6 @@
     "critical thinking.md",
     "economics/microeconomics.md",
     "economics",
-    "software-engineering/Azure/AZ500.md",
     "img/kerberos-authentication-illustration.jpg",
     "img/kerberos-authentication-illustration.jpg.crdownload",
     "software-engineering/Azure/AZ104.md",
@@ -194,10 +201,7 @@
     "software-engineering/security/CISSP/domain-2.md",
     "software-engineering/security/CISSP/think-like-a-manager.md",
     "books/management/the-managers-path.md",
-    "books/management/an-elegant-puzzle.md",
-    "books/emotions/emotional-intelligence.md",
     "books/emotions",
-    "Untitled.md",
     "software-engineering/security/img/roles-risks-pyramid.png",
     "software-engineering/security/img",
     "software-engineering/security/CISSP",
