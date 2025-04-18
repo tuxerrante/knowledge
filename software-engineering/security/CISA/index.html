@@ -1,0 +1,4826 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tuxerrante.github.io/knowledge/software-engineering/security/CISA/">
+      
+      
+        <link rel="prev" href="../../distributed-systems/kubernetes/kubernetes-dns/">
+      
+      
+        <link rel="next" href="../Fundamental-security-models/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>CISA - tuxerrante knowledge garden</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#different-levels-of-compliance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="tuxerrante knowledge garden" class="md-header__button md-logo" aria-label="tuxerrante knowledge garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            tuxerrante knowledge garden
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CISA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tuxerrante/knowledge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="tuxerrante knowledge garden" class="md-nav__button md-logo" aria-label="tuxerrante knowledge garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    tuxerrante knowledge garden
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tuxerrante/knowledge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%5BSecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    [Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LaTeX Math Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mermaid diagrams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Books
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/the-almanack-of-naval-ravikant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The almanack of naval ravikant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Critical thinking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Critical thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/designing-your-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Designing your life
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/inventing-temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventing temperature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/the-art-of-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The art of strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/the-elephant-in-the-brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The elephant in the brain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/critical%20thinking/thinking-in-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thinking in systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Emotions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Emotions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/emotions/emotional-intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emotional intelligence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/management/an-elegant-puzzle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    An elegant puzzle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/management/the-managers-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The managers path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Money
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/psychology-of-money/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Psychology of money
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/the-simple-path-to-wealth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The simple path to wealth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/money/your-money-or-your-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your money or your life
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parenting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Parenting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/parenting/danish-way-of-parenting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Danish way of parenting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../books/parenting/good-inside/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good inside
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../economics/microeconomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Microeconomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Finance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../economics/finance/personal-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personal finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../economics/finance/simulazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simulazioni
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrepreneurship
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Entrepreneurship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entrepreneurship/Domande%20per%20acquisto%20casa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domande per acquisto casa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entrepreneurship/make-a-startup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Principi base per creare una nuova startup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entrepreneurship/the-almanack-of-naval-ravikant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The almanack of naval ravikant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Music
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/Music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    My Soundcloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Philosophy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Philosophy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../philosophy/quotes-and-life-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quotes and life guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../philosophy/rational-buddhism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rational buddhism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Science
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/Logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/Theoretical-concepts-to-keep-in-mind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theoretical concepts to keep in mind
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/critical-thinking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critical thinking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/elephant-in-the-brain-vs-good-inside/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elephant in the brain vs good inside
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/epistemology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Videos:
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/how-to-read-body-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to read body language
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/how-to-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to study
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/mindfulness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mindfulness
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/rationality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rationality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/self-deception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Self deception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/strategy-and-game-theory-for-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strategy and game theory for management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/the-science-of-gratitude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The science of gratitude
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../science/think-again/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Think again
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Software engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Behind-The-Phoenix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Behind The Phoenix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DESIGN-PATTERNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DESIGN PATTERNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GIT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GIT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LFCE-LINUX-ENGINEER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LFCE - LFS211- LINUX ENGINEER
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RHCSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RHCSA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sed-grep-awk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sed grep awk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Azure
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            Azure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Azure/AZ104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AZ-104
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Azure/AZ500/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AZ500
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Devops
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Devops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/CI_CD%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CI CD Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/AKS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AKS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10_2" id="__nav_11_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/KUBERNETES%20APIS%20PROGRAMMING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KUBERNETES APIS PROGRAMMING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/KUBERNETES-CKAD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KUBERNETES CKA CKS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributed-systems/kubernetes/kubernetes-dns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes dns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_11" id="__nav_11_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_11">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CISA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CISA
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#different-levels-of-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different levels of compliance:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different levels of compliance:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-commerce-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-commerce requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collecting evidence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-assisted-audit-technologies-caats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer assisted audit technologies (CAATs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit interviews
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Governance?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Governance?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-governance-of-it-egit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Governance of IT (EGIT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governance-vs-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance vs. Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-egit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of EGIT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose of EGIT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-security-governance-isg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Security Governance (ISG)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organizational Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#it-governance-committees" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Governance Committees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-architecture-and-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Architecture and Risk Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise Architecture and Risk Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#levels-of-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levels of Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-effective-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost-Effective Balance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Systems Maturity Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Systems Maturity Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of Maturity Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Maturity Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmmi-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMMI Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-governance-risk-and-compliance-grc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Systems Governance, Risk, and Compliance (GRC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Systems Governance, Risk, and Compliance (GRC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-support-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision support system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organization structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organization structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projectized-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projectized Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-methodologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Methodologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Methodologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importance-of-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importance of Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-types-of-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Types of Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-testing-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Testing Classifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-testing-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Testing Approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-post-testing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Post-Testing Activities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changeover-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changeover Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changeover Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importance-of-changeover" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importance of Changeover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-types-of-changeover-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Types of Changeover Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Asset Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IT Asset Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-backend-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main backend devices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usbrfid" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB/RFID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Governance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Data Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Incident Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-and-patch-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Release and Patch Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-impact-analysis-bia" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Business Impact Analysis (BIA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-resiliency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 System Resiliency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-operations-and-business-resiliency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 'Information Systems Operations and Business Resiliency'
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 &#39;Information Systems Operations and Business Resiliency&#39;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backups-storage-and-restoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Backups, Storage, and Restoration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-continuity-management-bcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Business Continuity Management (BCM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-business-continuity-plan-bcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 The Business Continuity Plan (BCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-bcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing the BCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery-plans-drp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌪️ Disaster Recovery Plans (DRP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-drp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing the DRP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fundamental-security-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fundamental security models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KodeKloud%20CKS%20challenge%20%232/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KodeKloud CKS challenge #2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security hardening
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_11_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_11_5" id="__nav_11_11_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CISSP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_11_5">
+            <span class="md-nav__icon md-icon"></span>
+            CISSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/domain-1-security-and-risk-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain 1 security and risk management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/domain-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/domain-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/domain-4-communication-and-network-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IPv4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/domain-7-security-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incident Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CISSP/think-like-a-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Think like a manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wellbeing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Wellbeing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wellbeing/gym-at-home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gym at home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Work
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work/interviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interviews
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#different-levels-of-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different levels of compliance:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different levels of compliance:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-commerce-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-commerce requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collecting evidence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-assisted-audit-technologies-caats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer assisted audit technologies (CAATs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit interviews
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Governance?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Governance?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-governance-of-it-egit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Governance of IT (EGIT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governance-vs-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance vs. Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-egit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of EGIT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose of EGIT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-security-governance-isg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Security Governance (ISG)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organizational Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#it-governance-committees" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Governance Committees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-architecture-and-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Architecture and Risk Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise Architecture and Risk Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#levels-of-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levels of Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-effective-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost-Effective Balance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Systems Maturity Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Systems Maturity Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of Maturity Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-maturity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Maturity Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmmi-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMMI Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-governance-risk-and-compliance-grc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Systems Governance, Risk, and Compliance (GRC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Systems Governance, Risk, and Compliance (GRC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-support-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision support system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organization structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organization structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projectized-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projectized Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-methodologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Methodologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Methodologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importance-of-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importance of Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-types-of-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Types of Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-testing-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Testing Classifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-testing-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Testing Approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-post-testing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Post-Testing Activities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changeover-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changeover Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changeover Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importance-of-changeover" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importance of Changeover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-types-of-changeover-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Types of Changeover Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Asset Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IT Asset Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-backend-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main backend devices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usbrfid" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB/RFID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Governance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Data Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Incident Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-and-patch-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Release and Patch Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-impact-analysis-bia" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Business Impact Analysis (BIA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-resiliency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 System Resiliency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-systems-operations-and-business-resiliency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 'Information Systems Operations and Business Resiliency'
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 &#39;Information Systems Operations and Business Resiliency&#39;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backups-storage-and-restoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Backups, Storage, and Restoration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-continuity-management-bcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Business Continuity Management (BCM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-business-continuity-plan-bcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 The Business Continuity Plan (BCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-bcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing the BCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery-plans-drp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌪️ Disaster Recovery Plans (DRP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-drp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing the DRP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>CISA</h1>
+
+<h2 id="different-levels-of-compliance"><strong>Different levels of compliance:</strong><a class="headerlink" href="#different-levels-of-compliance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>standard</li>
+<li>policy</li>
+<li>recommendation</li>
+<li>guideline</li>
+</ul>
+<p><strong>Standards</strong> are mandatory and must be followed to ensure compliance and consistency in audit practices. They provide specific requirements that must be met. 
+<strong>Guidelines</strong> are suggestions that provide additional advice and best practices but are not compulsory.</p>
+<h4 id="standards">Standards<a class="headerlink" href="#standards" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Mandatory requirements and practices codified into specifications that organizations must follow.</li>
+<li><strong>Purpose</strong>: Ensure consistency and compliance across the organization.</li>
+</ul>
+<h4 id="policies">Policies<a class="headerlink" href="#policies" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: High-level statements of management intent, outlining what should and shouldn't be done.</li>
+<li><strong>Components</strong>:<ul>
+<li><strong>Management Review</strong>: Policies should be periodically reviewed by management.</li>
+<li><strong>Information Security Policy (ISP)</strong>: Must be approved by senior management, documented, and communicated throughout the organization.</li>
+</ul>
+</li>
+</ul>
+<h4 id="procedures">Procedures<a class="headerlink" href="#procedures" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Documented steps to achieve policy objectives.</li>
+<li><strong>Purpose</strong>: Provide detailed actions to ensure policies are implemented effectively.</li>
+</ul>
+<h4 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Recommendations for positive results, not mandatory.</li>
+<li><strong>Purpose</strong>: Help make wise decisions and support best practices.</li>
+</ul>
+<p>Comprehensive <strong>security control processes</strong> help in identifying and mitigating risks, ensuring compliance with regulations, and maintaining the integrity of financial and operational data.</p>
+<p>When operating internationally, especially in regions like India and China, <strong>policy controls</strong> are critical. These regions have specific regulatory requirements and compliance standards that companies must adhere to.</p>
+<p>Crossing the <strong>risk threshold</strong> means that the company is exposed to risks beyond its capacity to manage effectively. This can lead to operational disruptions, financial losses, and an inability to achieve strategic objectives</p>
+<p><strong>Governance strategy</strong> is the key component that ensures stakeholder needs, conditions, and options are evaluated to determine balanced enterprise objectives. It involves setting priorities, making decisions, and monitoring performance to align with governance direction</p>
+<p><strong>Audit Charter</strong>: Ask for a clear declaration about IS Auditor authority. 
+- Which documentation should be available, 
+- which IT processes should be verified or triggered: tests run, deployments, production logs...</p>
+<p><strong>IS Audit plan</strong>
+1. Understand the organization’s mission, objective and purpose
+2. Understand the organization’s governance structure
+3. Review prior audit work papers
+4. Perform a risk analysis
+    1. ISO27001
+    2. NIST80053
+5. Set the audit <strong>scope</strong> and audit objectives
+6. Develop the audit approach and strategy
+7. Assign personnel to the audit
+8. Address engagement logistics
+    1. Can they enter the datacentre?
+    2. How is data access guaranteed? It could be a new account made for the audit, a present person...</p>
+<h2 id="e-commerce-requirements">E-commerce requirements<a class="headerlink" href="#e-commerce-requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>persisted customer data is never exposed to the internet</li>
+</ul>
+<p><strong>Electronic Data Interchange (EDI)</strong> is a standardized method for exchanging business documents and data between organizations electronically, replacing traditional paper-based methods. EDI is widely used in various industries.
+<strong>Security Measures</strong>: To protect the integrity, confidentiality, and availability of the data exchanged, EDI systems implement various security measures, including:
+    - <strong>Encryption</strong>: Ensures that data is encrypted during transmission to prevent unauthorized access.
+    - <strong>Authentication</strong>: Verifies the identity of the parties involved in the transaction to ensure that data is exchanged with trusted entities.
+    - <strong>Access Control</strong>: Restricts access to EDI systems and data to authorized personnel only.</p>
+<h2 id="collecting-evidence">Collecting evidence<a class="headerlink" href="#collecting-evidence" title="Permanent link">&para;</a></h2>
+<ul>
+<li>IS organization structure review</li>
+<li>IS policies review</li>
+<li>interviewing appropriate personnel</li>
+<li>Observation of processes</li>
+<li>Reperformance</li>
+<li>walk-through</li>
+</ul>
+<h3 id="computer-assisted-audit-technologies-caats">Computer assisted audit technologies (CAATs)<a class="headerlink" href="#computer-assisted-audit-technologies-caats" title="Permanent link">&para;</a></h3>
+<p>Data analytics tools to evaluate effectiveness of control environment and process improvements.
+It should contain independent unbiased data to conduct automated tests and fraud detections.</p>
+<h3 id="exit-interviews">Exit interviews<a class="headerlink" href="#exit-interviews" title="Permanent link">&para;</a></h3>
+<ul>
+<li>resolution recommendations with suggested implementation dates</li>
+<li>auditor reservation about policies and procedures not effective to fix controls</li>
+</ul>
+<h2 id="what-is-governance"><strong>What is Governance?</strong><a class="headerlink" href="#what-is-governance" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Definition</strong>: Governance is the way an organization directs and controls its operations to meet strategic objectives.</li>
+<li><strong>Components</strong>: Includes policies, procedures, controls, practices, and guidelines.</li>
+<li><strong>Ethical Issues and Decision-Making</strong>: Governance ensures ethical practices and guides decision-making processes.</li>
+</ul>
+<h3 id="enterprise-governance-of-it-egit"><strong>Enterprise Governance of IT (EGIT)</strong><a class="headerlink" href="#enterprise-governance-of-it-egit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Responsibility</strong>: Managed by the board of directors and executive management.</li>
+<li><strong>Frameworks</strong>: Commonly uses frameworks like COBIT 2019 to establish governance structures.</li>
+<li><strong>Key Elements</strong>:<ul>
+<li><strong>IT Resource Management</strong>: Efficient use of IT resources.</li>
+<li><strong>Performance Measurement</strong>: Evaluating how well IT functions perform.</li>
+<li><strong>Compliance Management</strong>: Ensuring adherence to regulatory requirements.</li>
+</ul>
+</li>
+</ul>
+<h3 id="governance-vs-management"><strong>Governance vs. Management</strong><a class="headerlink" href="#governance-vs-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Governance</strong>: Focuses on setting objectives, evaluating stakeholder needs, and aligning IT with business goals.</li>
+<li><strong>Management</strong>: Involves planning, building, running, and monitoring activities in alignment with governance directions.</li>
+</ul>
+<h3 id="purpose-of-egit"><strong>Purpose of EGIT</strong><a class="headerlink" href="#purpose-of-egit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Value Delivery</strong>: Ensures IT delivers value to the business.</li>
+<li><strong>Risk Management</strong>: Helps manage risks associated with IT and information systems.</li>
+</ul>
+<h4 id="information-security-governance-isg"><strong>Information Security Governance (ISG)</strong><a class="headerlink" href="#information-security-governance-isg" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Responsibility</strong>: Board of directors and CEO are accountable for ISG.</li>
+<li><strong>Alignment</strong>: ISG must align with business objectives and comply with applicable laws and regulations.</li>
+<li><strong>Roles and Responsibilities</strong>: Clear definition of roles, with senior management creating and approving security policies.</li>
+<li><strong>NIST</strong>: ISG is a process of maintaining a framework that guarantees the security in information systems. </li>
+</ul>
+<h3 id="organizational-structure"><strong>Organizational Structure</strong><a class="headerlink" href="#organizational-structure" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Decision-Making</strong>: The structure of an organization determines who makes decisions and who provides advice. It influences how governance is implemented and how policies are enforced.</li>
+<li><strong>Types of Structures</strong>:<ul>
+<li><strong>Hierarchical</strong>: Traditional organizations with many layers of management. Often found in older companies.</li>
+<li><strong>Flat</strong>: Modern organizations, especially in tech, with fewer layers and more peer-based control.</li>
+</ul>
+</li>
+</ul>
+<h4 id="it-governance-committees"><strong>IT Governance Committees</strong><a class="headerlink" href="#it-governance-committees" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>IT Strategy Committee</strong>:</p>
+<ul>
+<li><strong>Role</strong>: Provides insight, advice, and guidance on IT development and alignment with business objectives.</li>
+<li><strong>Responsibilities</strong>:<ul>
+<li>Assessing the relevance of new IT developments.</li>
+<li>Ensuring IT aligns with business direction.</li>
+<li>Evaluating the availability of IT resources.</li>
+<li>Considering the risks and competitive aspects of IT investments.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>IT Steering Committee</strong>:</p>
+<ul>
+<li><strong>Role</strong>: Makes decisions on IT spending and project approvals.</li>
+<li><strong>Responsibilities</strong>:<ul>
+<li>Deciding the level of IT spending.</li>
+<li>Approving project plans and budgets.</li>
+<li>Monitoring project progress and value delivery.</li>
+<li>Communicating strategic goals to project teams.</li>
+<li>Assisting executive management in delivering IT strategy.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Organizational structures play a crucial role in how effectively an organization can govern its IT operations. In hierarchical structures, decision-making is often slower due to multiple layers of approval, but it can provide clear lines of authority and accountability. In contrast, flat structures promote faster decision-making and greater flexibility, which is beneficial for innovation and rapid response to market changes.</p>
+<h2 id="enterprise-architecture-and-risk-management"><strong>Enterprise Architecture and Risk Management</strong><a class="headerlink" href="#enterprise-architecture-and-risk-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Enterprise Architecture</strong>: Structured documentation of an organization's assets and their interactions.</li>
+<li><strong>Risk Appetite</strong>: The maximum amount of risk an organization is willing to accept to maintain its capabilities.</li>
+<li><strong>Risk Threshold</strong>: Occasional higher risk levels allowed for specific opportunities.
+  Risk threshold refers to the point at which the level of risk becomes unacceptable, prompting the organization to take action to mitigate or manage the risk.</li>
+<li><strong>Risk Capacity</strong>: The absolute limit of risk an organization can handle without severe consequences.</li>
+</ul>
+<h4 id="risk-management-process"><strong>Risk Management Process</strong><a class="headerlink" href="#risk-management-process" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Identification</strong>: Recognizing potential risks to organizational assets.</li>
+<li><strong>Analysis</strong>: Evaluating the probability and impact of risks using qualitative, semi-quantitative, and quantitative methods.</li>
+<li><strong>Planning</strong>: Developing strategies to respond to identified risks.</li>
+<li><strong>Response</strong>: Implementing and monitoring risk responses.</li>
+</ul>
+<h4 id="levels-of-risk-management"><strong>Levels of Risk Management</strong><a class="headerlink" href="#levels-of-risk-management" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Operational Level</strong>: Day-to-day risks affecting routine operations.</li>
+<li><strong>Project Level</strong>: Risks associated with specific projects or initiatives.</li>
+<li><strong>Strategic Level</strong>: High-level risks impacting the overall direction and long-term goals of the organization.</li>
+</ul>
+<h4 id="cost-effective-balance"><strong>Cost-Effective Balance</strong><a class="headerlink" href="#cost-effective-balance" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Control Implementations vs. Risk Acceptance</strong>: Ensuring that the cost of risk mitigation measures is justified by the potential impact of the risks.</li>
+</ul>
+<h2 id="information-systems-maturity-models">Information Systems Maturity Models<a class="headerlink" href="#information-systems-maturity-models" title="Permanent link">&para;</a></h2>
+<h4 id="purpose-of-maturity-models"><strong>Purpose of Maturity Models</strong><a class="headerlink" href="#purpose-of-maturity-models" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Assessment</strong>: Maturity models help assess the quality and effectiveness of an organization's information security processes.</li>
+<li><strong>Improvement</strong>: They provide a framework for continuous improvement by identifying areas that need enhancement.</li>
+</ul>
+<h4 id="types-of-maturity-models"><strong>Types of Maturity Models</strong><a class="headerlink" href="#types-of-maturity-models" title="Permanent link">&para;</a></h4>
+<p>Maturity models like CMMI and IDEAL provide a structured approach to evaluating and improving organizational processes, helping identify areas for enhancement and promoting continuous improvement.</p>
+<ul>
+<li><strong>Capability Maturity Model Integration (CMMI)</strong>: Developed by Carnegie Mellon and managed by <strong>ISACA</strong>, CMMI is widely used to evaluate and improve processes.</li>
+<li><strong>IDEAL Model</strong>: Stands for Initiating, Diagnosing, Establishing, Acting, and Learning. It provides a structured approach to process improvement.</li>
+</ul>
+<h4 id="cmmi-levels"><strong>CMMI Levels</strong><a class="headerlink" href="#cmmi-levels" title="Permanent link">&para;</a></h4>
+<p>Also said: Initial, Repeatable, Defined, Managed, Optimizing
+1. <strong>Level 1 - Initial</strong>: Processes are unpredictable and poorly controlled.
+2. <strong>Level 2 - Managed</strong>: Basic project management processes are established.
+3. <strong>Level 3 - Defined</strong>: Processes are well-documented and standardized.
+4. <strong>Level 4 - Quantitatively Managed</strong>: Processes are measured and controlled.
+5. <strong>Level 5 - Optimizing</strong>: Focus on continuous process improvement.</p>
+<h2 id="information-systems-governance-risk-and-compliance-grc">Information Systems Governance, Risk, and Compliance (GRC)<a class="headerlink" href="#information-systems-governance-risk-and-compliance-grc" title="Permanent link">&para;</a></h2>
+<h4 id="governance"><strong>Governance</strong><a class="headerlink" href="#governance" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Governance involves setting policies, procedures, and controls to guide organizational operations.</li>
+<li><strong>Responsibility</strong>: Senior management, board of directors, and executives are accountable for governance.</li>
+<li><strong>Components</strong>: Includes internal audits, compliance programs, and operational risk management.</li>
+</ul>
+<h4 id="risk"><strong>Risk</strong><a class="headerlink" href="#risk" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Risk management identifies, analyzes, and responds to potential threats to organizational assets.</li>
+<li><strong>Process</strong>: Involves risk identification, analysis, planning, and response.</li>
+<li><strong>Levels</strong>: Operational, project, and strategic levels of risk management.</li>
+</ul>
+<h4 id="compliance"><strong>Compliance</strong><a class="headerlink" href="#compliance" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Compliance ensures adherence to laws, regulations, and standards.</li>
+<li><strong>Activities</strong>: Includes monitoring, auditing, and enforcing policies and procedures.</li>
+<li><strong>Importance</strong>: Compliance is crucial for maintaining legal and regulatory standards.</li>
+</ul>
+<p><strong>Governance, Risk, and Compliance (GRC)</strong> are three interconnected and overlapping activities essential for effective information systems management.</p>
+<p><strong>Governance</strong> sets the direction and control mechanisms for the organization, ensuring that policies and procedures are in place and followed. This includes internal audits to verify compliance and operational risk management to address potential threats.</p>
+<p><strong>Risk management</strong> is the process of identifying, analyzing, and responding to risks that could impact the organization's assets and operations. It operates at different levels, from day-to-day operational risks to strategic risks that affect long-term goals.</p>
+<p><strong>Compliance</strong> ensures that the organization adheres to relevant laws, regulations, and standards. This involves continuous monitoring and auditing to enforce policies and procedures, ensuring that the organization remains within legal and regulatory boundaries.</p>
+<p><strong>Quality Assurance (QA)</strong> is concerned with the processes and methodologies used to prevent defects in the development of information systems. Quality Control (QC), on the other hand, involves the identification and correction of defects in the final product.</p>
+<p>Effective <strong>cloud governance</strong> involves ensuring compliance with regulatory requirements, establishing clear policies for cloud usage, and implementing robust access control mechanisms to protect data and resources.</p>
+<p>Managing <strong>third-party services</strong> requires clear contractual obligations to define expectations and responsibilities, governance to oversee the relationship and ensure alignment with organizational goals, and internal audit reports to monitor performance and compliance.</p>
+<p><strong>Financial auditing</strong> in information systems involves ensuring compliance with accounting standards and implementing chargeback models to allocate costs appropriately within the organization.</p>
+<p>Effective <strong>human resource management</strong> in information systems auditing includes policies and procedures for recruiting qualified personnel, providing ongoing training, managing hiring processes, and handling termination when necessary.</p>
+<p><strong>Which of the following are key components of executing and monitoring in project management?</strong>
+- Information radiators, 
+- Work performance data, 
+- Scope management,
+These components are essential for tracking progress, managing scope, and ensuring that the project stays on schedule. Information radiators provide visual updates, work performance data tracks progress, scope management ensures the project stays within defined boundaries, the work breakdown structure organizes tasks, and the critical path method identifies the sequence of crucial tasks.</p>
+<p>A <strong>feasibility study</strong> assesses the viability of a project by analyzing potential risks, ensuring compliance with regulatory requirements, and managing stakeholder expectations. These components help determine whether the project is practical and worth pursuing.</p>
+<p><strong>Fourth Generation Languages (4GL)</strong> are designed to be more user-friendly and efficient for system development. Workbench concepts enhance their utility by providing integrated development environments that streamline coding, testing, and deployment processes.
+EG: SAS, SQL, ABAP, MATLAB</p>
+<h2 id="decision-support-system">Decision support system<a class="headerlink" href="#decision-support-system" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Efficiency and Speed</strong>: By automating data collection and analysis, DSS increase the speed and efficiency of decision-making processes</li>
+<li><strong>Risk Management</strong>: DSS help in identifying, assessing, and mitigating risks by providing comprehensive data analysis and predictive modeling</li>
+<li><strong>Resource Optimization</strong>: They assist in optimizing the use of resources by analyzing various scenarios and their potential outcomes</li>
+<li><strong>Strategic Planning</strong>: DSS support long-term strategic planning by providing insights into trends, patterns, and future projections</li>
+</ol>
+<p><strong>Well-Known Examples of DSS</strong>
+1. <strong>IBM Watson</strong>: An AI-powered DSS that helps in various fields, including healthcare, finance, and customer service. Watson analyzes vast amounts of data to provide insights and recommendations, enhancing decision-making processes.
+2. <strong>SAP BusinessObjects</strong>: A suite of business intelligence tools that provide comprehensive data analysis, reporting, and visualization capabilities. It helps organizations make data-driven decisions by offering insights into business operations and performance.</p>
+<p>Proper organizational change management is crucial to address DSS implementation challenges.
+Ensuring data consistency is important but not the most significant challenge in implementing DSS.</p>
+<h2 id="organization-structures">Organization structures<a class="headerlink" href="#organization-structures" title="Permanent link">&para;</a></h2>
+<h3 id="projectized-organization"><strong>Projectized Organization</strong><a class="headerlink" href="#projectized-organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Structure</strong>: Organized entirely around projects. Teams are formed specifically for projects and disbanded after completion.</li>
+<li><strong>Authority</strong>: Project managers have full authority over the project and its resources.</li>
+</ul>
+<h3 id="functional-organization"><strong>Functional Organization</strong><a class="headerlink" href="#functional-organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Structure</strong>: Divided into departments based on functions such as IT, finance, marketing, etc.</li>
+<li><strong>Authority</strong>: Functional managers have the highest authority. Project managers have limited or no authority.</li>
+</ul>
+<h3 id="matrix-organization"><strong>Matrix Organization</strong><a class="headerlink" href="#matrix-organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Structure</strong>: A blend of functional and projectized structures. Employees report to both functional and project managers.</li>
+<li><strong>Authority</strong>: Shared between functional and project managers. The balance of power can vary:<ul>
+<li><strong>Strong Matrix</strong>: Project manager has more authority.</li>
+<li><strong>Weak Matrix</strong>: Functional manager has more authority.</li>
+<li><strong>Balanced Matrix</strong>: Authority is shared equally.</li>
+</ul>
+</li>
+</ul>
+<h2 id="testing-methodologies"><strong>Testing Methodologies</strong><a class="headerlink" href="#testing-methodologies" title="Permanent link">&para;</a></h2>
+<h4 id="1-importance-of-testing"><strong>1. Importance of Testing</strong><a class="headerlink" href="#1-importance-of-testing" title="Permanent link">&para;</a></h4>
+<p><strong>Role of Auditors</strong>: Verify that appropriate testing is conducted as part of control measures.</p>
+<h4 id="2-types-of-testing"><strong>2. Types of Testing</strong><a class="headerlink" href="#2-types-of-testing" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Unit Testing</strong>: Tests individual pieces of code during development (e.g., during sprints in a Scrum environment).</li>
+<li><strong>Integration Testing</strong>: Ensures that combined code from different developers works together without issues.</li>
+<li><strong>System Testing</strong>: Tests the entire system as a whole to ensure it functions correctly.</li>
+<li><strong>Quality Assurance Testing (QAT)</strong>: Verifies that all requirements are met before final acceptance.</li>
+<li><strong>User Acceptance Testing (UAT)</strong>: Ensures that the system meets user expectations and requirements.</li>
+</ul>
+<h4 id="3-testing-classifications"><strong>3. Testing Classifications</strong><a class="headerlink" href="#3-testing-classifications" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>White Box Testing</strong>: Involves understanding the internal logic of the software and testing its procedural accuracy.</li>
+<li><strong>Black Box Testing</strong>: Focuses on the functional effectiveness of the system without considering its internal structure.</li>
+<li><strong>Regression Testing</strong>: Re-runs tests to ensure that changes or corrections have not introduced new errors.</li>
+<li><strong>Alpha and Beta Testing</strong>:<ul>
+<li><strong>Alpha</strong>: Conducted by internal users to identify initial issues.</li>
+<li><strong>Beta</strong>: Conducted by a limited number of external users to identify any remaining issues before final release.</li>
+</ul>
+</li>
+<li><strong>Parallel Testing</strong>: Compares the performance of a new system with the original system to ensure consistency and meet user requirements.</li>
+</ul>
+<h4 id="4-testing-approaches"><strong>4. Testing Approaches</strong><a class="headerlink" href="#4-testing-approaches" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Bottom-Up Testing</strong>: Starts with small unit tests and progresses to larger system tests.</li>
+<li><strong>Top-Down Testing</strong>: Begins with large system tests and works down to smaller unit tests.</li>
+</ul>
+<h4 id="5-post-testing-activities"><strong>5. Post-Testing Activities</strong><a class="headerlink" href="#5-post-testing-activities" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Reporting</strong>: Test results should be reported to relevant stakeholders (e.g., project managers).</li>
+<li><strong>Issue Resolution</strong>: Address any issues identified during testing to ensure the final product meets quality standards.</li>
+</ul>
+<h2 id="changeover-techniques"><strong>Changeover Techniques</strong><a class="headerlink" href="#changeover-techniques" title="Permanent link">&para;</a></h2>
+<h4 id="1-importance-of-changeover"><strong>1. Importance of Changeover</strong><a class="headerlink" href="#1-importance-of-changeover" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose</strong>: Transitioning users from one system or application to another, ensuring minimal disruption and maintaining data integrity.</li>
+<li><strong>Planning</strong>: Changeover must be planned and monitored to avoid loss of productivity and data compliance issues (e.g., GDPR, HIPAA).</li>
+</ul>
+<h4 id="2-types-of-changeover-techniques"><strong>2. Types of Changeover Techniques</strong><a class="headerlink" href="#2-types-of-changeover-techniques" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Parallel Changeover</strong>:<ul>
+<li><strong>Description</strong>: Both old and new systems run simultaneously. Users can access both until they are comfortable with the new system.</li>
+<li><strong>Advantages</strong>: Reduces risk by allowing fallback to the old system if issues arise.</li>
+<li><strong>Disadvantages</strong>: Resource-intensive, requiring support and payment for both systems.</li>
+</ul>
+</li>
+<li><strong>Phased Changeover</strong>:<ul>
+<li><strong>Description</strong>: The old system is replaced module by module. Each module is tested and users are transitioned gradually.</li>
+<li><strong>Advantages</strong>: Reduces risk by allowing gradual transition and testing of each module.</li>
+<li><strong>Disadvantages</strong>: Extends project duration and can disrupt change management due to overlapping old and new modules.</li>
+</ul>
+</li>
+<li><strong>Abrupt Changeover</strong>:<ul>
+<li><strong>Description</strong>: The new system is brought online and all users are migrated at once, often within a short period (e.g., 24-48 hours).</li>
+<li><strong>Advantages</strong>: Quick transition, useful when immediate change is necessary (e.g., ending licensing agreements).</li>
+<li><strong>Disadvantages</strong>: High risk of data integrity issues, missing records, and asset safeguarding concerns.</li>
+</ul>
+</li>
+</ul>
+<h2 id="it-asset-management">IT Asset Management<a class="headerlink" href="#it-asset-management" title="Permanent link">&para;</a></h2>
+<p>An asset is anything tangible or intangible the company uses to create a product or a service.
+- Capability
+- Resource
+Assets have to be identified in an <strong>inventory</strong> first in order to be protected.</p>
+<h3 id="main-backend-devices">Main backend devices:<a class="headerlink" href="#main-backend-devices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Supercomputers</li>
+<li>mainframes</li>
+<li>high range servers</li>
+<li>desktop/laptop endpoint devices</li>
+<li>thin clients</li>
+</ul>
+<h3 id="usbrfid">USB/RFID<a class="headerlink" href="#usbrfid" title="Permanent link">&para;</a></h3>
+<p>Risks
+- theft of data / badge skimmers
+- malware injection
+- data corruptions
+Controls
+- data encryption
+- locked desktop
+- Personnel training</p>
+<h2 id="data-governance">Data Governance<a class="headerlink" href="#data-governance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Data Quality and Lifecycle</li>
+<li>Operating systems</li>
+<li>Source code management</li>
+<li>Incident management</li>
+</ul>
+<h3 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Intrinsic<ul>
+<li>Accuracy (reliable)</li>
+<li>Objectivity</li>
+<li>Believability</li>
+<li>Reputation</li>
+</ul>
+</li>
+<li>Contextual<ul>
+<li>Currency</li>
+<li>Interpretability</li>
+<li>Relevancy</li>
+<li>Completeness</li>
+<li>Amount</li>
+</ul>
+</li>
+<li>Security/accessibility<ul>
+<li>availability</li>
+<li>restricted access (confidentiality)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="data-lifecycle">📁 Data Lifecycle<a class="headerlink" href="#data-lifecycle" title="Permanent link">&para;</a></h3>
+<p>The data lifecycle encompasses the stages through which data progresses within an organization:​</p>
+<ol>
+<li>
+<p><strong>Plan</strong>: Establish data governance policies, define data requirements, and plan for data acquisition.​</p>
+</li>
+<li>
+<p><strong>Design</strong>: Develop data models, structures, and storage solutions aligning with business objectives.​</p>
+</li>
+<li>
+<p><strong>Build</strong>: Implement data systems, ensuring integration with existing infrastructure and adherence to security protocols.​</p>
+</li>
+<li>
+<p><strong>Use</strong>: Access and utilize data for operational and analytical purposes, maintaining data quality and integrity.</p>
+</li>
+<li>
+<p><strong>Monitor</strong>: Continuously oversee data usage, performance, and compliance with policies.​<a href="https://www.cisa.gov/resources-tools/training/incident-management-review-imr-training?utm_source=chatgpt.com">CISA</a></p>
+</li>
+<li>
+<p><strong>Dispose</strong>: Securely delete or archive data that is no longer needed, in accordance with retention policies.​</p>
+</li>
+</ol>
+<p>​<a href="https://www.examtopics.com/discussions/isaca/view/146334-exam-cisa-topic-1-question-1354-discussion/?utm_source=chatgpt.com">ISACA+17ExamTopics+17Learning Tree International | Home+17</a></p>
+<hr />
+<h3 id="incident-management">🚨 Incident Management<a class="headerlink" href="#incident-management" title="Permanent link">&para;</a></h3>
+<p>Effective incident management involves a structured approach:</p>
+<ol>
+<li>
+<p><strong>Identification</strong>: Detect and acknowledge potential security incidents through monitoring and reporting mechanisms.​</p>
+</li>
+<li>
+<p><strong>Categorization</strong>: Classify incidents based on severity, impact, and type to prioritize response efforts.​</p>
+</li>
+<li>
+<p><strong>Resolution</strong>: Implement appropriate measures to contain, eradicate, and recover from the incident, followed by post-incident analysis.</p>
+</li>
+</ol>
+<p>CISA professionals must evaluate an organization's incident management processes, ensuring they are robust, well-documented, and capable of effectively handling security events.​</p>
+<hr />
+<h3 id="release-and-patch-management">📦 Release and Patch Management<a class="headerlink" href="#release-and-patch-management" title="Permanent link">&para;</a></h3>
+<p>This area focuses on the systematic deployment of software updates:​</p>
+<ul>
+<li>
+<p><strong>Release Management</strong>: Oversee the planning, scheduling, and control of software builds through different stages and environments.​</p>
+</li>
+<li>
+<p><strong>Patch Management</strong>: Identify, acquire, test, and install patches to fix vulnerabilities and improve system functionality.​</p>
+</li>
+</ul>
+<p>For CISA certification, auditors must assess whether organizations have effective release and patch management policies that minimize risks associated with software vulnerabilities.​</p>
+<hr />
+<h3 id="business-impact-analysis-bia">📊 Business Impact Analysis (BIA)<a class="headerlink" href="#business-impact-analysis-bia" title="Permanent link">&para;</a></h3>
+<p>BIA is a process that helps organizations:​ 
+- Identify critical business functions and the resources that support them.​<a href="https://www.infosecinstitute.com/resources/cisa/cisa-domain-4-information-systems-operations-maintenance-and-service-management/?utm_source=chatgpt.com">Infosec Institute</a>
+- Evaluate the potential impact of disruptions on these functions.​  <br />
+- Determine recovery priorities and strategies.​<a href="https://www.cisa.gov/resources-tools/services/business-impact-analysis-bia-system-security?utm_source=chatgpt.com">ISACA+8CISA+8proctor2.psionline.com+8</a></p>
+<p>CISA candidates should understand how to assess the adequacy of BIA processes, ensuring they effectively inform disaster recovery and business continuity planning.​
+<a href="https://www.cisa.gov/resources-tools/services/business-impact-analysis-bia-system-security">CISA+3CISA+3ISACA+3</a></p>
+<hr />
+<h3 id="system-resiliency">🔄 System Resiliency<a class="headerlink" href="#system-resiliency" title="Permanent link">&para;</a></h3>
+<p>System resiliency refers to the ability of an information system to withstand and recover from disruptions. Key concepts include:​</p>
+<ul>
+<li>
+<p><strong>Recovery Point Objective (RPO)</strong>: The maximum tolerable period in which data might be lost due to a major incident.​</p>
+</li>
+<li>
+<p><strong>Recovery Time Objective (RTO)</strong>: The targeted duration of time within which a business process must be restored after a disruption.​</p>
+</li>
+<li>
+<p><strong>Active-Passive Configuration</strong>: A setup where the secondary system remains idle until the primary system fails.​</p>
+</li>
+<li>
+<p><strong>Active-Active Configuration</strong>: Both systems run concurrently, providing load balancing and high availability.​</p>
+</li>
+</ul>
+<h2 id="information-systems-operations-and-business-resiliency">🧩 'Information Systems Operations and Business Resiliency'<a class="headerlink" href="#information-systems-operations-and-business-resiliency" title="Permanent link">&para;</a></h2>
+<p><strong>General Overview:</strong> Information Systems Operations and Business Resiliency encompass the strategies and practices that ensure IT systems support business objectives and can withstand disruptions. This includes robust infrastructure, effective incident response, and continuous improvement processes.​</p>
+<p><strong>CISA Relevance:</strong> CISA professionals evaluate the alignment of IT operations with business resiliency goals, ensuring that systems are reliable, secure, and capable of supporting critical functions during adverse events.​</p>
+<p><strong>Resource:</strong> <a href="https://www.acilearning.com/catalog/it/information-systems-operations-and-business-resiliency/">Information Systems Operations and Business Resiliency - ACI Learning</a>​<a href="https://www.acilearning.com/catalog/it/information-systems-operations-and-business-resiliency/?utm_source=chatgpt.com">acilearning.com</a></p>
+<h3 id="backups-storage-and-restoration">🔄 Backups, Storage, and Restoration<a class="headerlink" href="#backups-storage-and-restoration" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> Effective backup strategies are crucial for data integrity and business continuity. Implementing the 3-2-1 backup rule—maintaining three copies of data, on two different media, with one off-site—ensures resilience against data loss. Regular testing of backups is essential to confirm data can be restored when needed.​</p>
+<ul>
+<li>Full</li>
+<li>Incremental</li>
+<li>Differential</li>
+<li>Rotation of media</li>
+</ul>
+<p><strong>Resource:</strong> <a href="https://www.unitrends.com/blog/backup-and-recovery-trends-2025/">Backup &amp; Recovery Trends 2025 - Unitrends</a>​<a href="https://www.unitrends.com/blog/backup-and-recovery-trends-2025/?utm_source=chatgpt.com">Unitrends+1Unitrends+1</a></p>
+<hr />
+<h3 id="business-continuity-management-bcm">🛡️ Business Continuity Management (BCM)<a class="headerlink" href="#business-continuity-management-bcm" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> Business Continuity Management (BCM) involves preparing for potential disruptions to maintain critical business functions. It encompasses risk assessments, business impact analyses, and the development of strategies to ensure operational resilience.​</p>
+<p><strong>Resource:</strong> <a href="https://www.fusionrm.com/blogs/2025-trends-in-continuity-and-resilience/">2025 Trends in Continuity and Resilience - Fusion Risk Management</a>​<a href="https://www.fusionrm.com/blogs/2025-trends-in-continuity-and-resilience/?utm_source=chatgpt.com">fusionrm.com</a></p>
+<hr />
+<h3 id="the-business-continuity-plan-bcp">📋 The Business Continuity Plan (BCP)<a class="headerlink" href="#the-business-continuity-plan-bcp" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> A Business Continuity Plan (BCP) outlines procedures and resources required to maintain business operations during unforeseen events. It includes identifying critical functions, assigning responsibilities, and establishing communication protocols.​</p>
+<ul>
+<li>BCP starts with risk assessment</li>
+<li>Needs Inventory of Critical operations, human and material resources needed</li>
+</ul>
+<p><strong>Resource:</strong> <a href="https://www.forbes.com/councils/forbestechcouncil/2025/01/09/20-essential-elements-of-a-robust-business-continuity-plan/">20 Essential Elements Of A Robust Business Continuity Plan - Forbes</a>​<a href="https://www.forbes.com/councils/forbestechcouncil/2025/01/09/20-essential-elements-of-a-robust-business-continuity-plan/?utm_source=chatgpt.com">Forbes</a></p>
+<hr />
+<h3 id="testing-the-bcp">🧪 Testing the BCP<a class="headerlink" href="#testing-the-bcp" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> Regular testing of the BCP is vital to validate its effectiveness. Testing methods include tabletop exercises, simulations, and full-scale drills, which help identify gaps and areas for improvement.​</p>
+<p><strong>Resource:</strong> <a href="https://www.noggin.io/blog/6-business-continuity-plan-testing-best-practices">6 Business Continuity Plan Testing Best Practices - Noggin</a>​<a href="https://www.noggin.io/blog/6-business-continuity-plan-testing-best-practices?utm_source=chatgpt.com">noggin.io</a></p>
+<hr />
+<h3 id="disaster-recovery-plans-drp">🌪️ Disaster Recovery Plans (DRP)<a class="headerlink" href="#disaster-recovery-plans-drp" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> Disaster Recovery Plans (DRPs) focus on restoring IT systems and data after a disruption. Key components include defining Recovery Time Objectives (RTOs), Recovery Point Objectives (RPOs), and establishing recovery procedures.​</p>
+<p><strong>Resource:</strong> <a href="https://secureframe.com/blog/disaster-recovery-plan">How to Write a Disaster Recovery Plan in 2025: Template + Examples - Secureframe</a>​<a href="https://secureframe.com/blog/disaster-recovery-plan?utm_source=chatgpt.com">Secureframe</a></p>
+<hr />
+<h3 id="testing-the-drp">🧪 Testing the DRP<a class="headerlink" href="#testing-the-drp" title="Permanent link">&para;</a></h3>
+<p><strong>General Overview:</strong> Testing the DRP involves simulating disaster scenarios to evaluate the effectiveness of recovery procedures. Regular testing helps identify weaknesses and ensures that recovery objectives can be met.​</p>
+<p>​<a href="https://www.linkedin.com/pulse/world-backup-day-2025-modern-data-strategies-secure-future-benis-tyeye?utm_source=chatgpt.com">libertycenterone.com+2LinkedIn+2Duplicacy Forum+2</a></p>
+<p><strong>Resource:</strong> <a href="https://warrenaverett.com/insights/disaster-recovery-testing/">Disaster Recovery Testing: What It Is, How It Works and Where To Start - Warren Averett</a>​</p>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../distributed-systems/kubernetes/kubernetes-dns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kubernetes dns">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kubernetes dns
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Fundamental-security-models/" class="md-footer__link md-footer__link--next" aria-label="Next: Fundamental security models">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Fundamental security models
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://affinitoalessandro.altervista.org/blog/" target="_blank" rel="noopener" title="affinitoalessandro.altervista.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6m337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7m-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1M504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248m-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/affinitoalessandro" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
