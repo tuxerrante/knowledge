@@ -6,8 +6,85 @@ ISACA: ?
 - recommendation
 - guideline
 
-**Standards** are mandatory and must be followed to ensure compliance and consistency in audit practices. They provide specific requirements that must be met. 
-**Guidelines** are suggestions that provide additional advice and best practices but are not compulsory.
+
+
+```mermaid
+graph TD
+
+    A["Regulations <br>(Mandatory)"]
+
+    B["Standards <br>(Voluntary Guidelines)"]
+
+    C[Policies]
+
+    D[Controls]
+
+    E[Procedures]
+
+    F[Guidelines]
+
+  
+
+    A --> C
+
+    B --> C
+
+    C --> D
+
+    D --> E
+
+    D --> F
+
+  
+
+    subgraph Examples
+
+        A1[GDPR]
+
+        A2[ISO 27001:2022]
+
+    end
+
+  
+
+    A1 --> A
+
+    A2 --> B
+```
+**Explanation**:
+
+- **Regulations**: Legally enforceable requirements set by governmental bodies (e.g., GDPR).​
+- **Standards**: Voluntary best practices developed by industry groups (e.g., ISO 27001:2022).​
+- **Policies**: Organizational directives that align with applicable regulations and chosen standards.​
+- **Controls**: Specific measures implemented to enforce policies.​
+- **Procedures**: Detailed steps outlining how controls are executed.​
+- **Practices**: Day-to-day activities ensuring procedures are followed effectively.
+
+**Example:**
+
+```mermaid
+graph TD
+    A["GDPR<br/>(Regulation)"]
+    B["ISO 27001:2022<br/>(Standard)"]
+    C[Data Protection Policy]
+    D[Information Security Policy]
+    E[Access Control Measures]
+    F[Encryption Protocols]
+    G[User Access Procedure]
+    H[Data Encryption Procedure]
+    I[Employee Login Practice]
+    J[Secure Data Storage Practice]
+
+    A --> C
+    B --> D
+    C --> E
+    D --> F
+    E --> G
+    F --> H
+    G --> I
+    H --> J
+
+```
 
 #### Standards
 - **Definition**: Mandatory requirements and practices codified into specifications that organizations must follow.
@@ -394,7 +471,7 @@ The data lifecycle encompasses the stages through which data progresses within a
 6. **Dispose**: Securely delete or archive data that is no longer needed, in accordance with retention policies.​
     
 
-​[ISACA+17ExamTopics+17Learning Tree International | Home+17](https://www.examtopics.com/discussions/isaca/view/146334-exam-cisa-topic-1-question-1354-discussion/?utm_source=chatgpt.com)
+​[ISACA ExamTopics](https://www.examtopics.com/discussions/isaca/view/146334-exam-cisa-topic-1-question-1354-discussion)
 
 ---
 
@@ -430,10 +507,11 @@ For CISA certification, auditors must assess whether organizations have effectiv
 BIA is a process that helps organizations:​ 
 - Identify critical business functions and the resources that support them.​[Infosec Institute](https://www.infosecinstitute.com/resources/cisa/cisa-domain-4-information-systems-operations-maintenance-and-service-management/?utm_source=chatgpt.com)
 - Evaluate the potential impact of disruptions on these functions.​    
-- Determine recovery priorities and strategies.​[ISACA+8CISA+8proctor2.psionline.com+8](https://www.cisa.gov/resources-tools/services/business-impact-analysis-bia-system-security?utm_source=chatgpt.com)
+- Determine recovery priorities and strategies.
+  ​[CISA ISACA BIA](https://www.cisa.gov/resources-tools/services/business-impact-analysis-bia-system-security)
 
 CISA candidates should understand how to assess the adequacy of BIA processes, ensuring they effectively inform disaster recovery and business continuity planning.​
-[CISA+3CISA+3ISACA+3](https://www.cisa.gov/resources-tools/services/business-impact-analysis-bia-system-security)
+
 
 ---
 
@@ -457,7 +535,8 @@ System resiliency refers to the ability of an information system to withstand an
 
 **CISA Relevance:** CISA professionals evaluate the alignment of IT operations with business resiliency goals, ensuring that systems are reliable, secure, and capable of supporting critical functions during adverse events.​
 
-**Resource:** [Information Systems Operations and Business Resiliency - ACI Learning](https://www.acilearning.com/catalog/it/information-systems-operations-and-business-resiliency/)​[acilearning.com](https://www.acilearning.com/catalog/it/information-systems-operations-and-business-resiliency/?utm_source=chatgpt.com)
+**Resource:** [Information Systems Operations and Business Resiliency - ACI Learning](https://www.acilearning.com/catalog/it/information-systems-operations-and-business-resiliency/)​
+
 ### 🔄 Backups, Storage, and Restoration
 
 **General Overview:** Effective backup strategies are crucial for data integrity and business continuity. Implementing the 3-2-1 backup rule—maintaining three copies of data, on two different media, with one off-site—ensures resilience against data loss. Regular testing of backups is essential to confirm data can be restored when needed.​
@@ -475,6 +554,11 @@ System resiliency refers to the ability of an information system to withstand an
 
 **General Overview:** Business Continuity Management (BCM) involves preparing for potential disruptions to maintain critical business functions. It encompasses risk assessments, business impact analyses, and the development of strategies to ensure operational resilience.​
 
+Disasters could be:
+- local
+- regional
+- global
+- Due to human error or malicious entities (terrorism, malware, hackers)
 
 **Resource:** [2025 Trends in Continuity and Resilience - Fusion Risk Management](https://www.fusionrm.com/blogs/2025-trends-in-continuity-and-resilience/)​[fusionrm.com](https://www.fusionrm.com/blogs/2025-trends-in-continuity-and-resilience/?utm_source=chatgpt.com)
 
@@ -485,9 +569,10 @@ System resiliency refers to the ability of an information system to withstand an
 **General Overview:** A Business Continuity Plan (BCP) outlines procedures and resources required to maintain business operations during unforeseen events. It includes identifying critical functions, assigning responsibilities, and establishing communication protocols.​
 
 - BCP starts with risk assessment
-- Needs Inventory of Critical operations, human and material resources needed
+- Needs Inventory of Critical operations, human and material resources needed (BIA)
+- Needs a metrics to be monitored to define what is a "major incident"
 
-**Resource:** [20 Essential Elements Of A Robust Business Continuity Plan - Forbes](https://www.forbes.com/councils/forbestechcouncil/2025/01/09/20-essential-elements-of-a-robust-business-continuity-plan/)​[Forbes](https://www.forbes.com/councils/forbestechcouncil/2025/01/09/20-essential-elements-of-a-robust-business-continuity-plan/?utm_source=chatgpt.com)
+**Resource:** [20 Essential Elements Of A Robust Business Continuity Plan - Forbes](https://www.forbes.com/councils/forbestechcouncil/2025/01/09/20-essential-elements-of-a-robust-business-continuity-plan/)
 
 ---
 
@@ -495,8 +580,11 @@ System resiliency refers to the ability of an information system to withstand an
 
 **General Overview:** Regular testing of the BCP is vital to validate its effectiveness. Testing methods include tabletop exercises, simulations, and full-scale drills, which help identify gaps and areas for improvement.​
 
+- pre-test
+- test
+- post-test: report time and resources consumed, missed steps from the plan...
 
-**Resource:** [6 Business Continuity Plan Testing Best Practices - Noggin](https://www.noggin.io/blog/6-business-continuity-plan-testing-best-practices)​[noggin.io](https://www.noggin.io/blog/6-business-continuity-plan-testing-best-practices?utm_source=chatgpt.com)
+**Resource:** [6 Business Continuity Plan Testing Best Practices - Noggin](https://www.noggin.io/blog/6-business-continuity-plan-testing-best-practices)​
 
 ---
 
@@ -504,8 +592,10 @@ System resiliency refers to the ability of an information system to withstand an
 
 **General Overview:** Disaster Recovery Plans (DRPs) focus on restoring IT systems and data after a disruption. Key components include defining Recovery Time Objectives (RTOs), Recovery Point Objectives (RPOs), and establishing recovery procedures.​
 
+**RTO** is the maximum tolerable duration of any outage.
+**RPO** is the maximum acceptable amount of data loss measured in time.
 
-**Resource:** [How to Write a Disaster Recovery Plan in 2025: Template + Examples - Secureframe](https://secureframe.com/blog/disaster-recovery-plan)​[Secureframe](https://secureframe.com/blog/disaster-recovery-plan?utm_source=chatgpt.com)
+**Resource:** [How to Write a Disaster Recovery Plan in 2025: Template + Examples - Secureframe](https://secureframe.com/blog/disaster-recovery-plan)
 
 ---
 
@@ -513,9 +603,253 @@ System resiliency refers to the ability of an information system to withstand an
 
 **General Overview:** Testing the DRP involves simulating disaster scenarios to evaluate the effectiveness of recovery procedures. Regular testing helps identify weaknesses and ensures that recovery objectives can be met.​
 
-​[libertycenterone.com+2LinkedIn+2Duplicacy Forum+2](https://www.linkedin.com/pulse/world-backup-day-2025-modern-data-strategies-secure-future-benis-tyeye?utm_source=chatgpt.com)
+​[libertycenterone.com+2LinkedIn+2Duplicacy Forum+2](https://www.linkedin.com/pulse/world-backup-day-2025-modern-data-strategies-secure-future-benis-tyeye)
 
 **Resource:** [Disaster Recovery Testing: What It Is, How It Works and Where To Start - Warren Averett](https://warrenaverett.com/insights/disaster-recovery-testing/)​
 
 ---
+
+## 🛡️ Protection of Information Assets
+
+### Frameworks, Roles, and Data Protection
+
+Protecting information assets involves implementing structured frameworks that define roles, responsibilities, and data protection measures. The NIST Cybersecurity Framework (CSF) is widely adopted, comprising five core functions: Identify, Protect, Detect, Respond, and Recover. These functions guide organizations in managing and reducing cybersecurity risks.​[Wikipedia](https://en.wikipedia.org/wiki/NIST_Cybersecurity_Framework?utm_source=chatgpt.com)
+
+**Roles and responsibilities** are delineated within these frameworks to ensure accountability and effective implementation of security measures.​
+
+**Data protection** strategies include:​
+
+- **Data Classification**: Categorizing data based on sensitivity to apply appropriate security controls.  ​
+ - **Encryption**: Protecting data confidentiality during storage and transmission.​  
+- **Regular Audits**: Assessing compliance with data protection policies and identifying potential vulnerabilities.​  
+
+**Data privacy**:  foundational guidelines that govern the collection, processing, and storage of personal data. Key principles include:​
+	- **Lawfulness, Fairness, and Transparency**: Data must be processed legally, fairly, and transparently to the individual. 
+	  ​[Homepage | Data Protection Commission](https://www.dataprotection.ie/en/individuals/data-protection-basics/principles-data-protection)  
+	- **Purpose Limitation**: Data should be collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.​
+	  [Data Protection Principles](https://www.dataprotection.ie/en/individuals/data-protection-basics/principles-data-protection)  	    
+	- **Data Minimization**: Only data that is necessary for the intended purpose should be collected.​  
+	- **Integrity and Confidentiality**: Data must be processed securely to prevent unauthorized access, loss, or damage.​
+
+**Access Controls**: Ensuring only authorized individuals can access specific data.​
+  [Investopedia](https://www.investopedia.com/terms/e/encryption.asp?utm_source=chatgpt.com)  
+
+**Physical access** controls are security measures designed to prevent unauthorized physical access to facilities, equipment, and resources. Key components include:​  
+	- **Access Control Systems**: Utilizing key cards, biometric scanners, or PIN codes to restrict entry to authorized personnel.​  
+	- **Surveillance Systems**: Implementing CCTV cameras to monitor and record activities in sensitive areas.​  
+	- **Security Personnel**: Employing trained security staff to oversee access points and respond to incidents.​  
+	- **Visitor Management**: Maintaining logs of visitors, issuing temporary badges, and escorting them within the premises.​    
+	- **Regular Audits**: Conducting periodic reviews of access logs and physical security measures to ensure effectiveness.  
+
+https://www.idmanagement.gov/university/pacs/
+
+**Environmental Controls**: 
+	- **Fire Suppression Systems**: Installing fire alarms and suppression systems to detect and extinguish fires promptly.​    
+	- **Climate Control**: Maintaining optimal temperature and humidity levels to prevent equipment overheating or condensation.​      
+	- **Uninterruptible Power Supplies (UPS)**: Providing backup power to maintain operations during outages.​      
+	- **Water Leak Detection**: Implementing sensors to detect and alert for water leaks that could damage equipment.​      
+	- **Seismic Protection**: Designing facilities to withstand earthquakes, including securing equipment to prevent tipping.  
+
+For a comprehensive understanding of the NIST CSF, refer to the [NIST Cybersecurity Framework](https://en.wikipedia.org/wiki/NIST_Cybersecurity_Framework).​
+
+### IT Security baseline:
+- password policy
+- automated patch management
+- Asset inventory
+- Addressing vulnerabilities
+- Backups: present and tested
+
+
+---
+
+### 📦 Asset Management and Logging
+
+Effective asset management and logging are critical for maintaining security and facilitating incident response.​
+
+#### Asset Management
+
+Asset management involves maintaining an up-to-date inventory of all hardware, software, and data assets. This practice ensures that security measures can be appropriately applied and that assets are accounted for during risk assessments.​
+
+#### Logging
+
+Logging entails recording events and activities within information systems to monitor operations and detect anomalies. Key aspects include:​
+
+- **Comprehensive Log Collection**: Capturing logs from various sources such as operating systems, applications, and network devices.​
+    
+- **Log Management Policies**: Establishing procedures for log retention, analysis, and disposal.​
+    
+- **Security Information and Event Management (SIEM)**: Utilizing tools to aggregate and analyze log data for real-time threat detection.​
+    
+
+For guidance on audit log management, consult [CIS Control 8: Audit Log Management](https://blog.netwrix.com/2022/06/16/audit-log-management/).​
+
+---
+
+### 🌐 Network Security, Cloud Computing, and Cryptography
+
+#### Network Security
+
+Network security encompasses measures to protect the integrity, confidentiality, and availability of data during transmission. Key components include:​
+
+- **Firewalls**: Controlling incoming and outgoing network traffic based on predetermined security rules.​
+    
+- **Intrusion Detection and Prevention Systems (IDPS)**: Monitoring networks for malicious activities and policy violations.​
+    
+- **Virtual Private Networks (VPNs)**: Establishing secure connections over public networks.​
+    
+
+#### Cloud Computing
+
+The adoption of cloud computing introduces unique security challenges, such as data breaches and misconfigurations. To mitigate these risks:​[Financial Times](https://www.ft.com/content/2b36a642-bda5-4e43-9747-2175c4d72fd0?utm_source=chatgpt.com)
+
+- **Data Encryption**: Encrypting data both at rest and in transit.​
+    
+- **Access Management**: Implementing strict access controls and multi-factor authentication.​
+    
+- **Regular Audits**: Assessing cloud service providers' security practices and compliance.​
+    
+
+For insights into cloud security risks, refer to [Banks moving into the cloud prompt forecasts of security risk](https://www.ft.com/content/2b36a642-bda5-4e43-9747-2175c4d72fd0).​
+
+#### Cryptography
+
+Cryptography is essential for securing data through encryption and ensuring secure communication. There are two primary types:​ 
+
+- **Symmetric Encryption**: Uses the same key for encryption and decryption.​  
+- **Asymmetric Encryption**: Utilizes a pair of keys—a public key for encryption and a private key for decryption.​
+
+As quantum computing advances, traditional encryption methods face potential vulnerabilities. Organizations are exploring post-quantum cryptography to address these emerging threats. ​
+
+For a detailed explanation of encryption, see [What Is Encryption? How It Works, Types, and Benefits](https://www.investopedia.com/terms/e/encryption.asp).​
+
+---
+
+### 🧪 Security Testing, Incident Management, and Forensics
+
+#### Security Testing
+
+Regular security testing is vital to identify and remediate vulnerabilities. Common testing methods include:​
+
+- **Vulnerability Scanning**: Automated tools to detect known vulnerabilities.​      
+- **Penetration Testing**: Simulated attacks to evaluate system defenses.​      
+- **Security Audits**: Comprehensive reviews of security policies and controls.​
+
+#### Incident Management
+
+Incident management involves preparing for, detecting, responding to, and recovering from security incidents. Key steps include:​
+
+- **Preparation**: Establishing incident response plans and teams.​   
+- **Detection and Analysis**: Identifying incidents and assessing their impact.​      
+- **Containment, Eradication, and Recovery**: Isolating affected systems, removing threats, and restoring operations.​  
+- **Post-Incident Activity**: Analyzing incidents to improve future responses.​  
+
+### Forensics
+
+Digital forensics involves collecting and analyzing electronic evidence to investigate incidents. This process supports legal proceedings and helps organizations understand breaches to prevent recurrence.
+
+---
+## 🔐 Infosec Network Infrastructure
+![[firewall-infra.png]]
+
+### 🛡️ Network Infrastructure Security & Firewalls
+
+Network infrastructure security involves safeguarding the hardware and software resources that facilitate network connectivity, communication, operations, and management. Firewalls are critical components that monitor and control incoming and outgoing network traffic based on predetermined security rules. They act as barriers between trusted internal networks and untrusted external networks, such as the internet.
+​[Red Hat - cloud-vs-virtualization](https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization)
+
+**Key Concepts:**
+
+- **Firewalls:** Devices or software that enforce security policies by filtering traffic.​
+  [CISA - securing-network-infrastructure-devices](https://www.cisa.gov/news-events/news/securing-network-infrastructure-devices)   
+- **Segmentation:** Dividing a network into segments to control traffic flow and limit access. 
+  [firewall-security](https://www.f5.com/glossary/firewall-security)      
+- **Access Control Lists (ACLs):** Rules that permit or deny traffic based on various criteria.​
+
+**Resource:** [VMware: Network Infrastructure Security](https://www.vmware.com/topics/network-infrastructure-security)
+
+---
+
+### 🔄 Change Management in Networks
+
+Change management is a systematic approach to dealing with alterations in network infrastructure. It ensures that changes are made with minimal disruption to services and includes planning, testing, and implementing changes while maintaining security and compliance.​[vivantio.com - what-is-change-management-in-cyber-security](https://www.vivantio.com/blog/what-is-change-management-in-cyber-security)
+
+**Key Concepts:**  
+- **Risk Assessment:** Evaluating potential impacts of changes.​      
+- **Documentation:** Keeping detailed records of changes for accountability.​      
+- **Approval Processes:** Ensuring changes are reviewed and authorized before implementation.​  [itsecurityguru.org - effective-change-management-practices](https://www.itsecurityguru.org/2024/07/29/effective-change-management-practices-in-it-environments-a-guide)    
+
+**Resource:** [TechTarget: 5 Principles of Network Change Management](https://www.techtarget.com/searchnetworking/tip/5-principles-of-the-network-change-management-process)
+
+
+---
+
+### 🔐 Encryption Systems
+
+Encryption is the process of converting data into a coded format to prevent unauthorized access. It is fundamental to protecting sensitive information both at rest and in transit.​[TechTarget - Encryption](https://www.techtarget.com/searchsecurity/definition/encryption)
+
+**Key Concepts:**  
+- **Symmetric Encryption:** Uses the same key for encryption and decryption.​[safebase.io](https://safebase.io/blog/the-role-of-encryption-in-information-security-how-encryption-protects-sensitive-data?utm_source=chatgpt.com)      
+- **Asymmetric Encryption:** Uses a pair of keys (public and private) for encryption and decryption.​  
+- **End-to-End Encryption (E2EE):** Ensures that data is encrypted on the sender's system and only decrypted on the recipient's system.​      
+
+**Resource:** [Google Cloud: What is Encryption?](https://cloud.google.com/learn/what-is-encryption)​
+
+---
+
+#### 🔐 Applications of Cryptography
+
+Cryptography is used to secure communication and protect information from adversaries. Its applications are vast and integral to information security.
+​[TutorialsPoint applications-of-cryptography-in-information-security](https://www.tutorialspoint.com/what-are-the-applications-of-cryptography-in-information-security)
+
+**Key Applications:**
+
+- **Secure Communications:** Protecting data during transmission.​      
+- **Authentication:** Verifying the identity of users and devices.​      
+- **Data Integrity:** Ensuring that information has not been altered.
+
+**Resource:** [IBM: Cryptography Use Cases](https://www.ibm.com/think/topics/cryptography-use-cases)
+
+---
+
+### 🔑 The Public Key Infrastructure (PKI)
+
+PKI is a framework that enables secure, encrypted communication and authentication over networks. It uses a pair of cryptographic keys and digital certificates issued by a Certificate Authority (CA).​
+[Keyfactor - PKI](https://www.keyfactor.com/education-center/what-is-pki)
+
+**Key Components:**  
+- **Certificate Authority (CA):** Trusted entity that issues digital certificates.​[GeeksforGeeks](https://www.geeksforgeeks.org/public-key-infrastructure)  
+- **Registration Authority (RA):** Verifies the identity of entities requesting certificates.      
+- **Digital Certificates:** Electronic documents that use a digital signature to bind a public key with an identity.​
+
+**Resource:** [Okta: What is Public Key Infrastructure?](https://www.okta.com/identity-101/public-key-infrastructure/)​
+
+---
+
+### 📋 IS Audits and Social Media
+
+Information Systems (IS) audits assess the controls and security of an organization's information systems. With the rise of social media, audits now also encompass the evaluation of social media policies, usage, and associated risks.​
+
+One of the largest attack vectors into organizations.
+
+**Key Considerations:**  
+- **Policy Compliance:** Ensuring social media use aligns with organizational policies.​  
+- **Risk Management:** Identifying and mitigating risks such as data leaks and reputational damage.​  
+- **Monitoring:** Regularly reviewing social media activity for unauthorized or inappropriate content.​  
+
+**Resource:** [AuditBoard: Auditing Social Media](https://www.auditboard.com/blog/auditing-social-media-5-areas-concern/)​
+
+---
+
+### ☁️ Virtualization and Cloud Computing
+
+Virtualization and cloud computing have transformed IT infrastructure, offering scalability and flexibility. However, they also introduce new security challenges that must be addressed.​
+
+**Key Security Aspects:**
+
+- **Hypervisor Security:** Protecting the software layer that enables virtualization.​      
+- **Isolation:** Ensuring that virtual machines (VMs) are isolated to prevent cross-contamination.​[cloud-and-virtualization-security](https://cloudnetworks.ae/solutions/cloud-and-virtualization-security)  
+- **Access Control:** Managing who has access to virtual environments and cloud resources.​  
+
+**Resource:** [Red Hat: Virtualization vs Cloud Computing](https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization)
+
+
 
