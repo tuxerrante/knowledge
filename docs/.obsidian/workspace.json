@@ -94,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -171,8 +170,10 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
-    "software-engineering/security/Fundamental-security-models.md",
+    "img/firewall-infra.png",
     "software-engineering/security/CISA.md",
+    "img/firewall-infra.png.crdownload",
+    "software-engineering/security/Fundamental-security-models.md",
     "[Security.md",
     "software-engineering/Azure/AZ500.md",
     "science/rationality.md",
@@ -200,7 +201,6 @@
     "software-engineering/security/CISSP/domain-1-security-and-risk-management.md",
     "software-engineering/security/CISSP/domain-2.md",
     "software-engineering/security/CISSP/think-like-a-manager.md",
-    "books/management/the-managers-path.md",
     "books/emotions",
     "software-engineering/security/img/roles-risks-pyramid.png",
     "software-engineering/security/img",
@@ -210,7 +210,6 @@
     "software-engineering/Azure",
     "img/financial-planning-pyramid.png",
     "img/image.png",
-    "img/support.png",
-    "img"
+    "img/support.png"
   ]
 }
