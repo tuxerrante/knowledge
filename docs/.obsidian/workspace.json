@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software-engineering/security/CISA.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CISA"
+              "title": "index"
             }
           }
         ]
@@ -80,21 +80,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software-engineering/security/CISA.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CISA"
+              "title": "Outline of index"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 258.5
   },
   "right": {
     "id": "e0b805506c2aec1c",
@@ -170,8 +169,9 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
-    "img/firewall-infra.png",
+    "software-engineering/Azure/AZ-500.md",
     "software-engineering/security/CISA.md",
+    "img/firewall-infra.png",
     "img/firewall-infra.png.crdownload",
     "software-engineering/security/Fundamental-security-models.md",
     "[Security.md",
