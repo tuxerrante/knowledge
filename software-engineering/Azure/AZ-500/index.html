@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -2584,9 +2584,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app-gateway" class="md-nav__link">
+  <a href="#application-gateway" class="md-nav__link">
     <span class="md-ellipsis">
-      APP GATEWAY
+      APPLICATION GATEWAY
     </span>
   </a>
   
@@ -2605,6 +2605,24 @@
   <a href="#nsg-network-security-group-l4" class="md-nav__link">
     <span class="md-ellipsis">
       NSG – Network Security Group (L4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asg-application-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASG - Application Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Endpoints
     </span>
   </a>
   
@@ -3970,9 +3988,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app-gateway" class="md-nav__link">
+  <a href="#application-gateway" class="md-nav__link">
     <span class="md-ellipsis">
-      APP GATEWAY
+      APPLICATION GATEWAY
     </span>
   </a>
   
@@ -3991,6 +4009,24 @@
   <a href="#nsg-network-security-group-l4" class="md-nav__link">
     <span class="md-ellipsis">
       NSG – Network Security Group (L4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asg-application-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASG - Application Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Endpoints
     </span>
   </a>
   
@@ -4792,6 +4828,8 @@ Create Application rules to operate at at the application layer (FQDN filtering)
 <p><a href="https://learn.microsoft.com/en-us/azure/virtual-network/diagnose-network-routing-problem">Diagnose an Azure virtual machine routing problem | Microsoft Learn</a></p>
 <h3 id="expressroute">ExpressRoute<a class="headerlink" href="#expressroute" title="Permanent link">&para;</a></h3>
 <p>Dedicated physical connection to an Azure tenant</p>
+<p>Dot1Q VLAN
+QinQ</p>
 <h3 id="vpn">VPN<a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h3>
 <p>IpSec/K encrypted connection.</p>
 <ul>
@@ -4817,19 +4855,61 @@ Blocks: volumetric (UDP...), protocol (SYN flood, reflection...) and app layer a
 <h2 id="load-balancer">LOAD BALANCER<a class="headerlink" href="#load-balancer" title="Permanent link">&para;</a></h2>
 <p>L4 (TCP/UDP), REGIONAL</p>
 <p>can be internal or external (get assigned a Public IP)</p>
-<h2 id="app-gateway">APP GATEWAY<a class="headerlink" href="#app-gateway" title="Permanent link">&para;</a></h2>
-<p>L7, REGIONAL: redirection, rewrite, https,</p>
-<p>Can have on top a WAF (<a href="https://learn.microsoft.com/en-gb/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs21#owasp-crs-32">OWASP threats</a>)</p>
+<h2 id="application-gateway">APPLICATION GATEWAY<a class="headerlink" href="#application-gateway" title="Permanent link">&para;</a></h2>
+<p>L7, REGIONAL: redirection, rewrite, https,
+Can have on top a WAF (<a href="https://learn.microsoft.com/en-gb/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs21#owasp-crs-32">OWASP threats</a>)</p>
+<ol>
+<li>Connection comes from the internet</li>
+<li>App GW <strong>frontend public IP</strong> is reached trough the DNS</li>
+<li><strong>HTTP/HTTPS Listener</strong>: The gateway listens for incoming HTTP or HTTPS traffic. This listener is configured to handle specific types of requests.</li>
+<li><strong>Rule</strong>: Based on the listener's configuration, rules are applied to direct traffic. These rules determine how requests are routed to the backend.</li>
+<li><strong>Backend Pool</strong>: The destination for the traffic. This pool can include:<ul>
+<li><strong>Virtual Machines (VMs)</strong>: Individual virtual servers.</li>
+<li><strong>Virtual Machine Scale Sets (VMSS)</strong>: Groups of identical VMs that can automatically scale.</li>
+<li><strong>App Services</strong>: Managed services for hosting web applications.</li>
+</ul>
+</li>
+<li><strong>Encryption</strong>: The diagram highlights that traffic between the application servers and the application gateway is encrypted, ensuring secure communication.<ol>
+<li><strong>AES-256 (Advanced Encryption Standard)</strong>: This is a symmetric encryption algorithm widely used for its high level of security and efficiency.  </li>
+<li><strong>RSA-4096</strong>: This is an asymmetric encryption algorithm used for secure data transmission. It uses a pair of keys (public and private) and is known for its robustness, especially with a 4096-bit key</li>
+<li><strong>TLS 1.3 (Transport Layer Security)</strong>: This protocol provides secure communication over a computer network. TLS 1.3 is the latest version and offers improved security and performance over its predecessors </li>
+</ol>
+</li>
+</ol>
+<p>A traditional load balancer directs traffic based on where it's coming from and where it's supposed to go, much like how a post office sorts mail based on the address on the envelope. However, Azure Application Gateway besides knowing where the traffic comes from and where it's going, it can also direct traffic based on what's being asked for in the request (APIs).
+- back end health check
+- autoscaling
+- session affinity
+- WAF</p>
 <h2 id="az-front-door">AZ <a href="https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview">FRONT DOOR</a><a class="headerlink" href="#az-front-door" title="Permanent link">&para;</a></h2>
 <p>L7,  GLOBAL</p>
 <p>Uses <a href="https://en.wikipedia.org/wiki/Anycast">anycast</a> to manage the connection as close as possible to the client ( the lowest number of <a href="https://en.wikipedia.org/wiki/Border_gateway_protocol">BGP</a> network hops) with hundreds of PoPs (point of  presence) CDN connected through a high speed WAN.</p>
+<p><strong>Key Features</strong>:</p>
+<ol>
+<li><strong>Global Load Balancing</strong>: Routes traffic to the closest and healthiest backend based on latency, ensuring optimal performance for users worldwide </li>
+<li><strong>Content Delivery Network (CDN)</strong>: Provides caching and acceleration for static and dynamic content, reducing load times </li>
+<li><strong>Web Application Firewall (WAF)</strong>: Offers built-in protection against common web threats like SQL injection and cross-site scripting </li>
+<li><strong>SSL Offloading</strong>: Terminates SSL/TLS connections at the edge, reducing the load on backend servers </li>
+<li><strong>Multi-Region Failover</strong>: Ensures high availability by automatically routing traffic to another region if the primary region fails </li>
+</ol>
 <h2 id="nsg-network-security-group-l4">NSG – Network Security Group (L4)<a class="headerlink" href="#nsg-network-security-group-l4" title="Permanent link">&para;</a></h2>
-<p>Allows us to groups network resources through tags instead of caring of IPs</p>
-<p>SUBNET specifics</p>
+<p>Allows us to group network resources through tags instead of caring of IPs.</p>
+<p>SUBNET or NIC specific.</p>
+<p><strong>Network Security Groups (NSGs)</strong> can be applied to a single VM, subnet, or network adapter. <strong>only one NSG</strong> can be associated with each of these resources.</p>
 <ul>
 <li>Service endpoint: identifies an internal subnet to be allowed to call other internal services by allowing it in the target service firewall</li>
 <li>Private endpoint: identifies a specific service instance inside a private subnet. Requires also a DNS configuration in order to be found by other internal services.</li>
+<li>Through a resource manager deployment model they can be assigned at NIC level, such that the same VM would have different security rules assigned to its network interfaces.</li>
+<li>Limit of 100 NSG per region. Max 200 rules per NSG. This limits can be increased by raising a support ticket.</li>
+<li>https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview#default-security-rules</li>
 </ul>
+<h2 id="asg-application-security-group">ASG - Application Security Group<a class="headerlink" href="#asg-application-security-group" title="Permanent link">&para;</a></h2>
+<p>https://learn.microsoft.com/en-us/azure/virtual-network/application-security-groups</p>
+<p>It lets you focus on the business logic instead of networking details like IP addresses, allowing you to group virtual machines and define network security policies based on those groups (eg: AKS nodepool).
+All network interfaces assigned to an ASG should be in the same VNET.</p>
+<h2 id="service-endpoints"><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview">Service Endpoints</a><a class="headerlink" href="#service-endpoints" title="Permanent link">&para;</a></h2>
+<p>Virtual Network service endpoint provides secure and direct connectivity to Azure services over an optimized route over the Azure backbone network.
+Useful to identify internal resources that would have a non unique private IP while communicating through private VNets. Also it doesn't require a NAT Gateway.</p>
 <hr />
 <h1 id="host">HOST<a class="headerlink" href="#host" title="Permanent link">&para;</a></h1>
 <p>Azure update manager</p>
@@ -4907,6 +4987,7 @@ Apps used</p>
 <li><strong>Allocated dynamically</strong> or statically from the VNet’s address space.</li>
 <li>IPs are associated with NICs via Azure Resource Manager (ARM) configurations, not manually or directly by the admin.
 For load balancers, IPs are assigned to frontend configurations, not directly to the NIC.</li>
+<li>Azure reserves the first four and last IPs in each subnet (e.g., .0, .1, .2, .3, and .255 in a /24).</li>
 </ul>
 <p><strong>🔎 Tip</strong>: Private IPs are the default addressing method inside Azure VNets. Public IPs are required only for external communication.</p>
 <table>
@@ -5141,7 +5222,7 @@ For load balancers, IPs are assigned to frontend configurations, not directly to
       <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
