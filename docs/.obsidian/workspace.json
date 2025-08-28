@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "software-engineering/Azure/AZ-500.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "AZ-500"
             }
           }
         ]
@@ -80,16 +80,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "software-engineering/Azure/AZ-500.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of AZ-500"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -169,7 +170,9 @@
   },
   "active": "d04aa7fecda1a23c",
   "lastOpenFiles": [
+    "books/Go Domain Driven Design.md",
     "software-engineering/Azure/AZ-500.md",
+    "index.md",
     "software-engineering/security/CISA.md",
     "img/firewall-infra.png",
     "img/firewall-infra.png.crdownload",
@@ -186,7 +189,6 @@
     "brain/think-again-how-to-reason.md",
     "music/Music.md",
     "philosophy/quotes-and-life-guidelines.md",
-    "index.md",
     "books/the-almanack-of-naval-ravikant.md",
     "philosophy/rational-buddhism.md",
     "science/elephant-in-the-brain-vs-good-inside.md",
@@ -200,7 +202,6 @@
     "software-engineering/security/CISSP/domain-4-communication-and-network-security.md",
     "software-engineering/security/CISSP/domain-1-security-and-risk-management.md",
     "software-engineering/security/CISSP/domain-2.md",
-    "software-engineering/security/CISSP/think-like-a-manager.md",
     "books/emotions",
     "software-engineering/security/img/roles-risks-pyramid.png",
     "software-engineering/security/img",
