@@ -19,6 +19,8 @@ Motion creates momentum, and momentum reveals opportunities that standing still 
 Play stupid games, win stupid prizes.
 Wealth creation is an evolutionarily recent positive-sum game. Status is an old zero-sum gam. N.Ravikant
 
+A more positive interpretation of [Parkinson’s law](https://share.google/qDOba3n47SrXOG48M) is that, within reason, you can dictate how quickly you’re able to accomplish ambitious tasks. This is one of the best reasons to be ambition with your goals and timelines. [Kevin Naughton](https://substack.com/@kevinnaughtonjr).
+
 
 ### Every day work
 
